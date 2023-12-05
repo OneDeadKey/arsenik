@@ -45,21 +45,12 @@
     .gnu .specialKey .gnu,
     .win .specialKey .win { display: block; }
 
-    /* dimmed AltGr + bold dead keys */
-    .level3, .level4 { fill: #333; font-weight: bold; }
-    .level5, .level6 { fill: green; }
-
-    /* hide Level4 (Shift+AltGr) unless AltGr is pressed */
-    .level4        { display: none; }
-    .altgr .level4 { display: block; }
-
-    /* highlight AltGr + Dead Keys */
-    .dk .level1, .altgr .level1,
-    .dk .level2, .altgr .level2 { opacity: 0.25; }
-    .dk .level5, .altgr .level3,
-    .dk .level6, .altgr .level4 { opacity: 1; }
-    .dk .level3,
-    .dk .level4 { display: none; }
+    .level3 { fill: #333; }
+    @media (prefers-color-scheme: dark) {
+      text       { fill: #888; }
+      rect, path { fill: #555; }
+      .level3    { fill: #ccc; }
+    }
   </style>
 
   <g id="row_AD">

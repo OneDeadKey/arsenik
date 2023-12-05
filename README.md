@@ -70,16 +70,16 @@ A long press on the <kbd>Return</kbd> key brings up the Symbols layer:
 - the <kbd>Shift</kbd> key becomes a <kbd>Num</kbd> layer key
 
 
-Numbers Layer
+NumRow Layer
 --------------------------------------------------------------------------------
 
 If your keyboard has no number row, we got you covered! From <kbd>Symbols</kbd>
-mode, pressing the <kbd>Num</kbd> key brings up the Numbers layer:
+mode, pressing the <kbd>Num</kbd> key brings up the NumRow layer:
 
-![numbers layer on a 33-key keyboard](img/numrow.svg)
+![NumRow layer on a 33-key keyboard](img/numrow.svg)
 
 - all digits are on the home row, in the order you already know
-- the upper row helps with <kbd>Shift</kbd>-digits shortcuts
+- the upper row helps with <kbd>Shift</kbd>-digit shortcuts
 - the lower row has dash, comma, dot and slash signs to help with number / date
 inputs
 
