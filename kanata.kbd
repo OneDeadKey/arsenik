@@ -1,0 +1,59 @@
+;; ANSI layer (let kanata ignore all keys in the number row)
+(defsrc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+;; Base layer (active by default when kanata starts up):
+;;  - the 3 main thumb keys become mod/taps
+;;  - home-row mods on SDF and JKL
+;;  - CapsLock becomes Escape
+(deflayer qwerty
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  esc  _    @ss  @dd  @ff  _    _    @jj  @kk  @ll  _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    @sft           @nav           @alt _    _
+)
+
+;; Navigation layer:
+;;  - right: Vim-like arrows on HJKL, home/end page up/down, mouse scroll
+;;  - left: one-hand shortcuts (Ctrl-WASZXCV), Tab/Shift-Tab, prev/next
+(deflayer vimnav
+  _    _    C-w  bck  fwd  _    home pgdn pgup end  _    _    _    _
+  caps C-a  C-s S-tab tab  _    lft  down up   rght _    _    _
+  _    C-z  C-x  C-c  C-v  _    @mwl @mwd @mwu @mwr _    _
+  _    _    del            _              esc  _    _
+)
+
+;; Special key aliases
+(defalias
+  ;; Main mod-tap: VimNav layer when hold, Space when tapped.
+  ;; The space key must be hold long enough (200ms) to become a layer shift.
+  nav (tap-hold 200 200 spc (layer-toggle vimnav))
+
+  ;; Space-cadet thumb keys: Shift/BackSpace, AltGr/Return
+  ;;  - acts as a modifier by default, or as BS/Ret when tapped separately;
+  ;;  - works great with Qwerty-Lafayette and Ergo-L keyboard layouts, where
+  ;;    neither Shift nor AltGr are used outside of the 3×10 main alpha keys.
+  sft (tap-hold-press 200 200 bspc lsft)
+  alt (tap-hold-press 200 200 ret ralt)
+
+  ;; Home-row mods
+  ;; Must be hold long enough (200ms) to become a modifier.
+  ss (tap-hold 200 200 s lmet)
+  dd (tap-hold 200 200 d lalt)
+  ff (tap-hold 200 200 f lctl)
+  jj (tap-hold 200 200 j rctl)
+  kk (tap-hold 200 200 k lalt)
+  ll (tap-hold 200 200 l rmet)
+
+  ;; Mouse wheel emulation
+  mwu (mwheel-up    50 120)
+  mwd (mwheel-down  50 120)
+  mwl (mwheel-left  50 120)
+  mwr (mwheel-right 50 120)
+)
+
+;; vim: set ft=lisp
