@@ -37,6 +37,8 @@
     .right  { transform: translate(+15px, 0); }
     */
 
+    #row_AA .homeKey text,
+    .specialKey .win,
     .specialKey .win,
     .specialKey .gnu {
       font-size: 14px;
@@ -316,20 +318,20 @@
     <g class="left">
       <g class="specialKey" transform="translate(180)">
         <rect width="82" height="52" rx="5" ry="5"/>
-        <text x="64.8" y="18.6" text-anchor="middle" style="font-size: 12px;">⌫</text>
-        <text x="11.0" y="42.8" class="win gnu">Shift</text>
-        <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌥</text>
+        <!-- <text x="64.8" y="18.6" text-anchor="middle" style="font-size: 12px;">⌫</text> -->
+        <text x="11.0" y="42.8" class="win gnu">Num</text>
+        <!-- <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌥</text> -->
       </g>
     </g>
     <g class="homeKey" transform="translate(270)">
       <rect width="232" height="52" rx="5" ry="5"/>
-      <text x="11.0" y="42.8" class="win gnu">Nav</text>
+      <!-- <text x="11.0" y="42.8" class="win gnu">Nav</text> -->
     </g>
     <g class="right">
       <g class="specialKey" transform="translate(510)">
         <rect width="82" height="52" rx="5" ry="5" style="fill: #aad;"/>
-        <text x="64.8" y="20.6" text-anchor="middle">⏎</text>
-        <text x="11.0" y="42.8" class="win gnu">Sym</text>
+        <!-- <text x="64.8" y="20.6" text-anchor="middle">⏎</text> -->
+        <text x="11.0" y="42.8" class="win gnu" style="fill: blue;">Symbols</text>
         <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌥</text>
       </g>
     </g>

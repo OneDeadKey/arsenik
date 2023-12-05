@@ -7,9 +7,8 @@
 )
 
 ;; Base layer (active by default when kanata starts up):
-;;  - the 3 main thumb keys become mod/taps
 ;;  - home-row mods on SDF and JKL
-;;  - CapsLock becomes Escape
+;;  - the 3 main thumb keys become mod/taps
 (deflayer qwerty
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   esc  _    @ss  @dd  @ff  _    _    @jj  @kk  @ll  _    _    _

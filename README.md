@@ -4,6 +4,8 @@ Selenium
 A [Miryoku](https://github.com/manna-harbour/miryoku)-like approach to minimize
 finger movements without changing the keyboard layout:
 
+![base layer on a 33-key keyboard](img/base.svg)
+
 - 3 home-row mods per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Super</kbd>
 - 3 layer-tap keys under the thumbs
     - left: <kbd>Shift</kbd> / <kbd>Backspace</kbd>
@@ -12,7 +14,7 @@ finger movements without changing the keyboard layout:
 
 The idea behind these layers is to **bring the characters under the fingers,
 rather than moving the fingers over the keys**. This approach is what makes
-those 36-key keyboards so comfortable, and the goal here is to get a comparable
+those 34-key keyboards so comfortable, and the goal here is to get a comparable
 experience with any other keyboard — including your laptop’s.
 
 
@@ -51,8 +53,10 @@ A long press on the <kbd>Space</kbd> bar brings up the Navigation layer:
 
 ![navigation layer on a 33-key keyboard](img/navigation.svg)
 
-- right: Vim-like arrows on HJKL, home/end page up/down, mouse scroll
-- left: one-hand shortcuts (Ctrl-WASZXCV), Tab/Shift-Tab, prev/next
+- left: one-hand shortcuts (<kbd>Ctrl</kbd>-<kbd>WASZXCV</kbd>),
+<kbd>Tab</kbd>/<kbd>Shift</kbd>-<kbd>Tab</kbd>, prev/next
+- right: Vim-like arrows on <kbd>HJKL</kbd>, home/end page up/down, mouse scroll
+- bottom: <kbd>Delete</kbd> and <kbd>Escape</kbd>
 
 
 Symbols Layer
@@ -64,6 +68,32 @@ A long press on the <kbd>Return</kbd> key brings up the Symbols layer:
 
 - all symbols are on the same layer, arranged for comfort
 - the <kbd>Shift</kbd> key becomes a <kbd>Num</kbd> layer key
+
+
+Numbers Layer
+--------------------------------------------------------------------------------
+
+If your keyboard has no number row, we got you covered! From <kbd>Symbols</kbd>
+mode, pressing the <kbd>Num</kbd> key brings up the Numbers layer:
+
+![numbers layer on a 33-key keyboard](img/numrow.svg)
+
+- all digits are on the home row, in the order you already know
+- the upper row helps with <kbd>Shift</kbd>-digits shortcuts
+- the lower row has dash, comma, dot and slash signs to help with number / date
+inputs
+
+
+TODO
+--------------------------------------------------------------------------------
+
+The main idea is settled (3 home-row mods + 3 layer-taps), but Selenium is still
+a work in progress in an early stage. Expect refinements.
+
+- NumPad layer
+- macOS support (KMonad / Karabiner)
+- sample QMK / ZMK implementations for common keyboards
+- variants for specific keyboard layouts
 
 
 Why the name?
