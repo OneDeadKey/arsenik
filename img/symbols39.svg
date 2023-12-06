@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
 
-<!--
-  <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet"
-      href="42_style.css" type="text/css"/>
--->
-
   <style>
     rect, path {
       stroke: #666;

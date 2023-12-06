@@ -10,6 +10,7 @@
       fill: #999;
       font: normal 20px sans-serif;
       text-align: center;
+      text-anchor: middle;
     }
     .dualKey { fill: #ddd; transform: translateY(26px); }
 
@@ -35,11 +36,10 @@
       .dualKey             { fill: #666; }
       .layerMod, .colorMod { fill: #eee; }
       .layerSym, .colorSym { fill: #99f; }
-      .layerNav, .colorNav { fill: #e83; }
     }
   </style>
 
-  <g id="row_AD" text-anchor="middle">
+  <g id="row_AD">
     <g class="left">
       <g transform="translate(90)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -103,7 +103,7 @@
     </g>
   </g>
 
-  <g id="row_AC" text-anchor="middle">
+  <g id="row_AC">
     <g class="left">
       <g transform="translate(90)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -181,7 +181,7 @@
     </g>
   </g>
 
-  <g id="row_AB" text-anchor="middle">
+  <g id="row_AB">
     <g class="left">
       <g transform="translate(90)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -262,7 +262,7 @@
     </g>
   </g>
 
-  <g id="row_AA" text-anchor="middle">
+  <g id="row_AA">
     <g transform="translate(180)">
       <rect width="82" height="52" rx="5" ry="5"/>
       <rect width="41" height="26" rx="2" ry="2" class="dualKey"/>
@@ -274,7 +274,7 @@
     <g transform="translate(270)">
       <rect width="232" height="52" rx="5" ry="5"/>
       <rect width="116" height="26" rx="2" ry="2" class="dualKey"/>
-      <text x="58.0" y="42.8" class="layerMod colorNav shortcut" style="fill: #e83;">navigation</text>
+      <text x="58.0" y="42.8" class="layerMod colorNav shortcut">navigation</text>
     </g>
     <g transform="translate(510)">
       <rect width="82" height="52" rx="5" ry="5"/>
