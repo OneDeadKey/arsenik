@@ -1,21 +1,25 @@
-Selenium
+Selenium33
 ================================================================================
 
-A [Miryoku](https://github.com/manna-harbour/miryoku)-like approach to minimize
-finger movements without changing the keyboard layout:
-
-![base layer on a 33-key keyboard](img/base.svg)
+A basic [Miryoku](https://github.com/manna-harbour/miryoku)-like approach to
+minimize finger movements on any keyboard:
 
 - 3 home-row mods per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Super</kbd>
-- 3 layer-tap keys under the thumbs
-    - left: <kbd>Shift</kbd> / <kbd>Backspace</kbd>
-    - center: <kbd>Navigation</kbd> / <kbd>Space</kbd>
-    - right: <kbd>Symbols</kbd> / <kbd>Return</kbd>
+- 3 layer-tap keys under the thumbs: <kbd>Shift</kbd>/<kbd>Backspace</kbd>, <kbd>Navigation</kbd>/<kbd>Space</kbd>, <kbd>Prog</kbd>/<kbd>Return</kbd>
 
-The idea behind these layers is to **bring the characters under the fingers,
-rather than moving the fingers over the keys**. This approach is what makes
-those 34-key keyboards so comfortable, and the goal here is to get a comparable
-experience with any other keyboard — including your laptop’s.
+![base, navigation and prog layers on a 33-key keyboard](img/all.svg)
+
+A long press on the <kbd>Return</kbd> key brings up the Prog layer, where all
+programming symbols are arranged for comfort.
+
+A long press on the <kbd>Space</kbd> bar brings up the Navigation layer, with
+easy one-hand shortcuts (<kbd>Ctrl</kbd>-<kbd>WASZXCV</kbd>), Vim-like
+navigation (<kbd>HJKL</kbd>) and more…
+
+The idea behind these layers is to **bring the characters to the fingers, rather
+than moving the fingers to the keys**. This approach is what makes those 34-key
+keyboards so comfortable, and the goal here is to get a comparable experience
+with any other keyboard — including your laptop’s.
 
 
 Main Benefits
@@ -46,34 +50,10 @@ Of course, Selenium can be implemented in programmable keyboards with QMK, ZMK,
 Kaleidoscope, etc.
 
 
-Navigation Layer
+No numbers? No problem.
 --------------------------------------------------------------------------------
 
-A long press on the <kbd>Space</kbd> bar brings up the Navigation layer:
-
-![navigation layer on a 33-key keyboard](img/navigation.svg)
-
-- left: one-hand shortcuts (<kbd>Ctrl</kbd>-<kbd>WASZXCV</kbd>),
-<kbd>Tab</kbd>/<kbd>Shift</kbd>-<kbd>Tab</kbd>, prev/next
-- right: Vim-like arrows on <kbd>HJKL</kbd>, home/end page up/down, mouse scroll
-- bottom: <kbd>Delete</kbd> and <kbd>Escape</kbd>
-
-
-Symbols Layer
---------------------------------------------------------------------------------
-
-A long press on the <kbd>Return</kbd> key brings up the Symbols layer:
-
-![symbols layer on a 33-key keyboard](img/symbols.svg)
-
-- all symbols are on the same layer, arranged for comfort
-- the <kbd>Shift</kbd> key becomes a <kbd>Num</kbd> layer key
-
-
-NumRow Layer
---------------------------------------------------------------------------------
-
-If your keyboard has no number row, we got you covered! From <kbd>Symbols</kbd>
+If your keyboard has no number row, we got you covered! From <kbd>Prog</kbd>
 mode, pressing the <kbd>Num</kbd> key brings up the NumRow layer:
 
 ![NumRow layer on a 33-key keyboard](img/numrow.svg)
