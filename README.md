@@ -1,4 +1,4 @@
-Selenium33
+Arsenik
 ================================================================================
 
 A basic [Miryoku](https://github.com/manna-harbour/miryoku)-like approach to
@@ -40,51 +40,17 @@ Main Benefits
 - works with any keyboard
 
 
-Using Selenium33
+Using Arsenik
 --------------------------------------------------------------------------------
 
-### Standard/Laptop Keyboard
+Unlike Miryoku which requires 6 thumb keys, Arsenik has been designed to work
+with standard ANSI/ISO/laptop keyboards, leveraging the spacebar and the two
+Alt/Cmd keys.
 
-Unlike Miryoku which requires 6 thumb keys, Selenium has been designed to work
-with standard ANSI/ISO/laptop keyboards from the very beginning, leveraging the
-spacebar and the two Alt/Cmd keys.
+[Non-programmable keyboards are supported through kanata.](kanata).
 
-Non-programmable keyboards are supported through [kanata](https://github.com/jtroo/kanata):
-
-- install kanata
-- grab the [Selenium33 configuration file](kanata.kbd)
-- enjoy!
-
-| type  | with homerow-mods       | without homerow-mods         | suitable layouts                  |
-| ----- | ----------------------- | ---------------------------- | --------------------------------- |
-| ANSI  | [selenium_ansi.kbd][1]  | [selenium_easy_ansi.kbd][3]  | QWERTY, Dvorak, Colemak, Workman… |
-| AltGr | [selenium_altgr.kbd][2] | [selenium_easy_altgr.kbd][4] | [Lafayette42][10], [Ergo-L][11]…  |
-
-[1]: selenium_ansi.kbd
-[2]: selenium_altgr.kbd
-[3]: selenium_easy_ansi.kbd
-[4]: selenium_easy_altgr.kbd
-
-- ANSI variants assume all symbols in your keyboard layout are in their
-QWERTY-ANSI positions: works fine with most US layouts but Dvorak users will get
-a slightly different <kbd>Prog</kbd> layer.
-- AltGr variants use your layout’s AltGr layer instead of the <kbd>Prog</kbd>
-layer: perfect for layouts that already have an optimized AltGr layer, such as
-[QWERTY-Lafayette][10] and [Ergo-L][11].
-- “Easy” variants don’t use any homerow-mods and leave the left thumb key
-modifier unchanged — but they still use a <kbd>Prog</kbd> layer and put the
-<kbd>Backspace</kbd> and <kbd>Return</kbd> keys under the thumbs. A good
-starting point if you’re new to dual keys.
-
-[10]: https://qwerty-lafayette.org/42
-[11]: https://ergol.org
-
-Note that kanata can also use the laptop’s trackpoint buttons (e.g. ThinkPad)
-as two additional thumb keys. :-)
-
-### Custom Programmable Keyboard
-
-TODO: sample configurations for QMK, ZMK, Kaleidoscope, etc.
+Programmable keyboards should be trivial to configure withQMK, ZMK,
+Kaleidoscope, etc.
 
 
 No numbers? No problem.
@@ -107,7 +73,7 @@ interesting to use in order to minimize finger movements a bit more.
 TODO
 --------------------------------------------------------------------------------
 
-The main idea is settled (3 home-row mods + 3 layer-taps), but Selenium is still
+The main idea is settled (3 home-row mods + 3 layer-taps), but Arsenik is still
 a work in progress in an early stage. Expect refinements.
 
 - NumPad layer
@@ -115,14 +81,3 @@ a work in progress in an early stage. Expect refinements.
 - macOS support (KMonad / Karabiner)
 - sample QMK / ZMK implementations for common keyboards
 - variants for specific keyboard layouts
-
-
-Why the name?
---------------------------------------------------------------------------------
-
-I believe 34-key keyboards like the [Ferris][34] are the end game of ergonomic
-keyboards, and 34 is selenium’s atomic number. All other keyboards I’ve tried
-feel like unstable isotopes of the Ferris experience.
-
-[Other cultural biases](https://en.wikipedia.org/wiki/Evolution_(2001_film))
-might have been involved as well, though this remains to be proven. :-)
