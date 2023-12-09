@@ -1,0 +1,80 @@
+;; ANSI sub-layer (let kanata ignore all other keys)
+(defsrc
+  q    w    e    r    t    y    u    i    o    p
+  a    s    d    f    g    h    j    k    l    ;
+  z    x    c    v    b    n    m    ,    .    /
+       lalt           spc            ralt
+)
+
+;; Base layer (active by default when kanata starts up):
+;;  - home-row mods on SDF and JKL
+;;  - the 3 main thumb keys become mod/taps
+(deflayer qwerty
+  _    _    _    _    _    _    _    _    _    _
+  _    @ss  @dd  @ff  _    _    @jj  @kk  @ll  _
+  _    _    _    _    _    _    _    _    _    _
+       @sft           @nav           @sym
+)
+
+;; Navigation layer:
+;;  - right: Vim-like arrows on HJKL, home/end page up/down, mouse scroll
+;;  - left: one-hand shortcuts (Ctrl-WASZXCV), Tab/Shift-Tab, prev/next
+(deflayer vimnav
+  lrld C-w  bck  fwd  XX   home pgdn pgup end  XX
+  C-a  C-s S-tab tab  XX   lft  down up   rght XX
+  C-z  C-x  C-c  C-v  XX   @mwl @mwd @mwu @mwr XX
+       del            _              esc
+)
+
+;; Symbol layer
+(deflayer symbols
+  1    [    ]    S-4  S-5  S-6  S-7  S-8  '    0
+  S-[  S-9  S-0  S-]  =    S-=  -    S-,  S-.  S-'
+  @tld grv  S-\  S--  /    \    S-2  S-3  S-1  S-/
+       @num           spc            @alt
+)
+
+;; Numrow layer
+(deflayer numrow
+  S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0
+  1    2    3    4    5    6    7    8    9    0
+  XX   XX   XX   XX   XX   S--  -    ,    .    /
+       @sft           S-spc          @sym
+)
+
+;; Special key aliases
+(defalias
+  tld S-grv
+
+  ;; Main mod-tap: VimNav layer when hold, Space when tapped.
+  ;; The space key must be hold long enough (300ms) to become a layer shift.
+  nav (tap-hold 200 300 spc (layer-toggle vimnav))
+
+  ;; Space-cadet thumb keys: Shift/BackSpace, AltGr/Return
+  ;;  - acts as a modifier by default, or as BS/Ret when tapped separately;
+ ;;  - works great with Qwerty-Lafayette and Ergo-L keyboard layouts, where
+  ;;    neither Shift nor AltGr are used outside of the 3×10 main alpha keys.
+  sft (tap-hold-press 200 200 bspc lsft)
+  alt (tap-hold-press 200 200 ret ralt)
+  sym (tap-hold-press 200 200 ret (layer-toggle symbols))
+
+  ;; NumRow layer shifter
+  num (layer-toggle numrow)
+
+  ;; Home-row mods
+  ;; Must be hold long enough (300ms) to become a modifier.
+  ss (tap-hold 200 300 s lmet)
+  dd (tap-hold 200 300 d lalt)
+  ff (tap-hold 200 300 f lctl)
+  jj (tap-hold 200 300 j rctl)
+  kk (tap-hold 200 300 k ralt)
+  ll (tap-hold 200 300 l rmet)
+
+  ;; Mouse wheel emulation
+  mwu (mwheel-up    50 120)
+  mwd (mwheel-down  50 120)
+  mwl (mwheel-left  50 120)
+  mwr (mwheel-right 50 120)
+)
+
+;; vim: set ft=lisp
