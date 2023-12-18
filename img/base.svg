@@ -2,12 +2,12 @@
 
   <style>
     rect, path {
+      fill: #f8f8f8;
       stroke: #666;
       stroke-width: .5px;
-      fill: #fff;
     }
     text {
-      fill: #ccc;
+      fill: #999;
       font: normal 20px sans-serif;
       text-align: center;
     }
@@ -27,7 +27,7 @@
 
     @media (prefers-color-scheme: dark) {
       text       { fill: #888; }
-      rect, path { fill: #555; }
+      rect, path { fill: #444; }
       .layer     { fill: #eee; }
     }
   </style>

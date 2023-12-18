@@ -23,12 +23,10 @@
     .layer  { font-size: 14px; font-weight: bold; }
     .layerNum { fill: green; }
     .layerSym { fill: blue; }
-    .active   { fill: #ddd; }
 
     @media (prefers-color-scheme: dark) {
       text      { fill: #888; }
       rect      { fill: #444; }
-      .active   { fill: #666; }
       .layerNum { fill: #6d6; }
       .layerSym { fill: #99f; }
     }
@@ -205,17 +203,17 @@
 
   <g id="row_AA">
     <g transform="translate(180)">
-      <rect width="82" height="52" rx="5" ry="5" class="active"/>
-      <text x="20.5" y="20.6" class="level2" style="font-size: 14px;">⌫</text>
-      <text x="20.5" y="42.8" class="layer layerNum">num</text>
+      <rect width="82" height="52" rx="5" ry="5" class="layerNum"/>
+      <!-- <text x="20.5" y="20.6" class="level2" style="font-size: 14px;">⌫</text> -->
+      <text x="20.5" y="42.8" class="layer">num</text>
     </g>
     <g transform="translate(270)">
       <rect width="232" height="52" rx="5" ry="5"/>
     </g>
     <g transform="translate(510)">
       <rect width="82" height="52" rx="5" ry="5"/>
-      <text x="20.5" y="23.6" class="level2">⏎</text>
-      <text x="20.5" y="42.8" class="layer layerSym">prog</text>
+      <!-- <text x="20.5" y="23.6" class="level2">⏎</text> -->
+      <text x="20.5" y="42.8" class="layer layerSym">sym</text>
     </g>
   </g>
 
