@@ -89,7 +89,7 @@ blatantly taken *as is*.
 
 - being the most efficient 3×5 layout — [Miryoku][1] is probably the most
 advanced approach for that, at least on custom 36-key keyboards;
-- being the most intuitive 3×5 layout — [Neo][4]’s navigation-and-numpad layer
+- being the most intuitive 3×5 layout — [Neo][5]’s navigation-and-numpad layer
 would be an easier alternative, but a more Vim-like approach has been preferred;
 - fitting any OS layout — Arsenik works best if your OS layout has either no
 AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr layer
