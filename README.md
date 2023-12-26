@@ -1,7 +1,7 @@
 Arsenik
 ================================================================================
 
-A basic [Miryoku][1]-like approach to minimize finger movements:
+A beginner-friendly,[Miryoku][1]-like approach to minimize finger movements:
 
 - 3 home-row mods per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Super</kbd>
 - 3 layer-tap keys under the thumbs: <kbd>Shift</kbd>/<kbd>Backspace</kbd>,
@@ -115,7 +115,8 @@ blatantly taken *as is*;
 ### Alternative Symbol Layers
 
 - [Neo][5]
-- [Pascal Getreuer’s][7]
+- [Seniply][7]
+- [Pascal Getreuer’s][8]
 
 ### Non-Goals
 
@@ -125,13 +126,21 @@ advanced approach for that, at least on custom 36-key keyboards;
 AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr layer
 ([Lafayette][2], [Ergo-L][3]…).
 
+### Similar Projects
+
+- [Miryoku][1]: 36 keys, 6 layers
+- [Seniply][7]: 34 keys, 6 layers, no layer-taps
+- [Selenium][11]: 33 keys, 4 layers — a Vim-friendly Arsenik mod
+
 [1]: https://github.com/manna-harbour/miryoku
 [2]: https://qwerty-lafayette.org/42
 [3]: https://ergol.org
 [4]: https://dreymar.colemak.org/layers-extend.html
-[5]: https://www.neo-layout.org/
+[5]: https://neo-layout.org
 [6]: https://github.com/lobre/shaka34
-[7]: https://getreuer.info/posts/keyboards/symbol-layer/
+[7]: https://stevep99.github.io/seniply/
+[8]: https://getreuer.info/posts/keyboards/symbol-layer/#my-symbol-layer
+[11]: mods/selenium33
 
 
 TODO

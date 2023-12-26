@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
+
+  <style>
+    rect, path {
+      fill: #f8f8f8;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: #999;
+      font: normal 20px sans-serif;
+      text-align: center;
+    }
+    .layer {
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: middle;
+      fill: #333;
+    }
+
+    #row_AD { transform: translate(64px,  64px); }
+    #row_AC { transform: translate(64px, 124px); }
+    #row_AB { transform: translate(64px, 184px); }
+    #row_AA { transform: translate(64px, 244px); }
+    .left   { transform: translate(-15px, 0); }
+    .right  { transform: translate(+15px, 0); }
+
+    @media (prefers-color-scheme: dark) {
+      text       { fill: #888; }
+      rect, path { fill: #444; }
+      .layer     { fill: #eee; }
+    }
+  </style>
+
+  <g id="row_AD">
+    <g class="left">
+      <g transform="translate(90)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">Q</text>
+        </g>
+      </g>
+      <g transform="translate(150)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">W</text>
+        </g>
+      </g>
+      <g transform="translate(210)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">E</text>
+        </g>
+      </g>
+      <g transform="translate(270)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">R</text>
+        </g>
+      </g>
+      <g transform="translate(330)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">T</text>
+        </g>
+      </g>
+    </g>
+    <g class="right">
+      <g transform="translate(390)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">Y</text>
+        </g>
+      </g>
+      <g transform="translate(450)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">U</text>
+        </g>
+      </g>
+      <g transform="translate(510)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">I</text>
+        </g>
+      </g>
+      <g transform="translate(570)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">O</text>
+        </g>
+      </g>
+      <g transform="translate(630)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">P</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AC">
+    <g class="left">
+      <g transform="translate(90)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">A</text>
+        </g>
+      </g>
+      <g transform="translate(150)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">S</text>
+          <text x="26.0" y="43.4" class="layer">Super</text>
+        </g>
+      </g>
+      <g transform="translate(210)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">D</text>
+          <text x="26.0" y="43.4" class="layer">Alt</text>
+        </g>
+      </g>
+      <g transform="translate(270)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">F</text>
+          <text x="26.0" y="43.4" class="layer">Ctrl</text>
+        </g>
+      </g>
+      <g transform="translate(330)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">G</text>
+        </g>
+      </g>
+    </g>
+    <g class="right">
+      <g transform="translate(390)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">H</text>
+        </g>
+      </g>
+      <g transform="translate(450)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">J</text>
+          <text x="26.0" y="43.4" class="layer">Ctrl</text>
+        </g>
+      </g>
+      <g transform="translate(510)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">K</text>
+          <text x="26.0" y="43.4" class="layer">Alt</text>
+        </g>
+      </g>
+      <g transform="translate(570)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">L</text>
+          <text x="26.0" y="43.4" class="layer">Super</text>
+        </g>
+      </g>
+      <g transform="translate(630)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="43.4" class="level1">;</text>
+          <text x="12.8" y="20.6" class="level2">:</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AB">
+    <g class="left">
+      <g transform="translate(90)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">Z</text>
+        </g>
+      </g>
+      <g transform="translate(150)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">X</text>
+        </g>
+      </g>
+      <g transform="translate(210)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">C</text>
+        </g>
+      </g>
+      <g transform="translate(270)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">V</text>
+        </g>
+      </g>
+      <g transform="translate(330)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">B</text>
+        </g>
+      </g>
+    </g>
+    <g class="right">
+      <g transform="translate(390)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">N</text>
+        </g>
+      </g>
+      <g transform="translate(450)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="20.6" class="level2">M</text>
+        </g>
+      </g>
+      <g transform="translate(510)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="43.4" class="level1">,</text>
+          <text x="12.8" y="20.6" class="level2">&lt;</text>
+        </g>
+      </g>
+      <g transform="translate(570)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="43.4" class="level1">.</text>
+          <text x="12.8" y="20.6" class="level2">&gt;</text>
+        </g>
+      </g>
+      <g transform="translate(630)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g class="key" text-anchor="middle">
+          <text x="12.8" y="43.4" class="level1">/</text>
+          <text x="12.8" y="20.6" class="level2">?</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AA">
+    <g transform="translate(180)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <text x="12.8" y="20.6" class="level2" style="font-size: 14px;">⌫</text>
+      <text x="41.0" y="42.8" class="layer">Shift</text>
+    </g>
+    <g class="homeKey" transform="translate(270)">
+      <rect width="232" height="52" rx="5" ry="5"/>
+      <text x="116.0" y="42.8" class="layer" style="fill: #e83;">Navigation</text>
+    </g>
+    <g transform="translate(510)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <text x="12.8" y="23.6" class="level2">⏎</text>
+      <text x="41.0" y="42.8" class="layer" style="fill: #66d;">Symbols</text>
+    </g>
+  </g>
+
+</svg>
