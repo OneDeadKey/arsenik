@@ -45,14 +45,14 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">W</text>
-          <text x="38.0" y="43.4" class="layerSym">[</text>
+          <text x="38.0" y="43.4" class="layerSym">&lt;</text>
         </g>
       </g>
       <g transform="translate(210)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">E</text>
-          <text x="38.0" y="43.4" class="layerSym">]</text>
+          <text x="38.0" y="43.4" class="layerSym">&gt;</text>
         </g>
       </g>
       <g transform="translate(270)">
@@ -89,7 +89,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">I</text>
-          <text x="38.0" y="43.4" class="layerSym">"</text>
+          <text x="38.0" y="43.4" class="layerSym">*</text>
         </g>
       </g>
       <g transform="translate(570)">
@@ -143,7 +143,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">G</text>
-          <text x="38.0" y="43.4" class="layerSym">_</text>
+          <text x="38.0" y="43.4" class="layerSym"> = </text>
         </g>
       </g>
     </g>
@@ -152,7 +152,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">H</text>
-          <text x="38.0" y="43.4" class="layerSym">|</text>
+          <text x="38.0" y="43.4" class="layerSym">\</text>
         </g>
       </g>
       <g transform="translate(450)">
@@ -173,7 +173,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">L</text>
-          <text x="38.0" y="43.4" class="layerSym">*</text>
+          <text x="38.0" y="43.4" class="layerSym">/</text>
         </g>
       </g>
       <g transform="translate(630)">
@@ -181,7 +181,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="43.4" class="level1">;</text>
           <text x="12.8" y="20.6" class="level2">:</text>
-          <text x="38.0" y="43.4" class="layerSym">!</text>
+          <text x="38.0" y="43.4" class="layerSym">"</text>
         </g>
       </g>
     </g>
@@ -200,21 +200,21 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">X</text>
-          <text x="38.0" y="43.4" class="layerSym">&lt;</text>
+          <text x="38.0" y="43.4" class="layerSym">[</text>
         </g>
       </g>
       <g transform="translate(210)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">C</text>
-          <text x="38.0" y="43.4" class="layerSym">&gt;</text>
+          <text x="38.0" y="43.4" class="layerSym">]</text>
         </g>
       </g>
       <g transform="translate(270)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">V</text>
-          <text x="38.0" y="43.4" class="layerSym"> = </text>
+          <text x="38.0" y="43.4" class="layerSym">_</text>
         </g>
       </g>
       <g transform="translate(330)">
@@ -230,14 +230,14 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">N</text>
-          <text x="38.0" y="43.4" class="layerSym">\</text>
+          <text x="38.0" y="43.4" class="layerSym">|</text>
         </g>
       </g>
       <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">M</text>
-          <text x="38.0" y="43.4" class="layerSym">/</text>
+          <text x="38.0" y="43.4" class="layerSym">!</text>
         </g>
       </g>
       <g transform="translate(510)">
@@ -270,15 +270,13 @@
   <g id="row_AA">
     <g transform="translate(180)">
       <rect width="82" height="52" rx="5" ry="5"/>
-      <!-- <text x="20.5" y="20.6" class="level2" style="font-size: 14px;">⌫</text> -->
-      <text x="20.5" y="42.8" class="layer layerNum">num</text>
+      <text x="20.5" y="20.6" class="level2" style="font-size: 14px;">⌫</text>
     </g>
     <g transform="translate(270)">
       <rect width="232" height="52" rx="5" ry="5"/>
     </g>
     <g transform="translate(510)">
       <rect width="82" height="52" rx="5" ry="5" class="layerSym"/>
-      <!-- <text x="20.5" y="23.6" class="level2">⏎</text> -->
       <text x="20.5" y="42.8" class="layer">sym</text>
     </g>
   </g>
