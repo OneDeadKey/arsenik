@@ -12,57 +12,31 @@
   _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _
-       @sft           @nav           @sym
+       @alt           @nav           @sym
 )
 
 ;; Navigation layer:
-;;  - right: Vim-like arrows on HJKL, home/end page up/down, mouse scroll
-;;  - left: one-hand shortcuts (Ctrl-WASZXCV), Tab/Shift-Tab, prev/next
-(deflayer vimnav
-  lrld C-w  bck  fwd  XX   home pgdn pgup end  XX
-  C-a  C-s S-tab tab  XX   lft  down up   rght XX
-  C-z  C-x  C-c  C-v  XX   @mwl @mwd @mwu @mwr XX
-       del            _              esc
-)
-
-;; Symbol layer (= AltGr except for the left thumb key)
-(deflayer symbols
-  RA-q RA-w RA-e RA-r RA-t RA-y RA-u RA-i RA-o RA-p
-  RA-a RA-s RA-d RA-f RA-g RA-h RA-j RA-k RA-l RA-;
-  RA-z RA-x RA-c RA-v RA-b RA-n RA-m RA-, RA-. RA-/
-       @num           spc            _
-)
-
-;; Numrow layer
-(deflayer numrow
-  S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0
-  1    2    3    4    5    6    7    8    9    0
-  XX   XX   XX   XX   XX   S--  -    ,    .    /
-       @sft           S-spc          @sym
+;;  - left: arrows, Tab/Shift-Tab, one-hand shortcuts (Ctrl-AZXCV)
+;;  - right: numpad
+(deflayer numnav
+  tab  home up   end  pgup    /  7  8  9  XX
+  C-a  lft  down rght pgdn    -  4  5  6  0
+  C-z  C-x  C-c  C-v  S-tab   ,  1  2  3  .
+       del            _             esc
 )
 
 ;; Special key aliases
 (defalias
   ;; Main mod-tap: VimNav layer when hold, Space when tapped.
   ;; The space key must be hold long enough (300ms) to become a layer shift.
-  nav (tap-hold 200 300 spc (layer-toggle vimnav))
+  nav (tap-hold 200 300 spc (layer-toggle numnav))
 
   ;; Space-cadet thumb keys: Shift/BackSpace, AltGr/Return
   ;;  - acts as a modifier by default, or as BS/Ret when tapped separately;
   ;;  - works great with Qwerty-Lafayette and Ergo-L keyboard layouts, where
   ;;    neither Shift nor AltGr are used outside of the 3×10 main alpha keys.
-  sft (tap-hold-press 200 200 bspc lsft)
-  alt (tap-hold-press 200 200 ret ralt)
-  sym (tap-hold-press 200 200 ret (layer-toggle symbols))
-
-  ;; NumRow layer shifter
-  num (layer-toggle numrow)
-
-  ;; Mouse wheel emulation
-  mwu (mwheel-up    50 120)
-  mwd (mwheel-down  50 120)
-  mwl (mwheel-left  50 120)
-  mwr (mwheel-right 50 120)
+  alt (tap-hold-press 200 200 bspc lalt)
+  sym (tap-hold-press 200 200 ret ralt)
 )
 
 ;; vim: set ft=lisp

@@ -44,12 +44,13 @@ Alt/Cmd keys.
 Pick Your Poison!
 --------------------------------------------------------------------------------
 
-A step-by-step approach is proposed.
+Adjusting to compact keyboard layouts isn’t easy, but Arsenik is designed for
+a step-by-step approach.
 
 ### 1. Supercharge Your Thumbs
 
 If you’re new to mod-taps, we suggest to start with the “easy” variants where
-just the thumbs are affected:
+only the thumbs are affected:
 
 - the left thumb key remains a <kbd>Cmd</kbd> or <kbd>Alt</kbd> key when hold,
 but emits a <kbd>Backspace</kbd> when tapped;
@@ -76,12 +77,13 @@ thumb key, and symmetrical modifiers on the homerow.
 
 ### 3. Spice It Up
 
-The 300 ms delay before a key becomes a modifier has been chosen to be easy for
+- the 300 ms delay before a key becomes a modifier has been chosen to be easy for
 beginners. Once used to mod-taps, you may want to reduce it so keyboard
-shortcuts can be done more quickly.
-
-Adding new layers should be easy, even without additional thumb keys — check the
-mods to get some ideas.
+shortcuts can be done more quickly;
+- adding new layers should be easy, even without additional thumb keys — check the
+mods to get some ideas;
+- the right thumb key could do something more useful than <kbd>Enter</kbd> —
+like a one-time-shift, for instance.
 
 
 Downloads
