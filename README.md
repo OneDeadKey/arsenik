@@ -15,8 +15,7 @@ A basic [Miryoku][1]-like approach to minimize finger movements:
 layer, where all programming symbols are arranged for comfort and efficiency,
 Dvorak-like.
 - A long press on the <kbd>Space</kbd> bar brings up the <kbd>Navigation</kbd>
-layer, with easy one-hand shortcuts (<kbd>Ctrl</kbd>-<kbd>WASZXCV</kbd>),
-Vim-like navigation (<kbd>HJKL</kbd>) and more…
+layer, with a numpad, cursor navigation (<kbd>ESDF</kbd>) and one-hand shortcuts.
 
 This is how modern ergonomic keyboards work — e.g. [Planck][47], [Atreus][44],
 [Corne][42], [Ferris][34]… The goal here is to propose an approach that works
@@ -32,48 +31,79 @@ Main Benefits
 --------------------------------------------------------------------------------
 
 - <kbd>Shift</kbd>, <kbd>Backspace</kbd>, <kbd>Return</kbd> under the thumbs!
-- all programming symbols in the comfortable 3×10 zone
+- all numbers and programming symbols in the comfortable 3×10 zone
 - symmetrical modifiers on the home row
-- Vim-like navigation in all apps
 - easier left-hand shortcuts
 - works with any keyboard
-
-
-Using Arsenik
---------------------------------------------------------------------------------
 
 Unlike Miryoku which requires 6 thumb keys, Arsenik has been designed to work
 with standard ANSI/ISO/laptop keyboards, leveraging the spacebar and the two
 Alt/Cmd keys.
 
+
+Pick Your Poison!
+--------------------------------------------------------------------------------
+
+Adjusting to compact keyboard layouts isn’t easy, but Arsenik is designed for
+a step-by-step approach.
+
+### 1. Supercharge Your Thumbs
+
+If you’re new to mod-taps, we suggest to start with the “easy” variants where
+only the thumbs are affected:
+
+- the left thumb key remains a <kbd>Cmd</kbd> or <kbd>Alt</kbd> key when hold,
+but emits a <kbd>Backspace</kbd> when tapped;
+- the right thumb key brings the <kbd>Symbols</kbd> layer when hold (similar to
+an <kbd>AltGr</kbd> key), and emits <kbd>Return</kbd> when tapped;
+- the spacebar brings the <kbd>Navigation</kbd> layer when when hold.
+
+![alt, navigation and sym layers under the thumbs](img/base_easy.svg)
+
+Having <kbd>Backspace</kbd> and <kbd>Enter</kbd> under the thumbs is enough to
+reduce the pinky fatigue very significantly. And using the <kbd>Symbol</kbd>
+and <kbd>Navigation</kbd> layer further reduces hand and finger movements.
+
+### 2. Enable the Home-Row Mods
+
+When you are familiar with mod-taps, it’s time to enable them on the homerow
+with the “hrm” variants:
+
+- <kbd>FDS</kbd> and <kbd>JKL</kbd> become <kbd>Ctrl</kbd>, <kbd>Alt</kbd>,
+<kbd>Super</kbd> when hold long enough;
+- the left thumb key can now emit a <kbd>Shift</kbd> rather than <kbd>Alt</kbd>
+wen hold.
+
+![homerow mods on SDF keys](img/base_hrm.svg)
+
+This is a very basic variant of the [Miryoku][1] principle: one layer on each
+thumb key, and symmetrical modifiers on the homerow.
+
+### 3. Spice It Up
+
+- the 300 ms delay before a key becomes a modifier has been chosen to be easy for
+beginners. Once used to mod-taps, you may want to reduce it so keyboard
+shortcuts can be done more quickly;
+- adding new layers should be easy, even without additional thumb keys — check the
+mods to get some ideas;
+- the right thumb key could do something more useful than <kbd>Enter</kbd> —
+like a one-time-shift, for instance.
+
+
+Downloads
+--------------------------------------------------------------------------------
+
 [Non-programmable keyboards are supported through kanata.](kanata)
+
+Other desktop implementations (kmonad, keyd…) would be nice to see as well.
 
 Programmable keyboards should be trivial to configure with QMK, ZMK,
 Kaleidoscope, etc.
 
 
-No numbers? No problem.
---------------------------------------------------------------------------------
+### Install Kanata
 
-If your keyboard has no number row, we got you covered! In <kbd>Symbol</kbd>
-mode, pressing the left thumb key brings up the <kbd>NumRow</kbd> layer:
-
-![NumRow layer on a 33-key keyboard](img/numrow.svg)
-
-- all digits are on the home row, in the order you already know
-- the upper row helps with <kbd>Shift</kbd>-digit shortcuts
-- the lower row has dash, comma, dot and slash signs to help with number / date
-inputs
-
-Even on keyboards that *do* have a number row, this <kbd>NumRow</kbd> layer can
-be interesting to use in order to minimize finger movements a bit more.
-
-
-Install
---------------------------------------------------------------------------------
-
-Arsenik is powered by [kanata](https://github.com/jtroo/kanata), which you’ll
-need to install by either downloading a [pre-built
+You can install `kanata` by either downloading a [pre-built
 executable](https://github.com/jtroo/kanata/releases), or by running the
 following commands (if you have `rustc` installed):
 
@@ -140,20 +170,18 @@ Related Projects
 - [Miryoku][1] for the main idea of using modifiers on the homerow and layer
 shifters under the thumbs;
 - [Lafayette][2] and [Ergo-L][3] for the <kbd>Symbol</kbd> layer, which has been
-blatantly taken *as is*.
+blatantly taken *as is*;
+- [Extend][4], [Neo][5], [Shaka34][6] for the <kbd>Navigation</kbd> layer.
 
-### Alternatives
+### Alternative Symbol Layers
 
-- [Extend][4] for the <kbd>Navigation</kbd> layer
-- [Neo][5] for the <kbd>Navigation</kbd> and <kbd>Symbol</kbd> layers
-- [Pascal Getreuer][6] for the <kbd>Symbol</kbd> layer
+- [Neo][5]
+- [Pascal Getreuer’s][7]
 
 ### Non-Goals
 
 - being the most efficient 3×5 layout — [Miryoku][1] is probably the most
 advanced approach for that, at least on custom 36-key keyboards;
-- being the most intuitive 3×5 layout — [Neo][5]’s navigation-and-numpad layer
-would be an easier alternative, but a more Vim-like approach has been preferred;
 - fitting any OS layout — Arsenik works best if your OS layout has either no
 AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr layer
 ([Lafayette][2], [Ergo-L][3]…).
@@ -163,13 +191,13 @@ AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr lay
 [3]: https://ergol.org
 [4]: https://dreymar.colemak.org/layers-extend.html
 [5]: https://www.neo-layout.org/
-[6]: https://getreuer.info/posts/keyboards/symbol-layer/
+[6]: https://github.com/lobre/shaka34
+[7]: https://getreuer.info/posts/keyboards/symbol-layer/
 
 
 TODO
 --------------------------------------------------------------------------------
 
-- NumPad layer?
 - angle mods!
 - KMonad / Karabiner support
 - sample QMK / ZMK implementations for common keyboards
