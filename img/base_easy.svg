@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="26 -4 720 60">
+
+  <style>
+    rect, path {
+      fill: #f8f8f8;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: #999;
+      font: normal 20px sans-serif;
+      text-align: center;
+    }
+    .layer {
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: middle;
+      fill: #333;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      text       { fill: #888; }
+      rect, path { fill: #444; }
+      .layer     { fill: #eee; }
+    }
+  </style>
+
+  <g id="row_AA">
+    <g transform="translate(180)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <text x="12.8" y="20.6" style="font-size: 14px;">⌫</text>
+      <text x="41.0" y="42.8" class="layer">Alt</text>
+    </g>
+    <g class="homeKey" transform="translate(270)">
+      <rect width="232" height="52" rx="5" ry="5"/>
+      <text x="116.0" y="42.8" class="layer" style="fill: #e83;">Navigation</text>
+    </g>
+    <g transform="translate(510)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <text x="12.8" y="23.6">⏎</text>
+      <text x="41.0" y="42.8" class="layer" style="fill: #66d;">Symbols</text>
+    </g>
+  </g>
+
+</svg>
