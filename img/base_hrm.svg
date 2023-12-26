@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -4 720 60">
+
+  <style>
+    rect, path {
+      fill: #f8f8f8;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: #999;
+      font: normal 20px sans-serif;
+      text-align: center;
+    }
+    .layer {
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: middle;
+      fill: #333;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      text       { fill: #888; }
+      rect, path { fill: #444; }
+      .layer     { fill: #eee; }
+    }
+  </style>
+
+  <g id="row_AC" text-anchor="middle">
+    <g transform="translate(90)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <g class="key">
+        <text x="12.8" y="20.6">A</text>
+      </g>
+    </g>
+    <g transform="translate(150)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <g class="key">
+        <text x="12.8" y="20.6">S</text>
+        <text x="26.0" y="43.4" class="layer">Super</text>
+      </g>
+    </g>
+    <g transform="translate(210)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <g class="key">
+        <text x="12.8" y="20.6">D</text>
+        <text x="26.0" y="43.4" class="layer">Alt</text>
+      </g>
+    </g>
+    <g transform="translate(270)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <g class="key">
+        <text x="12.8" y="20.6">F</text>
+        <text x="26.0" y="43.4" class="layer">Ctrl</text>
+      </g>
+    </g>
+    <g transform="translate(330)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <g class="key">
+        <text x="12.8" y="20.6">G</text>
+      </g>
+    </g>
+  </g>
+
+</svg>

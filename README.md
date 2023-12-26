@@ -58,6 +58,8 @@ but emits a <kbd>Backspace</kbd> when tapped;
 an <kbd>AltGr</kbd> key), and emits <kbd>Return</kbd> when tapped;
 - the spacebar brings the <kbd>Navigation</kbd> layer when when hold.
 
+![alt, navigation and sym layers under the thumbs](img/base_easy.svg)
+
 Having <kbd>Backspace</kbd> and <kbd>Enter</kbd> under the thumbs is enough to
 reduce the pinky fatigue very significantly. And using the <kbd>Symbol</kbd>
 and <kbd>Navigation</kbd> layer further reduces hand and finger movements.
@@ -71,6 +73,8 @@ with the “hrm” variants:
 <kbd>Super</kbd> when hold long enough;
 - the left thumb key can now emit a <kbd>Shift</kbd> rather than <kbd>Alt</kbd>
 wen hold.
+
+![homerow mods on SDF keys](img/base_hrm.svg)
 
 This is a very basic variant of the [Miryoku][1] principle: one layer on each
 thumb key, and symmetrical modifiers on the homerow.
@@ -90,7 +94,8 @@ Downloads
 --------------------------------------------------------------------------------
 
 [Non-programmable keyboards are supported through kanata.](kanata)
-Other implementations (kmonad, keyd…) would be nice to see as well.
+
+Other desktop implementations (kmonad, keyd…) would be nice to see as well.
 
 Programmable keyboards should be trivial to configure with QMK, ZMK,
 Kaleidoscope, etc.
