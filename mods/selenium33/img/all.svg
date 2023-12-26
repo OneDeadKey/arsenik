@@ -51,13 +51,13 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">W</text>
         <text x="38.0" y="20.6" class="layerNav shortcut">^w</text>
-        <text x="38.0" y="43.4" class="layerSym">[</text>
+        <text x="38.0" y="43.4" class="layerSym">&lt;</text>
       </g>
       <g transform="translate(210)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">E</text>
         <text x="38.0" y="20.6" class="layerNav">⎗</text>
-        <text x="38.0" y="43.4" class="layerSym">]</text>
+        <text x="38.0" y="43.4" class="layerSym">&gt;</text>
       </g>
       <g transform="translate(270)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -88,7 +88,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">I</text>
         <text x="38.0" y="20.6" class="layerNav">⇞</text>
-        <text x="38.0" y="43.4" class="layerSym">"</text>
+        <text x="38.0" y="43.4" class="layerSym">*</text>
       </g>
       <g transform="translate(570)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -139,7 +139,7 @@
       <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">G</text>
-        <text x="38.0" y="43.4" class="layerSym">_</text>
+        <text x="38.0" y="43.4" class="layerSym"> = </text>
       </g>
     </g>
     <g class="right">
@@ -147,7 +147,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">H</text>
         <text x="38.0" y="20.6" class="layerNav">←</text>
-        <text x="38.0" y="43.4" class="layerSym">|</text>
+        <text x="38.0" y="43.4" class="layerSym">\</text>
       </g>
       <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -171,13 +171,13 @@
         <text x="12.8" y="20.6" class="level2">L</text>
         <text x="12.8" y="43.4" class="layerMod">⌘</text>
         <text x="38.0" y="20.6" class="layerNav">→</text>
-        <text x="38.0" y="43.4" class="layerSym">*</text>
+        <text x="38.0" y="43.4" class="layerSym">/</text>
       </g>
       <g transform="translate(630)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">;</text>
         <text x="12.8" y="20.6" class="level2">:</text>
-        <text x="38.0" y="43.4" class="layerSym">!</text>
+        <text x="38.0" y="43.4" class="layerSym">"</text>
       </g>
     </g>
   </g>
@@ -197,7 +197,7 @@
         <g>
           <text x="12.8" y="20.6" class="level2">X</text>
           <text x="38.0" y="20.6" class="layerNav shortcut">^x</text>
-          <text x="38.0" y="43.4" class="layerSym">&lt;</text>
+          <text x="38.0" y="43.4" class="layerSym">[</text>
         </g>
       </g>
       <g transform="translate(210)">
@@ -205,7 +205,7 @@
         <g>
           <text x="12.8" y="20.6" class="level2">C</text>
           <text x="38.0" y="20.6" class="layerNav shortcut">^c</text>
-          <text x="38.0" y="43.4" class="layerSym">&gt;</text>
+          <text x="38.0" y="43.4" class="layerSym">]</text>
         </g>
       </g>
       <g transform="translate(270)">
@@ -213,7 +213,7 @@
         <g>
           <text x="12.8" y="20.6" class="level2">V</text>
           <text x="38.0" y="20.6" class="layerNav shortcut">^v</text>
-          <text x="38.0" y="43.4" class="layerSym"> = </text>
+          <text x="38.0" y="43.4" class="layerSym">_</text>
         </g>
       </g>
       <g transform="translate(330)">
@@ -230,14 +230,14 @@
         <text x="12.8" y="20.6" class="level2">N</text>
         <text x="30.0" y="20.6" class="layerNav">🖰</text>
         <text x="38.0" y="20.6" class="layerNav">←</text>
-        <text x="38.0" y="43.4" class="layerSym">\</text>
+        <text x="38.0" y="43.4" class="layerSym">|</text>
       </g>
       <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
         <text x="30.0" y="20.6" class="layerNav">🖰</text>
         <text x="42.0" y="20.6" class="layerNav">↓</text>
-        <text x="38.0" y="43.4" class="layerSym">/</text>
+        <text x="38.0" y="43.4" class="layerSym">!</text>
       </g>
       <g transform="translate(510)">
         <rect width="52" height="52" rx="5" ry="5"/>

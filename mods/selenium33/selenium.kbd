@@ -11,11 +11,10 @@
 ;; declarations must have the same number of keys as defsrc. Any keys not listed
 ;; in defsrc will be passed straight to the operating system.
 (defsrc
-  grv  1    2    3    4    5         6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t         y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g         h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b         n    m    ,    .    /    rsft
-       lctl lmet lalt          spc             ralt rmet rctl
+  q    w    e    r    t         y    u    i    o    p
+  a    s    d    f    g         h    j    k    l    ;
+  z    x    c    v    b         n    m    ,    .    /
+            lalt          spc             ralt
 )
 
 ;; Base layer (active by default when kanata starts up):
@@ -23,40 +22,36 @@
 ;;  - home-row mods on SDF and JKL
 ;;  - CapsLock becomes Escape
 (deflayer qwerty
-  _    _    _    _    _    _         _    _    _    _    _    _    _    _
-  _    _    _    _    _    _         _    _    _    _    _    _    _    _
-  esc  _    @ss  @dd  @ff  _         _    @jj  @kk  @ll  _    _    _
-  _    _    _    _    _    _         _    _    _    _    _    _
-       _    _    @sft          @nav            @ssm _    _
+  _    _    _    _    _         _    _    _    _    _    _
+  _    @ss  @dd  @ff  _         _    @jj  @kk  @ll  _    _
+  _    _    _    _    _         _    _    _    _    _    _
+            @sft          @nav            @ssm
 )
 
 ;; Symbol layer
 (deflayer symbols
-  _    AG-1 AG-2 AG-3 AG-4 AG-5      AG-6 AG-7 AG-8 AG-9 AG-0 _    _    _
-  _    AG-q AG-w AG-e AG-r AG-t      AG-y AG-u AG-i AG-o AG-p _    _    _
-  _    AG-a AG-s AG-d AG-f AG-g      AG-h AG-j AG-k AG-l AG-; _    _
-  _    AG-z AG-x AG-c AG-v AG-b      AG-n AG-m AG-, AG-. AG-/ _
-       _    _    @num          spc             @sym _    _
+  AG-q AG-w AG-e AG-r AG-t      AG-y AG-u AG-i AG-o AG-p
+  AG-a AG-s AG-d AG-f AG-g      AG-h AG-j AG-k AG-l AG-;
+  AG-z AG-x AG-c AG-v AG-b      AG-n AG-m AG-, AG-. AG-/
+            @num           spc            @sym
 )
 
 ;; Numrow layer
 (deflayer numrow
-  _    _    _    _    _    _         _    _    _    _    _    _    _    _
-  _    S-1  S-2  S-3  S-4  S-5       S-6  S-7  S-8  S-9  S-0  _    _    _
-  _    1    2    3    4    5         6    7    8    9    0    _    _
-  _    @dk1 @dk2 @dk3 @dk4 @dk5      XX   -    ,    .    /    _
-       _    _    @num          S-spc           @sym _    _
+  S-1  S-2  S-3  S-4  S-5       S-6  S-7  S-8  S-9  S-0
+  1    2    3    4    5         6    7    8    9    0
+  @dk1 @dk2 @dk3 @dk4 @dk5      XX   -    ,    .    /
+            @num          S-spc           @sym
 )
 
 ;; Numpad layer
 ;;  - right: numpad below 798
 ;;  - left: arrow bloc on ESDF + home/end + page up/down
 (deflayer numpad
-  _    _    _    _    _    _         _    _    _    _    _    _    _    _
-  _    XX   home up   end  pgup      XX   7    8    9    XX   XX   XX   _
-  _    XX   lft  down rght pgdn      -    4    5    6    0    XX   _
-  _    XX   XX   XX   XX   XX        ,    1    2    3    .    _
-       _    _    @std           spc            @std _    _
+  XX   home up   end  pgup      XX   7    8    9    XX
+  XX   lft  down rght pgdn      -    4    5    6    0
+  XX   XX   XX   XX   XX        ,    1    2    3    .
+            @std           spc            @std
 )
 
 ;; Num-Navigation layer:
@@ -66,11 +61,10 @@
 ;; The `lrld` action stands for "live reload". This will re-parse everything
 ;; except for linux-dev, i.e. you cannot live reload and switch keyboard devices.
 (deflayer numnav
-  _    M-1  M-2  M-3  M-4  M-5       M-6  M-7  M-8  M-9  M-0  C--  C-=  lrld
-  _    tab  _    _    _    _         _    _    _    _    _    _    _    _
-  caps @all _    _    _    _         _    _    _    _    _    _    _
-  _    @ndo @cut @cpy @pst S-tab     _    _    _    _    _    _
-       _    _    _              _              _    _    _
+  tab  _    _    _    _         _    _    _    _    _
+  @all _    _    _    _         _    _    _    _    _
+  @ndo @cut @cpy @pst S-tab     _    _    _    _    _
+            _              _              _
 )
 
 ;; Vim-Navigation layer:
@@ -80,20 +74,18 @@
 ;; The `lrld` action stands for "live reload". This will re-parse everything
 ;; except for linux-dev, i.e. you cannot live reload and switch keyboard devices.
 (deflayer vimnav
-  _    M-1  M-2  M-3  M-4  M-5       M-6  M-7  M-8  M-9  M-0  C--  C-=  lrld
-  _    @pad @cls bck  fwd  XX        home pgdn pgup end  M-p  XX   XX   XX
-  caps @all @sav S-tab tab XX        lft  down up   rght @fun XX   XX
-  _    @ndo @cut @cpy @pst XX        @mwl @mwd @mwu @mwr XX   XX
-       _    _    del            _              esc  _    _
+  @pad @cls bck  fwd  XX        home pgdn pgup end  M-p
+  @all @sav S-tab tab XX        lft  down up   rght @fun
+  @ndo @cut @cpy @pst XX        @mwl @mwd @mwu @mwr XX
+            del            _              esc
 )
 
 ;; Function layer
 (deflayer funpad
-  _    XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   _
-  _    f1   f2   f3   f4   XX        XX   XX   XX   XX   XX   XX   XX   XX
-  _    f5   f6   f7   f8   XX        XX   lctl lalt lmet _    XX   _
-  _    f9   f10  f11  f12  XX        XX   XX   XX   XX   XX   _
-       _    _    _              _              _    _    _
+  f1   f2   f3   f4   XX        XX   XX   XX   XX   XX
+  f5   f6   f7   f8   XX        XX   lctl lalt lmet _
+  f9   f10  f11  f12  XX        XX   XX   XX   XX   XX
+       _    _              _              _
 )
 
 ;; `defalias` is used to declare a shortcut for a more complicated action to keep
