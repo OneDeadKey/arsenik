@@ -81,13 +81,11 @@ thumb key, and symmetrical modifiers on the homerow.
 
 ### 3. Spice It Up
 
-- the 300 ms delay before a key becomes a modifier has been chosen to be easy for
-beginners. Once used to mod-taps, you may want to reduce it so keyboard
+- the 300 ms delay before a key becomes a modifier has been chosen to be easy
+for beginners. Once used to mod-taps, you may want to reduce it so keyboard
 shortcuts can be done more quickly;
-- adding new layers should be easy, even without additional thumb keys — check the
-mods to get some ideas;
-- the right thumb key could do something more useful than <kbd>Enter</kbd> —
-like a one-time-shift, for instance.
+- adding new layers should be easy, even without additional thumb keys — check
+[the Selenium33 mod][11] to get some ideas.
 
 
 Downloads
@@ -129,8 +127,10 @@ AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr lay
 ### Similar Projects
 
 - [Miryoku][1]: 36 keys, 6 layers
-- [Seniply][7]: 34 keys, 6 layers, no layer-taps
+- [Seniply][7]: 34 keys, 6 layers, no layer-taps (“Callum-style”)
 - [Selenium][11]: 33 keys, 4 layers — a Vim-friendly Arsenik mod
+
+<!-- https://jasoncarloscox.com/writing/combo-mods/ -->
 
 [1]: https://github.com/manna-harbour/miryoku
 [2]: https://qwerty-lafayette.org/42

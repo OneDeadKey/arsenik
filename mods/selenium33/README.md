@@ -25,7 +25,7 @@ Extended Navigation
 
 ![Vim navigation layer on a 33-key keyboard](img/navigation.svg)
 
-This -kbd>Navigation</kbd> layer has a few empty slots on purpose, so you can
+This <kbd>Navigation</kbd> layer has a few empty slots on purpose, so you can
 add our own keys or layers.
 
 
