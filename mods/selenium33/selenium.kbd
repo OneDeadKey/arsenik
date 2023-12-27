@@ -1,0 +1,162 @@
+;; Quick notes about the kanata configuration syntax:
+;;  - the syntax is Lisp-like but totally unrelated to Lisp, so no worries :-)
+;;  - comments are prefixed by double-semicolons
+;;  - only one `defsrc` is allowed, listing all keys handled by kanata
+;;  - up to 25 `deflayer` are allowed, one per layer emulation
+;;  - the underscore symbol `_` in `deflayer` sections means "transparent",
+;;    i.e. the previous layer behaviour is used when pressing that key
+
+;; `defsrc` defines the keys that will be intercepted by kanata.
+;; The order of the keys matches with deflayer declarations and all deflayer
+;; declarations must have the same number of keys as defsrc. Any keys not listed
+;; in defsrc will be passed straight to the operating system.
+(defsrc
+  q    w    e    r    t         y    u    i    o    p
+  a    s    d    f    g         h    j    k    l    ;
+  z    x    c    v    b         n    m    ,    .    /
+            lalt          spc             ralt
+)
+
+;; Base layer (active by default when kanata starts up):
+;;  - the 3 main thumb keys become mod/taps
+;;  - home-row mods on SDF and JKL
+;;  - CapsLock becomes Escape
+(deflayer qwerty
+  _    _    _    _    _         _    _    _    _    _    _
+  _    @ss  @dd  @ff  _         _    @jj  @kk  @ll  _    _
+  _    _    _    _    _         _    _    _    _    _    _
+            @sft          @nav            @ssm
+)
+
+;; Symbol layer
+(deflayer symbols
+  AG-q AG-w AG-e AG-r AG-t      AG-y AG-u AG-i AG-o AG-p
+  AG-a AG-s AG-d AG-f AG-g      AG-h AG-j AG-k AG-l AG-;
+  AG-z AG-x AG-c AG-v AG-b      AG-n AG-m AG-, AG-. AG-/
+            @num           spc            @sym
+)
+
+;; Numrow layer
+(deflayer numrow
+  S-1  S-2  S-3  S-4  S-5       S-6  S-7  S-8  S-9  S-0
+  1    2    3    4    5         6    7    8    9    0
+  @dk1 @dk2 @dk3 @dk4 @dk5      XX   -    ,    .    /
+            @num          S-spc           @sym
+)
+
+;; Numpad layer
+;;  - right: numpad below 798
+;;  - left: arrow bloc on ESDF + home/end + page up/down
+(deflayer numpad
+  XX   home up   end  pgup      XX   7    8    9    XX
+  XX   lft  down rght pgdn      -    4    5    6    0
+  XX   XX   XX   XX   XX        ,    1    2    3    .
+            @std           spc            @std
+)
+
+;; Num-Navigation layer:
+;;  - inherits from Numpad
+;;  - left: one-handed shortcuts (Cmd/Ctrl-AZXCV) + Tab/S-Tab
+;;  - top: Super-num (i3/sway) or Alt-num (browser), zoom in/out
+;; The `lrld` action stands for "live reload". This will re-parse everything
+;; except for linux-dev, i.e. you cannot live reload and switch keyboard devices.
+(deflayer numnav
+  tab  _    _    _    _         _    _    _    _    _
+  @all _    _    _    _         _    _    _    _    _
+  @ndo @cut @cpy @pst S-tab     _    _    _    _    _
+            _              _              _
+)
+
+;; Vim-Navigation layer:
+;;  - right: Vim-like arrows on HJKL, home/end page up/down, mouse scroll
+;;  - left: one-hand shortcuts (Cmd/Ctrl-WASZXCV), Tab/Shift-Tab, prev/next
+;;  - top: Super-num (i3/sway) or Alt-num (browser), zoom in/out
+;; The `lrld` action stands for "live reload". This will re-parse everything
+;; except for linux-dev, i.e. you cannot live reload and switch keyboard devices.
+(deflayer vimnav
+  @pad @cls bck  fwd  XX        home pgdn pgup end  M-p
+  @all @sav S-tab tab XX        lft  down up   rght @fun
+  @ndo @cut @cpy @pst XX        @mwl @mwd @mwu @mwr XX
+            del            _              esc
+)
+
+;; Function layer
+(deflayer funpad
+  f1   f2   f3   f4   XX        XX   XX   XX   XX   XX
+  f5   f6   f7   f8   XX        XX   lctl lalt lmet _
+  f9   f10  f11  f12  XX        XX   XX   XX   XX   XX
+       _    _              _              _
+)
+
+;; `defalias` is used to declare a shortcut for a more complicated action to keep
+;; the deflayer declarations clean and aligned. The alignment in deflayers is
+;; not necessary, but is highly recommended for ease of understanding visually.
+;; Aliases are referred to by `@<alias_name>`.
+(defalias
+  ;; tap: backtick (grave), hold: toggle layer-switching layer while held
+  ;; grl (tap-hold 200 200 grv (layer-toggle layers))
+
+  ;; layer-switch changes the base layer.
+  std (layer-switch qwerty)
+  pad (layer-switch numpad)
+
+  ;; layer-toggle shifts the layer while pressed
+  sym (layer-toggle symbols)
+  num (layer-toggle numrow)
+  fun (layer-toggle funpad)
+
+  ;; Main mod-tap: VimNav layer when hold, Space when tapped.
+  ;; The space key must be hold long enough (300ms) to become a layer shift.
+  nav (tap-hold 200 300 spc (layer-toggle vimnav))
+  ;; nav (tap-hold 200 300 spc (layer-toggle numnav))
+
+  ;; Space-cadet thumb keys: Shift/BackSpace, AltGr/Return
+  ;;  - acts as a modifier by default, or as BS/Ret when tapped separately;
+  ;;  - works great with Qwerty-Lafayette and Ergo-L keyboard layouts, where
+  ;;    neither Shift nor AltGr are used outside of the 3×10 main alpha keys.
+  sft (tap-hold-press 200 200 bspc lsft)
+  alt (tap-hold-press 200 200 ret ralt)
+  ssm (tap-hold-press 200 200 ret (layer-toggle symbols))
+
+  ;; Home-row mods
+  ;; Must be hold long enough (300ms) to become a modifier.
+  ss (tap-hold 200 300 s lmet)
+  dd (tap-hold 200 300 d lalt)
+  ff (tap-hold 200 300 f lctl)
+  jj (tap-hold 200 300 j rctl)
+  kk (tap-hold 200 300 k lalt)
+  ll (tap-hold 200 300 l rmet)
+
+  ;; Mouse wheel emulation
+  mwu (mwheel-up    50 120)
+  mwd (mwheel-down  50 120)
+  mwl (mwheel-left  50 120)
+  mwr (mwheel-right 50 120)
+
+  ;; shortcuts
+  all C-a
+  sav C-s
+  cls C-w
+  ndo C-z
+  cut C-x
+  cpy C-c
+  pst C-v
+
+  ;; Ergo-L/Lafayette dead-key macros
+  ;; 1dk o ;; Ergo-L
+  1dk ; ;; QWERTY-Lafayette
+  ;; digits must be escaped, otherwise they’re interpreted as delays in ms
+  ;; um1 (unmod 1) ;; raises an error, WTF?
+  1 1
+  2 2
+  3 3
+  4 4
+  5 5
+  dk1 (macro @1dk @1)
+  dk2 (macro @1dk @2)
+  dk3 (macro @1dk @3)
+  dk4 (macro @1dk @4)
+  dk5 (macro @1dk @5)
+)
+
+;; vim: set ft=lisp
