@@ -1,7 +1,7 @@
 Arsenik
 ================================================================================
 
-A beginner-friendly,[Miryoku][1]-like approach to minimize finger movements:
+A beginner-friendly, [Miryoku][1]-like approach to minimize finger movements:
 
 - 3 home-row mods per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Super</kbd>
 - 3 layer-tap keys under the thumbs: <kbd>Shift</kbd>/<kbd>Backspace</kbd>,
@@ -128,7 +128,7 @@ AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr lay
 
 - [Miryoku][1]: 36 keys, 6 layers
 - [Seniply][7]: 34 keys, 6 layers, no layer-taps (“Callum-style”)
-- [Selenium][11]: 33 keys, 4 layers — a Vim-friendly Arsenik mod
+- [Selenium33][11]: 33 keys, 4 layers — a Vim-friendly Arsenik mod
 
 <!-- https://jasoncarloscox.com/writing/combo-mods/ -->
 
