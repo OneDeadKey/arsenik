@@ -22,9 +22,9 @@
 ;;  - home-row mods on SDF and JKL
 ;;  - CapsLock becomes Escape
 (deflayer qwerty
-  _    _    _    _    _         _    _    _    _    _    _
-  _    @ss  @dd  @ff  _         _    @jj  @kk  @ll  _    _
-  _    _    _    _    _         _    _    _    _    _    _
+  _    _    _    _    _         _    _    _    _    _    
+  _    @ss  @dd  @ff  _         _    @jj  @kk  @ll  _    
+  _    _    _    _    _         _    _    _    _    _    
             @sft          @nav            @ssm
 )
 
@@ -85,7 +85,7 @@
   f1   f2   f3   f4   XX        XX   XX   XX   XX   XX
   f5   f6   f7   f8   XX        XX   lctl lalt lmet _
   f9   f10  f11  f12  XX        XX   XX   XX   XX   XX
-       _    _              _              _
+            _              _              _
 )
 
 ;; `defalias` is used to declare a shortcut for a more complicated action to keep
