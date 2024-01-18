@@ -42,7 +42,7 @@ following commands (if you have `rustc` installed):
 
 ```bash
 rustup update stable
-cargo insall kanata
+cargo install kanata
 ```
 
 Linux users may want to run these extra steps:
