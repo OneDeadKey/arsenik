@@ -60,7 +60,7 @@ read from `uinput`. This requires the users to be part of both `input` and
 For that, you first need to create a `uinput` group if it is not the case yet:
 
 ```bash
-groupadd -U $USERNAME uinput
+sudo groupadd -U $USERNAME uinput
 ```
 
 Where `$USERNAME` is the target user (or users in a comma separated list), and
