@@ -1,0 +1,42 @@
+;; Symbol layer: same as AltGr but enables a NumRow.
+;; This has been designed with Lafayette and Ergo-L in mind.
+
+(deflayer symbols
+  AG-1 AG-2 AG-3 AG-4 AG-5  XX  AG-6 AG-7 AG-8 AG-9 AG-0
+  AG-q AG-w AG-e AG-r AG-t      AG-y AG-u AG-i AG-o AG-p
+  AG-a AG-s AG-d AG-f AG-g      AG-h AG-j AG-k AG-l AG-;
+  AG-z AG-x AG-c AG-v AG-b  XX  AG-n AG-m AG-, AG-. AG-/
+            @num           spc            @sym
+)
+
+;; Numrow layer
+
+(deflayer numrow
+  _    _    _    _    _     _   _    _    _    _    _
+  S-1  S-2  S-3  S-4  S-5       S-6  S-7  S-8  S-9  S-0
+  1    2    3    4    5         6    7    8    9    0
+  @dk1 @dk2 @dk3 @dk4 @dk5  _   XX   -    ,    .    /
+            @num          S-spc           @sym
+)
+
+(defalias
+  num (layer-toggle numrow)
+
+  ;; Ergo-L/Lafayette dead-key macros
+  ;; 1dk o ;; Ergo-L
+  1dk ; ;; QWERTY-Lafayette
+  ;; digits must be escaped, otherwise they’re interpreted as delays in ms
+  ;; um1 (unmod 1) ;; raises an error, WTF?
+  1 1
+  2 2
+  3 3
+  4 4
+  5 5
+  dk1 (macro @1dk @1)
+  dk2 (macro @1dk @2)
+  dk3 (macro @1dk @3)
+  dk4 (macro @1dk @4)
+  dk5 (macro @1dk @5)
+)
+
+;; vim: set ft=lisp
