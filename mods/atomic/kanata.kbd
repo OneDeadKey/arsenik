@@ -38,14 +38,14 @@
 ;;-----------------------------------------------------------------------------
 ;; `Navigation` layer: ESDF or HJKL?
 
-(include deflayer_navigation.kbd)  ;; ESDF on the left, NumPad on the right
-;; (include deflayer_navigation_vim.kbd)  ;; HJKL + NumPad on [Space]+[Q]
+;; (include deflayer_navigation.kbd)  ;; ESDF on the left, NumPad on the right
+(include deflayer_navigation_vim.kbd)  ;; HJKL + NumPad on [Space]+[Q]
 
 ;; Replace XX by the keyboard shortcut of your application launcher, if any.
 ;; Mapped on [Space]+[P] in both navigation layers.
 
-;; (defalias run M-p)  ;; [Command]-[P]
-(defalias run XX)
+(defalias run M-p)  ;; [Command]-[P]
+;; (defalias run XX)
 
 
 ;;-----------------------------------------------------------------------------

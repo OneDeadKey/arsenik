@@ -47,7 +47,31 @@ layer can be interesting to use in order to minimize finger movements further
 more. And it makes it easier to mix symbols with numbers (e.g. `[0]`).
 
 
-Download
+Implementations
 --------------------------------------------------------------------------------
 
+### Kanata
+
 ![kanata configuration](selenium.kbd)
+
+It turns out the `Atomic` mod can support all Selenium33 features smoothly.
+You should definitely use `Atomic` and tweak it to your liking instead of using
+this. :-)
+
+
+### QMK
+
+The QMK implementation is a bit different:
+
+- it takes advantage of the 4 thumb keys
+- the Navigation layer uses a mouse emulation on the left hand
+
+In fact, this is what I ended up with for my beloved Ferris in the first place,
+and Arsenik/Selenium is an attempt to fit most of this magic into my laptop keyboard.
+
+![QMK code](qmk/keyoards/ferris/keymaps/1dk)
+
+```bash
+# from the `qmk_firmware` root:
+make ferris/0_2/bling:1dk:flash
+```

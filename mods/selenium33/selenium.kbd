@@ -13,18 +13,26 @@
 (defsrc
   q    w    e    r    t         y    u    i    o    p
   a    s    d    f    g         h    j    k    l    ;
-  z    x    c    v    b         n    m    ,    .    /
-            lalt          spc             ralt
+  z    x    c    v    b   102d  n    m    ,    .    /
+            lalt           spc            ralt
 )
+
+;; Use this instead if you want to apply an angle mod:
+;; (defsrc
+;;   q    w    e    r    t         y    u    i    o    p
+;;   a    s    d    f    g         h    j    k    l    ;
+;;   102d z    x    c    v    b    n    m    ,    .    /
+;;             lalt           spc            ralt
+;; )
 
 ;; Base layer (active by default when kanata starts up):
 ;;  - the 3 main thumb keys become mod/taps
 ;;  - home-row mods on SDF and JKL
 ;;  - CapsLock becomes Escape
 (deflayer qwerty
-  _    _    _    _    _         _    _    _    _    _    
-  _    @ss  @dd  @ff  _         _    @jj  @kk  @ll  _    
-  _    _    _    _    _         _    _    _    _    _    
+  q    w    e    r    t         y    u    i    o    p
+  a    @ss  @dd  @ff  g         h    @jj  @kk  @ll  ;
+  z    x    c    v    b   102d  n    m    ,    .    /
             @sft          @nav            @ssm
 )
 
@@ -32,7 +40,7 @@
 (deflayer symbols
   AG-q AG-w AG-e AG-r AG-t      AG-y AG-u AG-i AG-o AG-p
   AG-a AG-s AG-d AG-f AG-g      AG-h AG-j AG-k AG-l AG-;
-  AG-z AG-x AG-c AG-v AG-b      AG-n AG-m AG-, AG-. AG-/
+  AG-z AG-x AG-c AG-v AG-b  _   AG-n AG-m AG-, AG-. AG-/
             @num           spc            @sym
 )
 
@@ -40,7 +48,7 @@
 (deflayer numrow
   S-1  S-2  S-3  S-4  S-5       S-6  S-7  S-8  S-9  S-0
   1    2    3    4    5         6    7    8    9    0
-  @dk1 @dk2 @dk3 @dk4 @dk5      XX   -    ,    .    /
+  @dk1 @dk2 @dk3 @dk4 @dk5  _   XX   -    ,    .    /
             @num          S-spc           @sym
 )
 
@@ -50,7 +58,7 @@
 (deflayer numpad
   XX   home up   end  pgup      XX   7    8    9    XX
   XX   lft  down rght pgdn      -    4    5    6    0
-  XX   XX   XX   XX   XX        ,    1    2    3    .
+  XX   XX   XX   XX   XX    _   ,    1    2    3    .
             @std           spc            @std
 )
 
@@ -63,8 +71,8 @@
 (deflayer numnav
   tab  _    _    _    _         _    _    _    _    _
   @all _    _    _    _         _    _    _    _    _
-  @ndo @cut @cpy @pst S-tab     _    _    _    _    _
-            _              _              _
+  @ndo @cut @cpy @pst S-tab _   _    _    _    _    _
+            _               _             _
 )
 
 ;; Vim-Navigation layer:
@@ -74,18 +82,18 @@
 ;; The `lrld` action stands for "live reload". This will re-parse everything
 ;; except for linux-dev, i.e. you cannot live reload and switch keyboard devices.
 (deflayer vimnav
-  @pad @cls bck  fwd  XX        home pgdn pgup end  M-p
+  @pad @cls bck  fwd  XX        home pgdn pgup end  XX
   @all @sav S-tab tab XX        lft  down up   rght @fun
-  @ndo @cut @cpy @pst XX        @mwl @mwd @mwu @mwr XX
-            del            _              esc
+  @ndo @cut @cpy @pst XX    _   @mwl @mwd @mwu @mwr XX
+            del             _             esc
 )
 
 ;; Function layer
 (deflayer funpad
   f1   f2   f3   f4   XX        XX   XX   XX   XX   XX
   f5   f6   f7   f8   XX        XX   lctl lalt lmet _
-  f9   f10  f11  f12  XX        XX   XX   XX   XX   XX
-            _              _              _
+  f9   f10  f11  f12  XX    _   XX   XX   XX   XX   XX
+            _               _             _
 )
 
 ;; `defalias` is used to declare a shortcut for a more complicated action to keep
