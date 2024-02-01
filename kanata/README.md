@@ -42,7 +42,7 @@ following commands (if you have `rustc` installed):
 
 ```bash
 rustup update stable
-cargo insall kanata
+cargo install kanata
 ```
 
 Linux users may want to run these extra steps:
@@ -51,9 +51,29 @@ Linux users may want to run these extra steps:
 <summary> Running kanata without `sudo` </summary>
 
 kanata needs to intercept `uinput` signals, which it cannot do without the
-proper authorisations. If you don’t want to run `kanata` with `sudo`, you’ll
-need to allow `kanata` to read from `uinput` with a udev rule at
-`/etc/udev/rules.d/50-kanata.rules`:
+proper authorisations.
+
+If you don’t want to run `kanata` with `sudo`, you’ll need to allow `kanata` to
+read from `uinput`. This requires the users to be part of both `input` and
+`uinput` groups.
+
+For that, you first need to create a `uinput` group if it is not the case yet:
+
+```bash
+sudo groupadd -U $USERNAME uinput
+```
+
+Where `$USERNAME` is the target user (or users in a comma separated list), and
+add the target user (or users) to the group input:
+
+```bash
+sudo usermod -aG input $USERNAME
+```
+
+You can then check after relogin that both groups appear in the result of the
+`groups` command launched as the target user.
+
+Finally, you need to add a udev rule in `/etc/udev/rules.d/50-kanata.rules`:
 
 ```udev
 KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
