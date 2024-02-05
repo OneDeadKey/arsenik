@@ -7,7 +7,7 @@
       stroke-width: .5px;
     }
     text {
-      fill: #999;
+      fill: #bbb;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
@@ -29,14 +29,16 @@
     .layerMod, .colorMod { fill: #333; }
     .layerSym, .colorSym { fill: blue; }
     .layerNav, .colorNav { fill: #e83; }
+    #row_AA    .level2   { fill: #333; }
 
     @media (prefers-color-scheme: dark) {
-      text                 { fill: #888; }
+      text                 { fill: #666; }
       rect                 { fill: #444; }
       .dualKey             { fill: #666; }
       .layerMod, .colorMod { fill: #eee; }
       .layerSym, .colorSym { fill: #99f; }
       .layerNav, .colorNav { fill: #e83; }
+      #row_AA .level2      { fill: #ccc; }
     }
   </style>
 
