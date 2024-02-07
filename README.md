@@ -88,10 +88,18 @@ shortcuts can be done more quickly;
 [the Selenium33 mod][11] to get some ideas.
 
 
-Downloads
+Instalation
 --------------------------------------------------------------------------------
 
-[Non-programmable keyboards are supported through kanata.](kanata)
+[Non-programmable keyboards are supported through kanata.](kanata). To install
+it, you should follow [the installation guide of
+[kanata](https://github.com/jtroo/kanata?tab=readme-ov-file#usage). Additionally
+on Mac — as specified on kanata user guide — you may also need to install
+kext as explained in [kmonad
+documentation](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#macos)
+(kmonad is the projet that kanata took inspiration from). Once kanata is
+installed, you can load the .kbd file of your choosing.
+
 
 Other desktop implementations (kmonad, keyd…) would be nice to see as well.
 
