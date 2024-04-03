@@ -48,7 +48,7 @@ cargo install kanata
 Linux users may want to run these extra steps:
 
 <details>
-<summary> Running kanata without `sudo` </summary>
+<summary> Running kanata without <code>sudo</code> </summary>
 
 kanata needs to intercept `uinput` signals, which it cannot do without the
 proper authorisations.
@@ -56,7 +56,7 @@ proper authorisations.
 If you don’t want to run `kanata` with `sudo`, you’ll need to allow `kanata` to
 read from `uinput`. This requires the users to be part of both `input` and
 `uinput` groups.
-
+Update README.md
 For that, you first need to create a `uinput` group if it is not the case yet:
 
 ```bash
@@ -83,7 +83,7 @@ KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
 <details>
 <summary> Making a user-side systemd service for kanata </summary>
 
-Note: This only works if `kanata` is able to run without `sudo` (and are using
+Note: This only works if `kanata` is able to run without <pre>sudo</pre> (and are using
 `systemd`).
 
 Using a `systemd service` allows running `kanata` as a daemon, possibly right
