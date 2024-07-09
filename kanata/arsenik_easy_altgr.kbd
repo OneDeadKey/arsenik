@@ -27,8 +27,8 @@
 
 ;; Special key aliases
 (defalias
-  ;; Main mod-tap: VimNav layer when hold, Space when tapped.
-  ;; The space key must be hold long enough (300ms) to become a layer shift.
+  ;; Main mod-tap: VimNav layer when held, Space when tapped.
+  ;; The space key must be held long enough (300ms) to become a layer shift.
   nav (tap-hold 200 300 spc (layer-toggle numnav))
 
   ;; Space-cadet thumb keys: Shift/BackSpace, AltGr/Return

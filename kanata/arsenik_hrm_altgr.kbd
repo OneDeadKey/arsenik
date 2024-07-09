@@ -28,8 +28,8 @@
 
 ;; Special key aliases
 (defalias
-  ;; Main mod-tap: NumNav layer when hold, Space when tapped.
-  ;; The space key must be hold long enough (300ms) to become a layer shift.
+  ;; Main mod-tap: NumNav layer when held, Space when tapped.
+  ;; The space key must be held long enough (300ms) to become a layer shift.
   nav (tap-hold 200 300 spc (layer-toggle numnav))
 
   ;; Space-cadet thumb keys: Shift/BackSpace, AltGr/Return
@@ -40,7 +40,7 @@
   alt (tap-hold-press 200 200 ret ralt)
 
   ;; Home-row mods
-  ;; Must be hold long enough (300ms) to become a modifier.
+  ;; Must be held long enough (300ms) to become a modifier.
   ss (tap-hold 200 300 s lmet)
   dd (tap-hold 200 300 d lalt)
   ff (tap-hold 200 300 f lctl)
