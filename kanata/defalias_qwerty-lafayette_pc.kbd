@@ -1,0 +1,89 @@
+;; Qwerty‑Lafayette Windows/Linux aliases
+
+;; Navigation layer
+(defalias
+
+  all C-a
+  sav C-s
+  cls C-w
+  ndo C-z
+  cut C-x
+  cpy C-c
+  pst C-v
+
+  0 0
+  1 1
+  2 2
+  3 3
+  4 4
+  5 5
+  6 6
+  7 7
+  8 8
+  9 9
+  , ,
+  . .
+)
+
+;; Symbols layer
+(defalias
+
+  ^  AG-q
+  <  AG-w
+  >  AG-e
+  $  AG-r
+  %  AG-t
+  @  AG-y
+  &  AG-u
+  *  AG-i
+  '  AG-o
+  `  AG-p
+
+  {  AG-a
+  pl AG-s
+  pr AG-d
+  }  AG-f
+  =  AG-g
+  \  AG-h
+  +  AG-j
+  -  AG-k
+  /  AG-l
+  '' AG-;
+
+  ~  AG-z
+  [  AG-x
+  ]  AG-c
+  _  AG-v
+  #  AG-b
+  |  AG-n
+  !  AG-m
+  ;  AG-,
+  :  AG-.
+  ?  AG-/
+)
+
+;; NumRow layer
+(defalias
+
+  s0 S-0
+  s1 S-1
+  s2 S-2
+  s3 S-3
+  s4 S-4
+  s5 S-5
+  s6 S-6
+  s7 S-7
+  s8 S-8
+  s9 S-9
+  nbs S-spc ;; narrow no-break space
+
+  1dk ;
+  ;; digits must be escaped, otherwise they’re interpreted as delays in ms
+  dk1 (macro @1dk @1)
+  dk2 (macro @1dk @2)
+  dk3 (macro @1dk @3)
+  dk4 (macro @1dk @4)
+  dk5 (macro @1dk @5)
+)
+
+;; vim: set ft=lisp
