@@ -56,7 +56,7 @@ only the thumbs are affected:
 but emits a <kbd>Backspace</kbd> when tapped;
 - the right thumb key brings the <kbd>Symbols</kbd> layer when hold (similar to
 an <kbd>AltGr</kbd> key), and emits <kbd>Return</kbd> when tapped;
-- the spacebar brings the <kbd>Navigation</kbd> layer when when hold.
+- the spacebar brings the <kbd>Navigation</kbd> layer when hold.
 
 ![alt, navigation and sym layers under the thumbs](img/base_easy.svg)
 
