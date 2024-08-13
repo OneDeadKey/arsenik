@@ -150,3 +150,210 @@ TODO
 - KMonad / Karabiner support
 - sample QMK / ZMK implementations for common keyboards
 - variants for specific OS layouts
+
+
+kanata
+================================================================================
+
+
+Pick Your Poison!
+--------------------------------------------------------------------------------
+
+| type  | without homerow-mods        | with homerow-mods          | suitable layouts                  |
+| ----- | --------------------------- | -------------------------- | --------------------------------- |
+| ANSI  | [arsenik_easy_ansi.kbd][1]  | [arsenik_hrm_ansi.kbd][3]  | QWERTY, Dvorak, Colemak, Workman… |
+| AltGr | [arsenik_easy_altgr.kbd][2] | [arsenik_hrm_altgr.kbd][4] | [Lafayette42][10], [Ergo-L][11]…  |
+
+[1]: arsenik_easy_ansi.kbd
+[2]: arsenik_easy_altgr.kbd
+[3]: arsenik_hrm_ansi.kbd
+[4]: arsenik_hrm_altgr.kbd
+
+- “Easy” variants don’t use any homerow-mods and leave the left thumb key
+modifier unchanged — but they still use a <kbd>Prog</kbd> layer and put the
+<kbd>Backspace</kbd> and <kbd>Return</kbd> keys under the thumbs. A good
+starting point if you’re new to dual keys.
+- ANSI variants assume all symbols in your keyboard layout are in their
+QWERTY-ANSI positions: works fine with most US layouts but Dvorak users will get
+a slightly different <kbd>Prog</kbd> layer.
+- AltGr variants use your layout’s AltGr layer instead of the <kbd>Prog</kbd>
+layer: perfect for layouts that already have an optimized AltGr layer, such as
+[QWERTY-Lafayette][10] and [Ergo-L][11].
+
+[10]: https://qwerty-lafayette.org/42
+[11]: https://ergol.org
+
+Note that kanata can also use the laptop’s trackpoint buttons (e.g. ThinkPad)
+as two additional thumb keys. :-)
+
+
+Installation
+--------------------------------------------------------------------------------
+
+You can install `kanata` by either downloading a [pre-built
+executable](https://github.com/jtroo/kanata/releases), or by running the
+following commands (if you have `rustc` installed):
+
+```bash
+rustup update stable
+cargo install kanata
+```
+
+Linux users may want to run these extra steps:
+
+<details>
+<summary> Running kanata without `sudo` </summary>
+
+kanata needs to intercept `uinput` signals, which it cannot do without the
+proper authorisations.
+
+If you don’t want to run `kanata` with `sudo`, you’ll need to allow `kanata` to
+read from `uinput`. This requires the users to be part of both `input` and
+`uinput` groups.
+
+For that, you first need to create a `uinput` group if it is not the case yet:
+
+```bash
+sudo groupadd -U $USERNAME uinput
+```
+
+Where `$USERNAME` is the target user (or users in a comma separated list), and
+add the target user (or users) to the group input:
+
+```bash
+sudo usermod -aG input $USERNAME
+```
+
+You can then check after relogin that both groups appear in the result of the
+`groups` command launched as the target user.
+
+Finally, you need to add a udev rule in `/etc/udev/rules.d/50-kanata.rules`:
+
+```udev
+KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+```
+</details>
+
+<details>
+<summary> Making a user-side systemd service for kanata </summary>
+
+Note: This only works if `kanata` is able to run without `sudo` (and are using
+`systemd`).
+
+Using a `systemd service` allows running `kanata` as a daemon, possibly right
+after logging in. Here is a template for a service file:
+
+```
+[Unit]
+Description=Kanata keyboard remapper
+Documentation=https://github.com/jtroo/kanata
+
+[Service]
+Environment=PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin
+Environment=DISPLAY=:0
+Environment=HOME=/path/to/home/folder
+Type=simple
+ExecStart=/usr/local/bin/kanata --cfg /path/to/kanata/config/file
+Restart=no
+
+[Install]
+WantedBy=default.target
+```
+
+Copy-paste it into `~/.config/systemd/user/kanata.service`, fill in the
+placeholders, then run one of the following commands:
+
+- `systemctl --user start kanata.service` to manually start `kanata`
+- `systemctl --user enable kanata.service` so `kanata` may autostart whenever the current user logs in
+- `systemctl --user status kanata.service` to check if `kanata` is running
+
+</details>
+
+
+An experiment to modularize Arsenik and bring more features, e.g.
+angle mods, Vim-like navigation layer, Mac/Azerty/Qwertz support, etc.
+
+- load `kanata.kbd`
+- enable each feature by un-commenting the related line
+- live-reload the configuration with Space+Backspace (requires layer-taps)
+
+Configuration options:
+
+- key arrangement: Mac or PC, with or without angle mod?
+- base layer: standard, layer-taps, homerow mods?
+- symbols layer: AltGr, QWERTY, QWERTZ, AZERTY?
+- navigation layer: ESDF or HJKL?
+
+This should work exactly like Arsenik by default, except Escape and Enter have
+been swapped.
+
+
+Selenium33
+================================================================================
+
+A Vim-friendly Arsenik mod:
+
+- 3 home-row mods per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Super</kbd>
+- 3 layer-tap keys under the thumbs: <kbd>Shift</kbd>/<kbd>Backspace</kbd>,
+<kbd>Navigation</kbd>/<kbd>Space</kbd>, <kbd>Symbol</kbd>/<kbd>Return</kbd>
+
+![base, navigation and sym layers on a 33-key keyboard](img/selenium33/all.svg)
+
+Selenium uses 4 layers (instead of 3 for Arsenik), which makes it a natural fit
+for 34-key keyboards like the [Ferris][34].
+
+[34]: https://github.com/pierrechevalier83/ferris
+
+
+Extended Navigation
+--------------------------------------------------------------------------------
+
+- Vim-like navigation in all apps, with any OS layout
+- super-comfortable <kbd>Tab</kbd> and <kbd>Shift</kbd>-<kbd>Tab</kbd>
+- mouse emulation: previous / next and mouse scroll
+- easy left-hand shortcuts
+
+![Vim navigation layer on a 33-key keyboard](img/selenium33/navigation.svg)
+
+This <kbd>Navigation</kbd> layer has a few empty slots on purpose, so you can
+add our own keys or layers.
+
+
+NumRow >> NumPad
+--------------------------------------------------------------------------------
+
+In <kbd>Symbol</kbd> mode, pressing the left thumb key brings up the
+<kbd>NumRow</kbd> layer:
+
+- all digits are on the home row, in the order you already know
+- the upper row helps with <kbd>Shift</kbd>-digit shortcuts
+- the lower row has dash, comma, dot and slash signs to help with number / date
+inputs
+
+![NumRow layer on a 33-key keyboard](img/selenium33/numrow.svg)
+
+Even on keyboards that *do* have a physical number row, this <kbd>NumRow</kbd>
+layer can be interesting to use in order to minimize finger movements further
+more. And it makes it easier to mix symbols with numbers (e.g. `[0]`).
+
+
+Implementations
+--------------------------------------------------------------------------------
+
+### QMK
+
+The QMK implementation is a bit different:
+
+- it takes advantage of the 4 thumb keys
+- the Navigation layer uses a mouse emulation on the left hand
+
+In fact, this is what I ended up with for my beloved Ferris in the first place,
+and Arsenik/Selenium is an attempt to fit most of this magic into my laptop keyboard.
+
+![QMK code](qmk/keyoards/ferris/keymaps/1dk)
+
+```bash
+# from the `qmk_firmware` root:
+make ferris/0_2/bling:1dk:flash
+```
+
