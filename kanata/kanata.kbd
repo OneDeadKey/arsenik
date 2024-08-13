@@ -1,14 +1,21 @@
-;; An experiment to modularize Arsenik and bring more features:
-;; angle mods, Vim-like navigation layer, Mac/Azerty/Qwertz support, etc.
+;;==========================================================================;;
+;;                                                                          ;;
+;;  With Arsenik, choose the features you want for your keyboard:           ;;
+;;  angle mods, Vim-like navigation layer, Mac/Azerty/Qwertz support, etc.  ;;
+;;                                                                          ;;
+;;==========================================================================;;
 
-;; Every section should enable one and only one `include`
-;; -- enable each feature by un-commenting the related line.
+;; Every section is mandatory and should enable one and only one `include`
+;; - enable each feature by un-commenting the related line.
+;; - a commented line starts with ;;
 
 ;; Live-reload the configuration with Space+Backspace (requires layer-taps).
 
 
 ;;-----------------------------------------------------------------------------
-;; Key arrangement: Mac or PC, with or without angle mod?
+;; Original key arrangement on your keyboard: Mac or PC.
+;; Choose here if you want to add an angle mod: ZXCVB are shifted to the left.
+;; See https://colemakmods.github.io/ergonomic-mods/angle.html for more details.
 
 ;; (include defsrc_pc.kbd)  ;; PC, standard finger assignment
 ;; (include defsrc_mac.kbd)  ;; Mac, standard finger assignment
@@ -18,10 +25,11 @@
 
 ;;-----------------------------------------------------------------------------
 ;; `Base` layer: standard or dual keys? (layer-taps, homerow mods?)
+;; If you just want angle mod, you still have to enable the standard base.
 
-;; (include deflayer_base.kbd)  ;; standard keyboard behavior
+(include deflayer_base.kbd)  ;; standard keyboard behavior
 ;; (include deflayer_base_lt.kbd)  ;; layer-taps on both thumb keys
-(include deflayer_base_lt_hrm.kbd)  ;; layer-taps + home-row mods
+;; (include deflayer_base_lt_hrm.kbd)  ;; layer-taps + home-row mods
 
 ;; Note: not enabling layer-taps here makes the rest of the file useless.
 
@@ -29,31 +37,35 @@
 ;;-----------------------------------------------------------------------------
 ;; `Symbols` layer
 
-(include deflayer_symbols_1dk.kbd)  ;; AltGr + NumRow layers
-;; (include deflayer_symbols_ansi.kbd)  ;; Symbol layer for Qwerty / Colemak
-;; (include deflayer_symbols_azerty.kbd)  ;; Symbol layer for Azerty
-;; (include deflayer_symbols_qwertz.kbd)  ;; Symbol layer for Qwertz
+(include deflayer_symbols_noop.kbd)  ;; AltGr stays as-is
+;; (include deflayer_symbols_1dk.kbd)  ;; AltGr programmation layer like Ergo‑L
+;; (include deflayer_symbols_noop_num.kbd)  ;; AltGr stays as-is + NumRow layers
+;; (include deflayer_symbols_1dk_num.kbd)  ;; AltGr prog layer + NumRow layers
 
 
 ;;-----------------------------------------------------------------------------
 ;; `Navigation` layer: ESDF or HJKL?
 
-;; (include deflayer_navigation.kbd)  ;; ESDF on the left, NumPad on the right
-(include deflayer_navigation_vim.kbd)  ;; HJKL + NumPad on [Space]+[Q]
+(include deflayer_navigation.kbd)  ;; ESDF on the left, NumPad on the right
+;; (include deflayer_navigation_vim.kbd)  ;; HJKL + NumPad on [Space]+[Q]
 
 ;; Replace XX by the keyboard shortcut of your application launcher, if any.
 ;; Mapped on [Space]+[P] in both navigation layers.
 
-(defalias run M-p)  ;; [Command]-[P]
-;; (defalias run XX)
+;; (defalias run M-p)  ;; [Command]-[P]
+(defalias run XX)  ;; do nothing
 
 
 ;;-----------------------------------------------------------------------------
-;; Keyboard shortcuts: macOS or Windows/Linux?
+;; Aliases for `Symbols` and `Navigation` layers
+;; Depends on PC/Mac and keyboard layout
 
-(include defalias_pc.kbd)
-;; (include defalias_mac.kbd)
-
-;; TODO: add shortcut files for Dvorak layouts.
+(include defalias_ergol_pc.kbd)  ;; Ergo‑L PC
+;; (include defalias_qwerty-lafayette_pc.kbd)  ;; Qwerty‑Lafayette PC
+;; (include defalias_qwerty_pc.kbd)  ;; Qwerty / Colemak PC
+;; (include defalias_qwerty_mac.kbd)  ;; Qwerty / Colemak Mac
+;; (include defalias_azerty_pc.kbd)  ;; Azerty PC
+;; (include defalias_qwertz_pc.kbd)  ;; Qwertz PC
+;; (include defalias_bepo_pc.kbd)  ;; Bépo PC
 
 ;; vim: set ft=lisp

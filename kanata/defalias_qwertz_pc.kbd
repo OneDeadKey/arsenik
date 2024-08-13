@@ -1,0 +1,88 @@
+;; Qwertz Windows/Linux aliases
+;; Works with QWERTZ-de. Needs a couple tweaks for other QWERTZ variants.
+
+;; Navigation layer
+(defalias
+
+  all C-a
+  sav C-s
+  cls C-w
+  ndo C-y
+  cut C-x
+  cpy C-c
+  pst C-v
+
+  0 0
+  1 1
+  2 2
+  3 3
+  4 4
+  5 5
+  6 6
+  7 7
+  8 8
+  9 9
+  , ,
+  . .
+)
+
+;; Symbols layer
+(defalias
+
+  ^  (macro grv spc)
+  <  <
+  >  S-<
+  $  S-4
+  %  S-5
+  @  AG-q
+  &  S-6
+  *  S-]
+  '  S-\
+  `  (macro S-= spc)
+
+  {  AG-7
+  pl S-8
+  pr S-9
+  }  AG-0
+  =  S-0
+  \  AG--
+  +  ]
+  -  /
+  /  S-7
+  '' S-2
+
+  ~  AG-]
+  [  AG-8
+  ]  AG-9
+  _  S-/
+  #  \
+  |  AG-<
+  !  S-1
+  ;  S-,
+  :  S-.
+  ?  S--
+)
+
+;; NumRow layer
+(defalias
+
+  s0 S-0
+  s1 S-1
+  s2 S-2
+  s3 S-3
+  s4 S-4
+  s5 S-5
+  s6 S-6
+  s7 S-7
+  s8 S-8
+  s9 S-9
+  nbs spc ;; no narrow no-break space in Qwerty
+
+  dk1 XX
+  dk2 XX
+  dk3 XX
+  dk4 XX
+  dk5 XX
+)
+
+;; vim: set ft=lisp

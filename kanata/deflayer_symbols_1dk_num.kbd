@@ -1,0 +1,26 @@
+;; Symbol layer: Lafayette/Ergo‑L AltGr programmation layer
+;; but enables a NumRow.
+
+(deflayer symbols
+  AG-1 AG-2 AG-3 AG-4 AG-5 XX   AG-6 AG-7 AG-8 AG-9 AG-0
+  @^   @<   @>   @$   @%        @@   @&   @*   @'   @`
+  @{   @pl  @pr  @}   @=        @\   @+   @-   @/   @''
+  @~   @[   @]   @_   @#   XX   @|   @!   @;   @:   @?
+            @num          spc            @sym
+)
+
+;; Numrow layer
+
+(deflayer numrow
+  _    _    _    _    _     _   _    _    _    _    _
+  @s1  @s2  @s3  @s4  @s5       @s6  @s7  @s8  @s9  @s0
+  @1   @2   @3   @4   @5        @6   @7   @8   @9   @0
+  @dk1 @dk2 @dk3 @dk4 @dk5  _   XX   @-   @,   @.   @/
+            @num           @nbs           @sym
+)
+
+(defalias
+  num (layer-toggle numrow)
+)
+
+;; vim: set ft=lisp
