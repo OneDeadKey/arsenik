@@ -5,7 +5,7 @@
   @^   @<   @>   @$   @%        @@   @&   @*   @'   @`
   @{   @pl  @pr  @}   @=        @\   @+   @-   @/   @''
   @~   @[   @]   @_   @#   XX   @|   @!   @;   @:   @?
-            _              spc            @sym
+            _             spc             _
 )
 
 ;; Note: this requires kanata 0.5+ to work properly.
