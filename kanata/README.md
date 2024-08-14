@@ -1,33 +1,19 @@
 kanata
 ================================================================================
 
+A modularized Arsenik that let you choose your features, e.g.
+angle mods, Vim-like navigation layer, Mac/Azerty/Qwertz support, etc.
 
-Pick Your Poison!
---------------------------------------------------------------------------------
+- load `kanata.kbd` with kanata (installation instructions below)
+- enable each feature by un-commenting the related line
+- live-reload the configuration with Space+Backspace (requires layer-taps)
 
-| type  | without homerow-mods        | with homerow-mods          | suitable layouts                  |
-| ----- | --------------------------- | -------------------------- | --------------------------------- |
-| ANSI  | [arsenik_easy_ansi.kbd][1]  | [arsenik_hrm_ansi.kbd][3]  | QWERTY, Dvorak, Colemak, Workman… |
-| AltGr | [arsenik_easy_altgr.kbd][2] | [arsenik_hrm_altgr.kbd][4] | [Lafayette42][10], [Ergo-L][11]…  |
+Configuration options:
 
-[1]: arsenik_easy_ansi.kbd
-[2]: arsenik_easy_altgr.kbd
-[3]: arsenik_hrm_ansi.kbd
-[4]: arsenik_hrm_altgr.kbd
-
-- “Easy” variants don’t use any homerow-mods and leave the left thumb key
-modifier unchanged — but they still use a <kbd>Prog</kbd> layer and put the
-<kbd>Backspace</kbd> and <kbd>Return</kbd> keys under the thumbs. A good
-starting point if you’re new to dual keys.
-- ANSI variants assume all symbols in your keyboard layout are in their
-QWERTY-ANSI positions: works fine with most US layouts but Dvorak users will get
-a slightly different <kbd>Prog</kbd> layer.
-- AltGr variants use your layout’s AltGr layer instead of the <kbd>Prog</kbd>
-layer: perfect for layouts that already have an optimized AltGr layer, such as
-[QWERTY-Lafayette][10] and [Ergo-L][11].
-
-[10]: https://qwerty-lafayette.org/42
-[11]: https://ergol.org
+- key arrangement: Mac or PC, with or without angle mod?
+- base layer: standard, layer-taps, homerow mods?
+- symbols layer: AltGr, QWERTY, QWERTZ, AZERTY?
+- navigation layer: ESDF or HJKL?
 
 Note that kanata can also use the laptop’s trackpoint buttons (e.g. ThinkPad)
 as two additional thumb keys. :-)
@@ -45,10 +31,13 @@ rustup update stable
 cargo install kanata
 ```
 
+Windows users might prefer the `kanata_winIOv2.exe` version as it fixes some
+weird bugs.
+
 Linux users may want to run these extra steps:
 
 <details>
-<summary> Running kanata without `sudo` </summary>
+<summary> Running kanata without <code>sudo</code> </summary>
 
 kanata needs to intercept `uinput` signals, which it cannot do without the
 proper authorisations.
@@ -83,8 +72,8 @@ KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
 <details>
 <summary> Making a user-side systemd service for kanata </summary>
 
-Note: This only works if `kanata` is able to run without `sudo` (and are using
-`systemd`).
+Note: This only works if `kanata` is able to run without <pre>sudo</pre> (and
+is using `systemd`).
 
 Using a `systemd service` allows running `kanata` as a daemon, possibly right
 after logging in. Here is a template for a service file:

@@ -1,0 +1,14 @@
+;; Symbol layer: Lafayette/Ergo‑L AltGr programmation layer for the masses!
+
+(deflayer symbols
+  AG-1 AG-2 AG-3 AG-4 AG-5 XX   AG-6 AG-7 AG-8 AG-9 AG-0
+  @^   @<   @>   @$   @%        @@   @&   @*   @'   @`
+  @{   @pl  @pr  @}   @=        @\   @+   @-   @/   @''
+  @~   @[   @]   @_   @#   XX   @|   @!   @;   @:   @?
+            _              spc            @sym
+)
+
+;; Note: this requires kanata 0.5+ to work properly.
+;; kanata 0.4 does not release Shift soon enough for this layer to work.
+
+;; vim: set ft=lisp

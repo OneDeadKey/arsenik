@@ -11,16 +11,16 @@
   @pad @cls bck  fwd  XX        home pgdn pgup end  @run
   @all @sav S-tab tab XX        lft  down up   rght @fun
   @ndo @cut @cpy @pst XX    _   @mwl @mwd @mwu @mwr XX
-            del             _             ret
+            del             _             esc
 )
 
 ;; NumPad
 (deflayer numpad
   _    _    _    _    _     _   _    _    _    _    _
-  XX   home up   end  pgup      XX   7    8    9    XX
-  XX   lft  down rght pgdn      -    4    5    6    0
-  XX   XX   XX   XX   XX    _   ,    1    2    3    .
-            @std           spc            @std
+  XX   home up   end  pgup      XX   @7   @8   @9   XX
+  XX   lft  down rght pgdn      @-   @4   @5   @6   @0
+  XX   XX   XX   XX   XX    _   @,   @1   @2   @3   @.
+            @std           @nbs           @std
 )
 
 ;; function keys

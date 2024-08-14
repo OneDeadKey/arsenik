@@ -1,5 +1,5 @@
 ;; Num-Navigation layer:
-;;  - should inherit from NumPad (but this doesn’t work for some reason)
+;;  - should inherit from NumPad
 ;;  - left: one-handed shortcuts (Cmd/Ctrl-AZXCV) + Tab/S-Tab
 ;;  - top: Super-num (i3/sway) or Alt-num (browser)
 
@@ -8,10 +8,10 @@
 
 (deflayer navigation
   M-1  M-2  M-3  M-4  M-5  lrld M-6  M-7  M-8  M-9  M-0
-  tab  home up   end  pgup      XX   7    8    9    @run
-  @all lft  down rght pgdn      -    4    5    6    0
-  @ndo @cut @cpy @pst S-tab _   ,    1    2    3    .
-            del             _             ret
+  tab  home up   end  pgup      XX   @7   @8   @9   @run
+  @all lft  down rght pgdn      @-   @4   @5   @6   @0
+  @ndo @cut @cpy @pst S-tab _   @,   @1   @2   @3   @.
+            del            @nbs           esc
 )
 
 ;; vim: set ft=lisp
