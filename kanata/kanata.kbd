@@ -68,4 +68,15 @@
 ;; (include defalias_qwertz_pc.kbd)  ;; Qwertz PC
 ;; (include defalias_bepo_pc.kbd)  ;; Bépo PC
 
+;;-----------------------------------------------------------------------------
+;; Extra configuration
+;; You should not modify this, only if you need to.
+
+(defcfg
+  ;; Enabled makes kanata process keys that are not defined in defsrc
+  ;; Fixes altgr for Windows (see Arsenik issue #22)
+  process-unmapped-keys yes
+  windows-altgr cancel-lctl-press
+)
+
 ;; vim: set ft=lisp
