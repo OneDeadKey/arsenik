@@ -1,0 +1,87 @@
+;; Optimot Windows/Linux aliases
+
+;; Navigation layer
+(defalias
+
+  all C-a
+  sav C-k
+  cls C-v
+  ndo C-]
+  cut C-[
+  cpy C-m
+  pst C-/
+
+  0 S-0
+  1 S-1
+  2 S-2
+  3 S-3
+  4 S-4
+  5 S-5
+  6 S-6
+  7 S-7
+  8 S-8
+  9 S-9
+  , g
+  . c
+)
+
+;; Symbols layer
+(defalias
+
+  ^  (macro ' spc)
+  <  AG-q
+  >  AG-w
+  $  `
+  %  S-=
+  @  -
+  &  AG-j
+  *  6
+  '  o
+  `  AG-h
+
+  {  AG-u
+  pl 9
+  pr 0
+  }  AG-i
+  =  8
+  \  AG-7
+  +  5
+  -  4
+  /  7
+  '' 3
+
+  ~  (macro AG-; spc)
+  [  AG-9
+  ]  AG-0
+  _  S--
+  #  =
+  |  AG-[
+  !  S-'
+  ;  S-g
+  :  S-c
+  ?  S-o
+)
+
+;; NumRow layer
+(defalias
+
+  s0 0
+  s1 1
+  s2 2
+  s3 3
+  s4 4
+  s5 5
+  s6 6
+  s7 7
+  s8 8
+  s9 9
+  nbs S-spc ;; narrow no-break space
+
+  dk1 XX
+  dk2 XX
+  dk3 XX
+  dk4 XX
+  dk5 XX
+)
+
+;; vim: set ft=lisp

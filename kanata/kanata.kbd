@@ -67,6 +67,7 @@
 ;; (include defalias_azerty_pc.kbd)  ;; Azerty PC
 ;; (include defalias_qwertz_pc.kbd)  ;; Qwertz PC
 ;; (include defalias_bepo_pc.kbd)  ;; Bépo PC
+;; (include defalias_optimot_pc.kbd)  ;; Optimot PC
 
 ;;-----------------------------------------------------------------------------
 ;; Extra configuration
