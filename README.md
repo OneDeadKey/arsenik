@@ -2,7 +2,7 @@ Arsenik
 ================================================================================
 
 Configure your keyboard (even if it is not programmable) with a
-beginner-friendly, simplified [Miryoku][1]-like approach to minimize finger
+beginner-friendly, simplified [Miryoku]-like approach to minimize finger
 movements!
 
 ![base, navigation and sym layers on a 33-key keyboard](img/all.svg)
@@ -19,18 +19,18 @@ efficiency.
 layer in orange, with a numpad, cursor navigation (<kbd>ESDF</kbd>) and one-hand
 shortcuts.
 
-This is how modern ergonomic keyboards work — e.g. [Planck][2], [Atreus][3],
-[Corne][4], [Ferris][5]… The goal here is to propose an approach that works
-with any keyboard, including your laptop’s.
+This is how modern ergonomic keyboards work — e.g. [Planck], [Atreus], [Corne],
+[Ferris]… The goal here is to propose an approach that works with any keyboard,
+including your laptop’s.
 
-*Note: You might benefit the most of Arsenik if you are [touch typing][6].*
+*Note: You might benefit the most of Arsenik if you are [touch typing].*
 
 
 Modular Approach
 --------------------------------------------------------------------------------
 
 Enable Arsenik features from the following options:
-- [angle mod][7] (the only enabled option by default)
+- [angle mod] (the only enabled option by default)
 - 3 home row mods (HRM) per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>,
 <kbd>Super</kbd>
 - 3 layer-tap keys under the thumbs: <kbd>Alt</kbd> (or <kbd>Shift</kbd> in
@@ -76,34 +76,34 @@ Related Projects
 
 ### Inspiration
 
-- [Miryoku][1] for the main idea of using modifiers on the home row and layer
+- [Miryoku] for the main idea of using modifiers on the home row and layer
 shifters under the thumbs;
-- [Lafayette][8] and [Ergo-L][9] for the <kbd>Symbol</kbd> layer, which has been
+- [Lafayette] and [Ergo-L] for the <kbd>Symbol</kbd> layer, which has been
 blatantly taken *as is*;
-- [Extend][10], [Neo][11], [Shaka34][12] for the <kbd>Navigation</kbd> layer.
+- [Extend], [Neo], [Shaka34] for the <kbd>Navigation</kbd> layer.
 
 ### Alternative Symbol Layers
 
-- [Neo][11]
-- [Seniply][13]
-- [Pascal Getreuer’s][14]
+- [Neo]
+- [Seniply]
+- [Pascal Getreuer’s]
 
 ### Non-Goals
 
-- being the most efficient 3×5 layout — [Miryoku][1] is probably the most
+- being the most efficient 3×5 layout — [Miryoku] is probably the most
 advanced approach for that, at least on custom 36-key keyboards;
 - fitting any OS layout — Arsenik works best if your OS layout has either no
 AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr layer
-([Lafayette][8], [Ergo-L][9]…).
+([Lafayette], [Ergo-L]…).
 
 ### Similar Projects
 
-- [Miryoku][1]: 36 keys, 6 layers
-- [Seniply][13]: 34 keys, 6 layers, no layer-taps (“Callum-style”)
+- [Miryoku]: 36 keys, 6 layers
+- [Seniply]: 34 keys, 6 layers, no layer-taps (“Callum-style”)
 
 ### Join the community
 
-French-speaking users may join the [Ergo-L Discord server][15] which hosts a
+French-speaking users may join the [Ergo-L Discord server] which hosts a
 channel to talk about Arsenik.
 
 Feel free to open an issue and/or a pull request if you encounter a bug or want
@@ -117,18 +117,18 @@ TODO
 <!-- https://jasoncarloscox.com/writing/combo-mods/ -->
 
 
-[1]: https://github.com/manna-harbour/miryoku
-[2]: https://olkb.com/collections/planck
-[3]: https://atreus.technomancy.us
-[4]: https://github.com/foostan/crkbd
-[5]: https://github.com/pierrechevalier83/ferris
-[6]: https://en.wikipedia.org/wiki/Touch_typing
-[7]: https://colemakmods.github.io/ergonomic-mods/angle.html
-[8]: https://qwerty-lafayette.org/42
-[9]: https://ergol.org
-[10]: https://dreymar.colemak.org/layers-extend.html
-[11]: https://neo-layout.org
-[12]: https://github.com/lobre/shaka34
-[13]: https://stevep99.github.io/seniply/
-[14]: https://getreuer.info/posts/keyboards/symbol-layer/#my-symbol-layer
-[15]: https://discord.gg/5xR5K3nAFX
+[Miryoku]: https://github.com/manna-harbour/miryoku
+[Planck]: https://olkb.com/collections/planck
+[Atreus]: https://atreus.technomancy.us
+[Corne]: https://github.com/foostan/crkbd
+[Ferris]: https://github.com/pierrechevalier83/ferris
+[touch typing]: https://en.wikipedia.org/wiki/Touch_typing
+[angle mod]: https://colemakmods.github.io/ergonomic-mods/angle.html
+[Lafayette]: https://qwerty-lafayette.org/42
+[Ergo-L]: https://ergol.org
+[Extend]: https://dreymar.colemak.org/layers-extend.html
+[Neo]: https://neo-layout.org
+[Shaka34]: https://github.com/lobre/shaka34
+[Seniply]: https://stevep99.github.io/seniply/
+[Pascal Getreuer’s]: https://getreuer.info/posts/keyboards/symbol-layer/#my-symbol-layer
+[Ergo-L Discord server]: https://discord.gg/5xR5K3nAFX

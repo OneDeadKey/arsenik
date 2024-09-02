@@ -5,9 +5,11 @@ Arsenik Kanata
 Installation
 --------------------------------------------------------------------------------
 
-- To get Arsenik, check out this repository with Git or [download it][1].
+- To get Arsenik, check out this repository with Git or
+[download it][Download Arsenik].
 - Launch `kanata.kbd` with Kanata.
-  - You can install Kanata by downloading a [pre-built executable][2].
+  - You can install Kanata by downloading a
+  [pre-built executable][Download Kanata].
   - Follow the installation details of your operating system.
 
 <details>
@@ -156,7 +158,7 @@ when held.
 
 ![home row mods on SDF keys](../img/kanata/hrm.svg)
 
-This is a very basic variant of the [Miryoku][3] principle: one layer on each
+This is a very basic variant of the [Miryoku] principle: one layer on each
 thumb key, and symmetrical modifiers on the home row.
 
 
@@ -275,7 +277,7 @@ to Arsenik!
 
 In the `NumRow` layer, you can edit the `dk1` to `dk5` shortcuts to put whatever
 seams useful to you (media buttons for example), a lot of available keys are
-defined in [Kanata source code][4].
+defined in [Kanata source code][Kanata keys].
 
 In the `Navigation` layer, you can put a command on top of the <kbd>P</kbd> key
 (in Qwerty), e.g. for an application launcher.
@@ -284,7 +286,7 @@ Note that Kanata can also use the laptop’s trackpoint buttons (e.g. ThinkPad)
 as two additional thumb keys. :-)
 
 
-[1]: https://github.com/OneDeadKey/arsenik/releases
-[2]: https://github.com/jtroo/kanata/releases
-[3]: https://github.com/manna-harbour/miryoku
-[4]: https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs#L159
+[Download Arsenik]: https://github.com/OneDeadKey/arsenik/releases
+[Download Kanata]: https://github.com/jtroo/kanata/releases
+[Miryoku]: https://github.com/manna-harbour/miryoku
+[Kanata keys]: https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs#L159
