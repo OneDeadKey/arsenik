@@ -10,7 +10,8 @@ movements!
 *Note: The keyboard layout presented here in the illustration is Qwerty but it
 works with other layouts as well — e.g. Azerty, Qwertz, Ergo‑L, Bépo…*
 
-**Bring the keys to your fingers, rather than moving your fingers to the keys!**
+**Bring the keys to your fingers, rather than moving your fingers to the keys
+with layer-taps!**
 
 - A long press on the <kbd>Return</kbd> key brings up the <kbd>Symbol</kbd>
 layer in blue, where all programming symbols are arranged for comfort and
@@ -30,18 +31,21 @@ Modular Approach
 --------------------------------------------------------------------------------
 
 Enable Arsenik features from the following options:
-- [angle mod] (the only enabled option by default)
+- [angle mod]: permuts the extra ISO keyboard key on the down left to ease the
+angle on your left wrist when typing
 - 3 home row mods (HRM) per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>,
-<kbd>Super</kbd>
+<kbd>Super</kbd> (if pressed: output a letter on the home row, if held: acts as
+a modifier)
 - 3 layer-tap keys under the thumbs: <kbd>Alt</kbd> (or <kbd>Shift</kbd> in
 HRM)/<kbd>Backspace</kbd>, <kbd>Navigation</kbd>/<kbd>Space</kbd>,
 <kbd>Symbol</kbd>/<kbd>Return</kbd>
-- symbol layer: have all programmation characters at, at most, one key away from
-your fingers
+- symbol layer: have all programmation characters at most one key away from your
+fingers
 - num row or num pad
 - navigation layer like in arrow cluster or Vim-like
 
-Use it with Qwerty, Qwertz, Azerty, Ergo‑L, Bépo, and many other keyboard layouts!
+*Note: these features are explained in more details in the
+[Arsenik Kanata page](kanata).*
 
 
 Main Benefits
@@ -62,7 +66,7 @@ Alt/Cmd keys.
 Installation
 --------------------------------------------------------------------------------
 
-Starts right now with the keyboard you already have, and install
+Start right now with the keyboard you already have, and install
 [Kanata with Arsenik configuration](kanata).
 
 If you have a programmable keyboard you might want to take a look at the
@@ -79,7 +83,7 @@ Related Projects
 - [Miryoku] for the main idea of using modifiers on the home row and layer
 shifters under the thumbs;
 - [Lafayette] and [Ergo-L] for the <kbd>Symbol</kbd> layer, which has been
-blatantly taken *as is*;
+shamelessly taken *as is*;
 - [Extend], [Neo], [Shaka34] for the <kbd>Navigation</kbd> layer.
 
 ### Alternative Symbol Layers
@@ -91,7 +95,9 @@ blatantly taken *as is*;
 ### Non-Goals
 
 - being the most efficient 3×5 layout — [Miryoku] is probably the most
-advanced approach for that, at least on custom 36-key keyboards;
+advanced approach for that, at least on custom 36-key keyboards; and each person
+its own configuration for their needs will be more efficient, even if Arsenik
+can serve at a starting point
 - fitting any OS layout — Arsenik works best if your OS layout has either no
 AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr layer
 ([Lafayette], [Ergo-L]…).
