@@ -47,7 +47,7 @@
       <g transform="translate(90)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Q</text>
-        <text x="38.0" y="43.4" class="layerSym">@</text>
+        <text x="38.0" y="43.4" class="layerSym">^</text>
       </g>
       <g transform="translate(150)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -78,7 +78,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Y</text>
         <text x="38.0" y="20.6" class="layerNav">⇱</text>
-        <text x="38.0" y="43.4" class="layerSym">^</text>
+        <text x="38.0" y="43.4" class="layerSym">@</text>
       </g>
       <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>

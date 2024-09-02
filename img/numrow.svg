@@ -1,17 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
 
   <style>
-    rect, path {
+    :root {
+      color-scheme: light dark;
+    }
+    rect {
       fill: #f8f8f8;
       stroke: #666;
       stroke-width: .5px;
     }
     text {
-      fill: #999;
+      fill: #bbb;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
     }
+    .dualKey { fill: #ddd; transform: translateY(26px); }
 
     #row_AD { transform: translate(64px,  64px); }
     #row_AC { transform: translate(64px, 124px); }
@@ -20,15 +24,20 @@
     .left   { transform: translate(-15px, 0); }
     .right  { transform: translate(+15px, 0); }
 
-    .layer  { font-size: 14px; font-weight: bold; }
+    .layer  { font-size: 14px; font-weight: bold; fill: #f8f8f8; }
     .layerNum { fill: green; }
-    .layerSym { fill: blue; }
+    .layerSym { font-weight: normal; }
+    .layerMod { font-weight: bold; font-size: 14px; }
+
+    .layerSym, .colorSym { fill: blue; }
 
     @media (prefers-color-scheme: dark) {
-      text      { fill: #888; }
-      rect      { fill: #444; }
-      .layerNum { fill: #6d6; }
-      .layerSym { fill: #99f; }
+      text                 { fill: #666; }
+      rect                 { fill: #444; }
+      .dualKey             { fill: #666; }
+      .layerMod            { fill: #eee; }
+      .layerNum            { fill: #6d6; }
+      .layerSym, .colorSym { fill: #99f; }
     }
   </style>
 
@@ -151,23 +160,33 @@
     <g class="left">
       <g transform="translate(90)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">Z</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">Z</text>
+        </g>
       </g>
       <g transform="translate(150)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">X</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">X</text>
+        </g>
       </g>
       <g transform="translate(210)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">C</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">C</text>
+        </g>
       </g>
       <g transform="translate(270)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">V</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">V</text>
+        </g>
       </g>
       <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">B</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">B</text>
+        </g>
       </g>
     </g>
     <g class="right">
@@ -204,16 +223,15 @@
   <g id="row_AA">
     <g transform="translate(180)">
       <rect width="82" height="52" rx="5" ry="5" class="layerNum"/>
-      <!-- <text x="20.5" y="20.6" class="level2" style="font-size: 14px;">⌫</text> -->
       <text x="20.5" y="42.8" class="layer">num</text>
     </g>
     <g transform="translate(270)">
       <rect width="232" height="52" rx="5" ry="5"/>
+      <text x="20.5" y="42.8" class="layer layerNum">⍽</text>
     </g>
     <g transform="translate(510)">
-      <rect width="82" height="52" rx="5" ry="5"/>
-      <!-- <text x="20.5" y="23.6" class="level2">⏎</text> -->
-      <text x="20.5" y="42.8" class="layer layerSym">sym</text>
+      <rect width="82" height="52" rx="5" ry="5" class="layerSym"/>
+      <text x="20.5" y="42.8" class="layer">sym</text>
     </g>
   </g>
 

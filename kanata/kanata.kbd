@@ -38,9 +38,9 @@
 ;; `Symbols` layer
 
 (include deflayer_symbols_noop.kbd)  ;; AltGr stays as-is
-;; (include deflayer_symbols_1dk.kbd)  ;; AltGr programmation layer like Ergo‑L
+;; (include deflayer_symbols_lafayette.kbd)  ;; AltGr programmation layer like Ergo‑L
 ;; (include deflayer_symbols_noop_num.kbd)  ;; AltGr stays as-is + NumRow layers
-;; (include deflayer_symbols_1dk_num.kbd)  ;; AltGr prog layer + NumRow layers
+;; (include deflayer_symbols_lafayette_num.kbd)  ;; AltGr prog layer + NumRow layers
 
 
 ;;-----------------------------------------------------------------------------
