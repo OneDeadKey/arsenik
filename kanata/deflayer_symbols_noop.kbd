@@ -8,7 +8,7 @@
   AG-q AG-w AG-e AG-r AG-t      AG-y AG-u AG-i AG-o AG-p
   AG-a AG-s AG-d AG-f AG-g      AG-h AG-j AG-k AG-l AG-;
   AG-z AG-x AG-c AG-v AG-b  XX  AG-n AG-m AG-, AG-. AG-/
-            _              spc            _
+            _             AG-spc          _
 )
 
 ;; vim: set ft=lisp
