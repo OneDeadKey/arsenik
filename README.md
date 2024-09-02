@@ -107,10 +107,10 @@ thumb key, and symmetrical modifiers on the home row.
 For the <kbd>Symbols</kbd> layer you can keep <kbd>AltGr</kbd> as-is. It is
 useful for keyboard layouts that rely heavily on the <kbd>AltGr</kbd> key.
 
-But the real fun (especially for programmers) happens when we enable the “One 
-Dead Key” (= 1DK) programmation layer!
+But the real fun (especially for programmers) happens when we enable the 
+“Lafayette” programmation layer!
 
-![1dk symbols layer on a 33-key keyboard](./img/symbols.svg)
+![Lafayette symbols layer on a 33-key keyboard](./img/symbols.svg)
 
 
 #### Num row >> Num pad
@@ -178,31 +178,31 @@ Here are some caveats for some specific layouts:
 <details>
 <summary>Ergo‑L/Qwerty‑Lafayette/other Lafayette layouts</summary>
 
-Arsenik works out-of-the-box with Lafayette layouts because their AltGr layer
-already matches Arsenik’s Symbols layer.
+Arsenik works out-of-the-box with Lafayette layouts because their
+<kbd>AltGr</kbd> layer already matches Arsenik’s <kbd>Symbols</kbd> layer.
 </details>
 
 <details>
 <summary>Qwerty/Colemak</summary>
 
-Qwerty/Colemak works out-of-the-box with the Symbols layer because there isn’t
-other characters in AltGr.
+Qwerty/Colemak works out-of-the-box with the Lafayette <kbd>Symbols</kbd> layer
+because there isn’t other characters in <kbd>AltGr</kbd>.
 </details>
 
 <details>
 <summary>Azerty</summary>
 
-By using the 1dk <kbd>Symbols</kbd> layer, you won’t have access to the
+By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
 <kbd>€</kbd> sign in <kbd>AltGr</kbd>. You might want to remap it elsewhere, or
-not using the 1dk <kbd>Symbols</kbd> layer.
+not using the Lafayette <kbd>Symbols</kbd> layer.
 </details>
 
 <details>
 <summary>Bépo</summary>
 
-By using the 1dk <kbd>Symbols</kbd> layer, you won’t have access to the
+By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
 characters in <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
-or not using the 1dk <kbd>Symbols</kbd> layer.
+or not using the Lafayette <kbd>Symbols</kbd> layer.
 </details>
 
 <details>
@@ -211,9 +211,9 @@ or not using the 1dk <kbd>Symbols</kbd> layer.
 Do not enable angle mod for Optimot as it is already in angle mod with its
 driver.
 
-By using the 1dk <kbd>Symbols</kbd> layer, you won’t have access to the
+By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
 characters in <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
-or not using the 1dk <kbd>Symbols</kbd> layer.
+or not using the Lafayette <kbd>Symbols</kbd> layer.
 </details>
 
 
