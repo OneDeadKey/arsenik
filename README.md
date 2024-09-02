@@ -8,7 +8,7 @@ movements!
 ![base, navigation and sym layers on a 33-key keyboard](img/all.svg)
 
 *Note: The keyboard layout presented here in the illustration is Qwerty but it
-works with others layouts as well — e.g. Azerty, Ergo‑L, Qwertz, Bépo, …*
+works with other layouts as well — e.g. Azerty, Qwertz, Ergo‑L, Bépo…*
 
 **Bring the keys to your fingers, rather than moving your fingers to the keys!**
 
@@ -26,11 +26,11 @@ with any keyboard, including your laptop’s.
 *Note: You might benefit the most of Arsenik if you are [touch typing][6].*
 
 
-Modular approach
+Modular Approach
 --------------------------------------------------------------------------------
 
-You can choose your options:
-- [angle mod][7] (by default the only option activated)
+Enable Arsenik features from the following options:
+- [angle mod][7] (the only enabled option by default)
 - 3 home row mods (HRM) per hand for <kbd>Ctrl</kbd>, <kbd>Alt</kbd>,
 <kbd>Super</kbd>
 - 3 layer-tap keys under the thumbs: <kbd>Alt</kbd> (or <kbd>Shift</kbd> in
@@ -40,7 +40,8 @@ HRM)/<kbd>Backspace</kbd>, <kbd>Navigation</kbd>/<kbd>Space</kbd>,
 your fingers
 - num row or num pad
 - navigation layer like in arrow cluster or Vim-like
-- use it with Qwerty, Ergo‑L, Azerty, Bépo, and many more keyboard layouts!
+
+Use it with Qwerty, Qwertz, Azerty, Ergo‑L, Bépo, and many other keyboard layouts!
 
 
 Main Benefits

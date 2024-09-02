@@ -267,7 +267,7 @@ the 1dk `Symbols` layer.
 </details>
 
 
-Extra personalization
+Extra Personalization
 --------------------------------------------------------------------------------
 
 From there, you can edit the configuration to match your liking, even contribute
