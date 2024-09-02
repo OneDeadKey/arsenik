@@ -176,6 +176,20 @@ existing one.
 Here are some caveats for some specific layouts:
 
 <details>
+<summary>Ergo‑L/Qwerty‑Lafayette/other Lafayette layouts</summary>
+
+Arsenik works out-of-the-box with Lafayette layouts because their AltGr layer
+already matches Arsenik’s Symbols layer.
+</details>
+
+<details>
+<summary>Qwerty/Colemak</summary>
+
+Qwerty/Colemak works out-of-the-box with the Symbols layer because there isn’t
+other characters in AltGr.
+</details>
+
+<details>
 <summary>Azerty</summary>
 
 By using the 1dk <kbd>Symbols</kbd> layer, you won’t have access to the
