@@ -1,6 +1,7 @@
 Arsenik Kanata
 ================================================================================
 
+![base, navigation and sym layers on a 33-key keyboard](../img/kanata/all_ergo.svg)
 
 Installation
 --------------------------------------------------------------------------------

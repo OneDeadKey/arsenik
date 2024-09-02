@@ -17,10 +17,12 @@
     }
     .dualKey { fill: #ddd; transform: translateY(26px); }
 
-    #row_AD { transform: translate(48px,  64px); }
+    #row_AD { transform: translate(64px,  64px); }
     #row_AC { transform: translate(64px, 124px); }
-    #row_AB { transform: translate(32px, 184px); }
-    #row_AA { transform: translate(62px, 244px); }
+    #row_AB { transform: translate(64px, 184px); }
+    #row_AA { transform: translate(64px, 244px); }
+    .left   { transform: translate(-15px, 0); }
+    .right  { transform: translate(+15px, 0); }
 
     .shortcut { font-size: 10px; transform: translate(-3px,  -1px); }
     .layerSym { font-weight: normal; }
@@ -160,35 +162,35 @@
 
   <g id="row_AB">
     <g class="left">
-      <g transform="translate(150)">
+      <g transform="translate(90)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g>
           <text x="12.8" y="20.6" class="level2">Z</text>
           <text x="38.0" y="20.6" class="layerNav shortcut">undo</text>
         </g>
       </g>
-      <g transform="translate(210)">
+      <g transform="translate(150)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g>
           <text x="12.8" y="20.6" class="level2">X</text>
           <text x="38.0" y="20.6" class="layerNav shortcut">cut</text>
         </g>
       </g>
-      <g transform="translate(270)">
+      <g transform="translate(210)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g>
           <text x="12.8" y="20.6" class="level2">C</text>
           <text x="38.0" y="20.6" class="layerNav shortcut">copy</text>
         </g>
       </g>
-      <g transform="translate(330)">
+      <g transform="translate(270)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g>
           <text x="12.8" y="20.6" class="level2">V</text>
           <text x="38.0" y="20.6" class="layerNav shortcut">paste</text>
         </g>
       </g>
-      <g transform="translate(390)">
+      <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g>
           <text x="12.8" y="20.6" class="level2">B</text>
@@ -197,29 +199,29 @@
       </g>
     </g>
     <g class="right">
-      <g transform="translate(450)">
+      <g transform="translate(390)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">N</text>
         <text x="38.0" y="20.6" class="layerNav">,</text>
       </g>
-      <g transform="translate(510)">
+      <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
         <text x="38.0" y="20.6" class="layerNav">1</text>
       </g>
-      <g transform="translate(570)">
+      <g transform="translate(510)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">&lt;</text>
         <text x="38.0" y="20.6" class="layerNav">2</text>
       </g>
-      <g transform="translate(630)">
+      <g transform="translate(570)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">.</text>
         <text x="12.8" y="20.6" class="level2">&gt;</text>
         <text x="38.0" y="20.6" class="layerNav">3</text>
       </g>
-      <g transform="translate(690)">
+      <g transform="translate(630)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">/</text>
         <text x="12.8" y="20.6" class="level2">?</text>
