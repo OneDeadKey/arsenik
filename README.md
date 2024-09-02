@@ -59,8 +59,8 @@ Choose which Arsenik features to use from the following options:
 
 ### 1. Angle mod
 
-On an ISO keyboard, it permuts the extra down left key to ease the angle on your
-left wrist when typing.
+On an ISO keyboard, it permutes the extra down-left key to ease the angle on
+your left wrist when typing.
 
 ![Angle mod](./img/angle_mod.svg)
 
@@ -139,7 +139,7 @@ move around and a num pad on the right hand.
 
 #### A superpowered Vim-friendly mod
 
-For those who like to move the cursor with <kbd>HJKL</kbd> in all app, with any
+For those who like to move the cursor with <kbd>HJKL</kbd> in all apps with any
 keyboard layout, it is possible to enable a Vim-like <kbd>Navigation</kbd>
 layer.
 
@@ -152,7 +152,7 @@ It also has:
 This <kbd>Navigation</kbd> layer has a few empty slots on purpose, so you can
 add our own keys or layers.
 
-<kbd>NumPad</kbd> and <kbd>Fn</kbd> toggle these layers, they stay active
+<kbd>NumPad</kbd> and <kbd>Fn</kbd> lock these layers: they remain active
 without holding the key until escaped with <kbd>Alt</kbd> or <kbd>AltGr</kbd>.
 
 ![NumPad layer on a 33-key keyboard](./img/numpad.svg)
@@ -173,7 +173,7 @@ properly.
 If your layout is not on this list, feel free to open an issue or upvote an
 existing one.
 
-Here is some specifities for some supported layouts:
+Here are some caveats for some specific layouts:
 
 <details>
 <summary>Azerty</summary>
@@ -233,7 +233,7 @@ a step-by-step approach:
 - enable each feature by un-commenting the related line (a commented line starts
 with `;;`), you must enable one and only one line per feature
 - live-reload the configuration with <kbd>Space</kbd>+<kbd>Backspace</kbd>
-(requires the feature layer-taps enabled)
+(requires the layer-taps feature enabled)
 
 If you have a programmable keyboard you might want to take a look at the
 [QMK](qmk) version of Arsenik (work in progress).
@@ -268,9 +268,10 @@ shamelessly taken *as is*;
 ### Non-Goals
 
 - being the most efficient 3×5 layout — [Miryoku] is probably the most
-advanced approach for that, at least on custom 36-key keyboards; and each person
-its own configuration for their needs will be more efficient, even if Arsenik
-can serve at a starting point
+advanced approach for that, at least on custom 36-key keyboards;
+- suiting every user out-of-the-box — Arsenik is proposed as a reasonable
+default configuration, but users are encouraged to customize it to suit their
+personal needs and preferences;
 - fitting any OS layout — Arsenik works best if your OS layout has either no
 AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr layer
 ([Lafayette], [Ergo-L]…).
