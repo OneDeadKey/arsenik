@@ -1,83 +1,106 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
 
   <style>
-    rect, path {
-      fill: #f8f8f8;
+    :root {
+      color-scheme: light dark;
+    }
+    rect {
+      fill: #fff;
       stroke: #666;
       stroke-width: .5px;
     }
     text {
-      fill: #999;
+      fill: #666;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
     }
+    .dualKey { fill: #ddd; transform: translateY(26px); }
 
-    #row_AD { transform: translate(64px,  64px); }
+    #row_AD { transform: translate(48px,  64px); }
     #row_AC { transform: translate(64px, 124px); }
-    #row_AB { transform: translate(64px, 184px); }
-    #row_AA { transform: translate(64px, 244px); }
-    .left   { transform: translate(-15px, 0); }
-    .right  { transform: translate(+15px, 0); }
+    #row_AB { transform: translate(32px, 184px); }
+    #row_AA { transform: translate(62px, 244px); }
 
-    .layer    { font-size: 14px; font-weight: bold; }
-    .layerNav { fill: #e83; font-weight: bold; }
-    .shortcut { font-size: smaller; }
+    .shortcut { font-size: 10px; transform: translate(-3px,  -1px); }
+    .layerSym { font-weight: normal; }
+    .layerMod { font-weight: bold; font-size: 14px; }
+
+    .layerMod, .colorMod { fill: #333; }
+    .layerSym, .colorSym { fill: blue; }
+    #row_AA    .level2   { fill: #333; }
+
+    [finger="m1"] rect { fill: hsl(  0, 100%, 95%); }
+    [finger="l2"] rect { fill: hsl( 42, 100%, 85%); }
+    [finger="r2"] rect { fill: hsl( 61, 100%, 85%); }
+    [finger="l3"] rect,
+    [finger="r3"] rect { fill: hsl(136, 100%, 85%); }
+    [finger="l4"] rect,
+    [finger="r4"] rect { fill: hsl(200, 100%, 85%); }
+    [finger="l5"] rect,
+    [finger="r5"] rect { fill: hsl(230, 100%, 85%); }
 
     @media (prefers-color-scheme: dark) {
-      text    { fill: #888; }
-      rect    { fill: #444; }
+      text                 { fill: #aaa; }
+      rect                 { fill: #444; }
+      .dualKey             { fill: #666; }
+      .layerMod, .colorMod { fill: #eee; }
+      .layerSym, .colorSym { fill: #99f; }
+      #row_AA .level2      { fill: #ccc; }
+      /* 'hints' theme */
+      [finger="m1"] rect { fill: hsl(  0, 25%, 30%); }
+      [finger="l2"] rect { fill: hsl( 31, 30%, 30%); }
+      [finger="r2"] rect { fill: hsl( 61, 30%, 30%); }
+      [finger="l3"] rect,
+      [finger="r3"] rect { fill: hsl(136, 30%, 30%); }
+      [finger="l4"] rect,
+      [finger="r4"] rect { fill: hsl(200, 30%, 30%); }
+      [finger="l5"] rect,
+      [finger="r5"] rect { fill: hsl(230, 30%, 30%); }
     }
   </style>
 
   <g id="row_AD">
     <g class="left">
-      <g transform="translate(90)">
+      <g transform="translate(90)" finger="l5">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Q</text>
       </g>
-      <g transform="translate(150)">
+      <g transform="translate(150)" finger="l4">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">W</text>
-        <text x="38.0" y="43.4" class="layerNav shortcut">^w</text>
       </g>
-      <g transform="translate(210)">
+      <g transform="translate(210)" finger="l3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">E</text>
-        <text x="38.0" y="43.4" class="layerNav">⎗</text>
       </g>
-      <g transform="translate(270)">
+      <g transform="translate(270)" finger="l2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">R</text>
-        <text x="38.0" y="43.4" class="layerNav">⎘</text>
       </g>
-      <g transform="translate(330)">
+      <g transform="translate(330)" finger="l2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">T</text>
       </g>
     </g>
     <g class="right">
-      <g transform="translate(390)">
+      <g transform="translate(390)" finger="r2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Y</text>
-        <text x="38.0" y="43.4" class="layerNav">⇱</text>
       </g>
-      <g transform="translate(450)">
+      <g transform="translate(450)" finger="r2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">U</text>
-        <text x="38.0" y="43.4" class="layerNav">⇟</text>
       </g>
-      <g transform="translate(510)">
+      <g transform="translate(510)" finger="r3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">I</text>
-        <text x="38.0" y="43.4" class="layerNav">⇞</text>
       </g>
-      <g transform="translate(570)">
+      <g transform="translate(570)" finger="r4">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">O</text>
-        <text x="38.0" y="43.4" class="layerNav">⇲</text>
       </g>
-      <g transform="translate(630)">
+      <g transform="translate(630)" finger="r5">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">P</text>
       </g>
@@ -86,53 +109,45 @@
 
   <g id="row_AC">
     <g class="left">
-      <g transform="translate(90)">
+      <g transform="translate(90)" finger="l5">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">A</text>
-        <text x="38.0" y="43.4" class="layerNav shortcut">^a</text>
       </g>
-      <g transform="translate(150)">
+      <g transform="translate(150)" finger="l4">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">S</text>
-        <text x="38.0" y="43.4" class="layerNav shortcut">^s</text>
       </g>
-      <g transform="translate(210)">
+      <g transform="translate(210)" finger="l3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">D</text>
-        <text x="38.0" y="43.4" class="layerNav">⇤</text>
       </g>
-      <g transform="translate(270)">
+      <g transform="translate(270)" finger="l2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">F</text>
-        <text x="38.0" y="43.4" class="layerNav">↹</text>
       </g>
-      <g transform="translate(330)">
+      <g transform="translate(330)" finger="l2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">G</text>
       </g>
     </g>
     <g class="right">
-      <g transform="translate(390)">
+      <g transform="translate(390)" finger="r2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">H</text>
-        <text x="38.0" y="43.4" class="layerNav">←</text>
       </g>
-      <g transform="translate(450)">
+      <g transform="translate(450)" finger="r2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">J</text>
-        <text x="38.0" y="43.4" class="layerNav">↓</text>
       </g>
-      <g transform="translate(510)">
+      <g transform="translate(510)" finger="r3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">K</text>
-        <text x="38.0" y="43.4" class="layerNav">↑</text>
       </g>
-      <g transform="translate(570)">
+      <g transform="translate(570)" finger="r4">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">L</text>
-        <text x="38.0" y="43.4" class="layerNav">→</text>
       </g>
-      <g transform="translate(630)">
+      <g transform="translate(630)" finger="r5">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">;</text>
         <text x="12.8" y="20.6" class="level2">:</text>
@@ -142,59 +157,62 @@
 
   <g id="row_AB">
     <g class="left">
-      <g transform="translate(90)">
+      <g transform="translate(90)" finger="l5">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">Z</text>
-        <text x="38.0" y="43.4" class="layerNav shortcut">^z</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">Z</text>
+        </g>
       </g>
-      <g transform="translate(150)">
+      <g transform="translate(150)" finger="l4">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">X</text>
-        <text x="38.0" y="43.4" class="layerNav shortcut">^x</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">X</text>
+        </g>
       </g>
-      <g transform="translate(210)">
+      <g transform="translate(210)" finger="l3">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">C</text>
-        <text x="38.0" y="43.4" class="layerNav shortcut">^c</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">C</text>
+        </g>
       </g>
-      <g transform="translate(270)">
+      <g transform="translate(270)" finger="l2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">V</text>
-        <text x="38.0" y="43.4" class="layerNav shortcut">^v</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">V</text>
+        </g>
       </g>
-      <g transform="translate(330)">
+      <g transform="translate(330)" finger="l2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">B</text>
+        <g>
+          <text x="12.8" y="20.6" class="level2">B</text>
+        </g>
       </g>
     </g>
+    <g transform="translate(390)" opacity="0.4">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <text x="12.8" y="43.4" class="level1">\</text>
+      <text x="12.8" y="20.6" class="level2">|</text>
+    </g>
     <g class="right">
-      <g transform="translate(390)">
+      <g transform="translate(450)" finger="r2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">N</text>
-        <text x="30.0" y="43.4" class="layerNav">🖰</text>
-        <text x="38.0" y="43.4" class="layerNav">←</text>
       </g>
-      <g transform="translate(450)">
+      <g transform="translate(510)" finger="r2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
-        <text x="30.0" y="43.4" class="layerNav">🖰</text>
-        <text x="42.0" y="43.4" class="layerNav">↓</text>
       </g>
-      <g transform="translate(510)">
+      <g transform="translate(570)" finger="r3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">&lt;</text>
-        <text x="30.0" y="43.4" class="layerNav">🖰</text>
-        <text x="42.0" y="43.4" class="layerNav">↑</text>
       </g>
-      <g transform="translate(570)">
+      <g transform="translate(630)" finger="r4">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">.</text>
         <text x="12.8" y="20.6" class="level2">&gt;</text>
-        <text x="30.0" y="43.4" class="layerNav">🖰</text>
-        <text x="38.0" y="43.4" class="layerNav">→</text>
       </g>
-      <g transform="translate(630)">
+      <g transform="translate(690)" finger="r5">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">/</text>
         <text x="12.8" y="20.6" class="level2">?</text>
@@ -204,18 +222,15 @@
 
   <g id="row_AA">
     <g transform="translate(180)">
-      <rect width="82" height="52" rx="5" ry="5"/>
-      <text x="20.5" y="20.6" class="level2" style="font-size: 14px;">⌫</text>
-      <text x="61.5" y="42.8" class="layerNav" style="font-size: 14px;">⌦</text>
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <text x="26.0" y="42.8" class="layerMod">Alt</text>
     </g>
-    <g class="homeKey" transform="translate(270)">
-      <rect width="232" height="52" rx="5" ry="5" class="layerNav"/>
-      <text x="58.0" y="42.8" class="layer">navigation</text>
+    <g transform="translate(240)">
+      <rect width="292" height="52" rx="5" ry="5"/>
     </g>
-    <g transform="translate(510)">
-      <rect width="82" height="52" rx="5" ry="5"/>
-      <text x="20.5" y="23.6" class="level2">⏎</text>
-      <text x="61.5" y="42.8" class="layerNav">⎋</text>
+    <g transform="translate(540)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <text x="26.0" y="42.8" class="layerMod">AltGr</text>
     </g>
   </g>
 
