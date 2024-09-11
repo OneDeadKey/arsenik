@@ -117,43 +117,43 @@
 )
 
 (deflayer base
-  @b1   @b2   @b3   @b4   @b5   _        @b6   @b7   @b8   @b9   @b0
-  a     c     o     p     z              j     ;     d     @dk   y
-  q     s     e     n     f              l     r     t     i     u
-  w     x     @dash v     b     <        @dot  h     g     @com  k
-  @sft0       _                 @spce             @sym        @sft0
+  _    @b1   @b2   @b3   @b4   @b5   _   @b6   @b7   @b8   @b9   @b0  _    _
+       a     c     o     p     z         j     ;     d     @dk   y    _    _
+       q     s     e     n     f         l     r     t     i     u    _    _
+       w     x     @dash v     b     <   @dot  h     g     @com  k
+  @sft0            _               @spce       @sym              @sft0
 )
 
 (deflayer baseSft
-  _     _     _     _     _     _        _     _     _     _     _
-  a     c     o     p     z              j     ;     d     @!sft y
-  q     s     e     n     f              l     r     t     i     u
-  w     x     @?sft v     b     _        @:sft h     g     @;sft k
-  _           _                 _                    _           _
+  _    _     _     _     _     _    _    _     _     _     _     _    _    _
+       a     c     o     p     z         j     ;     d     @!sft y    _    _
+       q     s     e     n     f         l     r     t     i     u    _    _
+       w     x     @?sft v     b    _    @:sft h     g     @;sft k
+  _                _                _          _                 _
 )
 
 (deflayer dk1
-  @„    @“    @”   @¢     @‰    _        _     _     @§    @¶    @°
-  @Â    @Ç    @Œ   @Ô     _              _     @µ    @_dk  @dk   @Û
-  @À    @É    @È   @Ê     @Ñ             @lpar @rpar @Î    @Ï    @Ù
-  @Æ    @ẞ    @¿   @–     @—    _        @…    XX    XX    @•    XX
-  @sft1       _                 @smark               _        @sft1
+  _    @„    @“    @”   @¢     @‰   _    _     _     @§    @¶    @°   _    _
+       @Â    @Ç    @Œ   @Ô     _         _     @µ    @_dk  @dk   @Û   _    _
+       @À    @É    @È   @Ê     @Ñ        @lpar @rpar @Î    @Ï    @Ù   _    _
+       @Æ    @ẞ    @¿   @–     @—   _    @…    XX    XX    @•    XX
+  @sft1            _              @smark       _                 @sft1
 )
 
 (deflayer dk2
-  _     _     _     _     _     _        _     _     _     _     _
-  a     c     @Ö    p     @Ẅ             j     ;     d     @dk   @Ÿ
-  @Ä    s     @Ë    n     f              l     r     @ẗ    @Ï    @Ü
-  w     @Ẍ    @-    v     b     _        @.    @Ḧ    g     m     k
-  @sft2       _                 @mark                _        @sft2
+  _    _     _     _     _     _    _    _     _     _     _     _    _    _
+       a     c     @Ö    p     @Ẅ        j     ;     d     @dk   @Ÿ   _    _
+       @Ä    s     @Ë    n     f         l     r     @ẗ    @Ï    @Ü   _    _
+       w     @Ẍ    @-    v     b    _    @.    @Ḧ    g     m     k
+  @sft2            _              @mark        _                 @sft2
 )
 
 (deflayer dk3
-  _     _     _     _     _     _        _     _     _     _     _
-  a     c     o     p     z              j     ;     d     @dk   y
-  q     s     e     n     f              l     r     t     i     u
-  w     x     @-    v     b     _        @.    h     g     m     k
-  @sft3       _                 @diaeresis           _        @sft3
+  _    _     _     _     _     _    _    _     _     _     _     _    _    _
+       a     c     o     p     z         j     ;     d     @dk   y    _    _
+       q     s     e     n     f         l     r     t     i     u    _    _
+       w     x     @-    v     b    _    @.    h     g     m     k
+  @sft3            _           @diaeresis      _                 @sft3
 )
 
 ;; vim: set ft=lisp
