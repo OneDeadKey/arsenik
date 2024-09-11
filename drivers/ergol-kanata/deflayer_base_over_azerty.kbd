@@ -57,6 +57,15 @@
 (defalias
   smark (unicode ’)
 
+  „ (t! dk-sft „ ‚)
+  “ (t! dk-sft “ ‘)
+  ” (t! dk-sft ” ’)
+  ¢ (unicode ¢)
+  ‰ (unicode ‰)
+  § (unicode §)
+  ¶ (unicode ¶)
+  ° (unicode °)
+
   Â (t! dk-sft â Â)
   Ç (t! dk-sft ç Ç)
   Œ (t! dk-sft œ Œ)
@@ -124,7 +133,7 @@
 )
 
 (deflayer dk1
-  _     _     _     _     _     _        _     _     _     _     _
+  @„    @“    @”   @¢     @‰    _        _     _     @§    @¶    @°
   @Â    @Ç    @Œ   @Ô     _              _     @µ    @_dk  @dk   @Û
   @À    @É    @È   @Ê     @Ñ             @lpar @rpar @Î    @Ï    @Ù
   @Æ    @ẞ    @¿   @–     @—    _        @…    XX    XX    @•    XX

@@ -8,7 +8,6 @@ An Ergo-L "portable" driver, emulated with Kanata over your regular keymap.
 - Mac keyboards are not supported at this point.
 - "Useless" right-hand keys are not remapped at this point; they should
   ideally be remapped to their Qwerty/Ergo-L counterparts.
-- Some exotic dead key characters are not yet handled (especially those on
-  the numrow).
+- Some exotic characters may be missing, please report bugs.
 - Layer taps are not supported at this point.
 - Home row mods are not supported at this point.
