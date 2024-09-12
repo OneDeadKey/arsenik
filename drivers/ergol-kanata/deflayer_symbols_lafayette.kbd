@@ -1,6 +1,9 @@
 ;; Symbol layers
 
+;; main symbols layer aliases
 (defalias
+  sym2 (layer-while-held symbolsSft)
+
   ;; subscript digits
   ₁ (unicode ₁)
   ₂ (unicode ₂)
@@ -14,13 +17,64 @@
   ₀ (unicode ₀)
 )
 
-(deflayer symbols
-  _ @₁   @₂   @₃   @₄   @₅   XX   @₆   @₇   @₈   @₉   @₀   _ _
-    @^   @<   @>   @$   @%        @@   @&   @*   @'   @`   _ _
-    @{   @pl  @pr  @}   @=        @\   @+   @-   @/   @''  _ _
-    @~   @[   @]   @_   @#   XX   @|   @!   @;   @:   @?
-  _           _              spc       _              _
+;; shifted symbols layer aliases
+(defalias
+  ;; superscript digits
+  ¹ (unicode ¹)
+  ² (unicode ²)
+  ³ (unicode ³)
+  ⁴ (unicode ⁴)
+  ⁵ (unicode ⁵)
+  ⁶ (unicode ⁶)
+  ⁷ (unicode ⁷)
+  ⁸ (unicode ⁸)
+  ⁹ (unicode ⁹)
+  ⁰ (unicode ⁰)
+
+  ;; TODO: dead ^
+  ≤ (unicode ≤)
+  ≥ (unicode ≥)
+  ;; TODO: dead ¤
+  ;; TODO: dead ˚
+  × (unicode ×)
+  ;; TODO: dead '
+  ;; TODO: dead `
+
+  ;; TODO: dead ˇ
+  ;; TODO: dead ˙
+  ≠ (unicode ≠)
+  ;; TODO: dead /
+  ± (unicode ±)
+  ;; TODO: dead ˉ
+  ÷ (unicode ÷)
+  ;; TODO: dead ˝
+
+  ;; TODO: dead ~
+  ;; TODO: dead ,
+  ;; TODO: dead ˛
+  ¦ (unicode ¦)
+  ¬ (unicode ¬)
+  ;; TODO: dead ¸
+  ;; TODO: dead ˘
 )
 
+(deflayer symbols
+  XX   @₁   @₂   @₃   @₄   @₅   XX   @₆   @₇   @₈   @₉   @₀   XX XX
+       @^   @<   @>   @$   @%        @@   @&   @*   @'   @`   XX XX
+       @{   @pl  @pr  @}   @=        @\   @+   @-   @/   @''  XX XX
+       @~   @[   @]   @_   @#   XX   @|   @!   @;   @:   @?
+  @sym2          _             spc        _              @sym2
+)
+
+;; TODO: on letter rows below, the _ correspond to unimplemented dead
+;;       keys (see above to dos). XX are where keys are actually not
+;;       supposed to have any effect.
+(deflayer symbolsSft
+  XX   @¹   @²   @³   @⁴   @⁵   XX   @⁶   @⁷   @⁸   @⁹   @⁰   XX XX
+       _    @≤   @≥   _    @‰        _    XX   @×   _    _    XX XX
+       _    XX   XX   _    @≠        _    @±   _    @÷   _    XX XX
+       _    _    _    @–   XX   XX   @¦   @¬   _    @:   _
+  _              _             spc        _              _
+)
 
 ;; vim: set ft=lisp
