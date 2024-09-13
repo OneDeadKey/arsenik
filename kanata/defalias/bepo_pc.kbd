@@ -10,6 +10,8 @@
   cut C-c
   cpy C-h
   pst C-u
+  nwd C-rght
+  pwd C-lft
 
   0 S-0
   1 S-1

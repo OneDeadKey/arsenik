@@ -1,6 +1,6 @@
 ;; Vim-Navigation layer:
 ;;  - right: Vim-like arrows on HJKL, home/end page up/down, mouse scroll
-;;  - left: one-hand shortcuts (Cmd/Ctrl-WASZXCV), Tab/Shift-Tab, prev/next
+;;  - left: one-hand shortcuts (Cmd/Ctrl-WASZXCV), Tab/Shift-Tab, prev/next, Ctrl/Alt-Left/Right
 ;;  - top: Super-num (i3/sway) or Alt-num (browser), zoom in/out
 
 ;; The `lrld` action stands for "live reload". This will re-parse everything
@@ -8,9 +8,9 @@
 
 (deflayer navigation
   M-1  M-2  M-3  M-4  M-5  lrld M-6  M-7  M-8  M-9  M-0
-  @pad @cls bck  fwd  XX        home pgdn pgup end  @run
+  @pad @cls bck  fwd  @nwd      home pgdn pgup end  @run
   @all @sav S-tab tab XX        lft  down up   rght @fun
-  @ndo @cut @cpy @pst XX    _   @mwl @mwd @mwu @mwr XX
+  @ndo @cut @cpy @pst @pwd  _   @mwl @mwd @mwu @mwr XX
             del             _             esc
 )
 

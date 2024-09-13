@@ -11,6 +11,8 @@
   cut C-x
   cpy C-c
   pst C-v
+  nwd C-rght
+  pwd C-lft
 
   0 S-0
   1 S-1
