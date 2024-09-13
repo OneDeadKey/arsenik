@@ -10,6 +10,8 @@
   cut M-x
   cpy M-c
   pst M-v
+  nwd A-rght
+  pwd A-lft
 
   0 0
   1 1

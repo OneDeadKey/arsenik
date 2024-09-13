@@ -10,6 +10,8 @@
   cut C-x
   cpy C-c
   pst C-v
+  nwd C-rght
+  pwd C-lft
 
   0 0
   1 1
