@@ -17,9 +17,9 @@
 ;; Choose here if you want to add an angle mod: ZXCVB are shifted to the left.
 ;; See https://colemakmods.github.io/ergonomic-mods/angle.html for more details.
 
-;; (include defsrc_pc.kbd)  ;; PC, standard finger assignment
+(include defsrc_pc.kbd)  ;; PC, standard finger assignment
 ;; (include defsrc_mac.kbd)  ;; Mac, standard finger assignment
-(include defsrc_pc_anglemod.kbd)  ;; PC, ZXCVB are shifted to the left
+;; (include defsrc_pc_anglemod.kbd)  ;; PC, ZXCVB are shifted to the left
 ;; (include defsrc_mac_anglemod.kbd)  ;; Mac, ZXCVB are shifted to the left
 
 
