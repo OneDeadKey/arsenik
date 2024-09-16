@@ -16,10 +16,9 @@
 ![base, navigation and sym layers on a 33-key keyboard](img/all.svg)
 
 *Note: The keyboard layout presented here in the illustration is Qwerty but it
-works with other layouts as well — e.g. Azerty, Qwertz, Ergo‑L, Bépo…*
+works with other layouts as well — Azerty, Qwertz, Ergo‑L, Bépo…*
 
 --------------------------------------------------------------------------------
-
 
 Table of contents
 --------------------------------------------------------------------------------
@@ -36,7 +35,6 @@ Table of contents
 - [Why “Arsenik”?](#why-arsenik)
 - [Join the community](#join-the-community)
 
-
 Philosophy
 --------------------------------------------------------------------------------
 
@@ -44,18 +42,16 @@ Philosophy
 
 Not sure if you should buy that expensive ergonomic keyboard?
 
-Download a ready-to-use Arsenik configuration for [Kanata], and enjoy on your
-regular keyboard features that were normally only accessible to programmable
+Download a ready-to-use Arsenik configuration for [Kanata], and enjoy your
+regular features that were normally only accessible to a programmable
 keyboard.
 
-*Note: You might benefit the most of Arsenik if you are [touch typing].*
-
+*Note: You probably will benefit the most of Arsenik if you are [touch typing].*
 
 Pick Your Poison!
 --------------------------------------------------------------------------------
 
 Choose which Arsenik features to use from the following options:
-
 
 ### 1. Angle mod
 
@@ -63,7 +59,6 @@ On an ISO keyboard, it permutes the extra down-left key to ease the angle on
 your left wrist when typing.
 
 ![Angle mod](./img/angle_mod.svg)
-
 
 ### 2. Supercharge your thumbs with mod-taps
 
@@ -82,9 +77,8 @@ emits <kbd>Return</kbd> when tapped;
 ![alt, navigation and sym layers under the thumbs](./img/layer_taps.svg)
 
 Having <kbd>Backspace</kbd> and <kbd>Enter</kbd> under the thumbs is enough to
-reduce the pinky fatigue very significantly. And using the <kbd>Symbols</kbd>
+reduce pinky fatigue very significantly. And using the <kbd>Symbols</kbd>
 and <kbd>Navigation</kbd> layers further reduces hand and finger movements.
-
 
 #### Next level: enable the Home Row Mods
 
@@ -101,34 +95,31 @@ when held.
 This is a very basic variant of the [Miryoku] principle: one layer on each
 thumb key, and symmetrical modifiers on the home row.
 
-
 ### 3. Symbols layer
 
 For the <kbd>Symbols</kbd> layer you can keep <kbd>AltGr</kbd> as-is. It is
 useful for keyboard layouts that rely heavily on the <kbd>AltGr</kbd> key.
 
-But the real fun (especially for programmers) happens when we enable the 
+But the real fun (especially for programmers) happens when we enable the
 “Lafayette” programmation layer!
 
 ![Lafayette symbols layer on a 33-key keyboard](./img/symbols.svg)
-
 
 #### Num row >> Num pad
 
 If enabled, in <kbd>Symbols</kbd> mode, pressing the left thumb key brings up
 the <kbd>NumRow</kbd> layer:
 
-- all digits are on the home row, in the order you already know
-- the upper row helps with <kbd>Shift</kbd>-digit shortcuts
-- the lower row has dash, comma, dot and slash signs to help with number / date
+- all digits are on the home row, in the order you already know;
+- the upper row helps with <kbd>Shift</kbd>-digit shortcuts;
+- the lower row has dash, comma, dot and slash signs to help with number/date
 inputs
-- <kbd>Space</kbd> becomes a narrow no-break space for layouts that supports it
+- <kbd>Space</kbd> becomes a narrow no-break space for layouts that support it.
 
 ![NumRow layer on a 33-key keyboard](./img/numrow.svg)
 
-Even on keyboards that *do* have a physical number row, this `NumRow`layer can
-be interesting to use in order to minimize finger movements furthermore.
-
+Even on keyboards that *do* have a physical number row, this `NumRow` layer can
+be interesting to use in order to further minimize finger movements.
 
 ### 4. Navigation layer
 
@@ -144,13 +135,14 @@ keyboard layout, it is possible to enable a Vim-like <kbd>Navigation</kbd>
 layer.
 
 It also has:
+
 - super-comfortable <kbd>Tab</kbd> and <kbd>Shift</kbd>-<kbd>Tab</kbd>
-- mouse emulation: previous / next and mouse scroll
+- mouse emulation: previous/next and mouse scroll
 
 ![Vim navigation layer on a 33-key keyboard](./img/vim_navigation.svg)
 
 This <kbd>Navigation</kbd> layer has a few empty slots on purpose, so you can
-add our own keys or layers.
+add your own keys or layers.
 
 <kbd>NumPad</kbd> and <kbd>Fn</kbd> lock these layers: they remain active
 without holding the key until escaped with <kbd>Alt</kbd> or <kbd>AltGr</kbd>.
@@ -173,7 +165,7 @@ properly.
 If your layout is not on this list, feel free to open an issue or upvote an
 existing one.
 
-Here are some caveats for some specific layouts:
+Here are some caveats for specific layouts:
 
 <details>
 <summary>Ergo‑L/Qwerty‑Lafayette/other Lafayette layouts</summary>
@@ -185,57 +177,54 @@ Arsenik works out-of-the-box with Lafayette layouts because their
 <details>
 <summary>Qwerty/Colemak</summary>
 
-Qwerty/Colemak works out-of-the-box with the Lafayette <kbd>Symbols</kbd> layer
-because there isn’t other characters in <kbd>AltGr</kbd>.
+Qwerty and Colemak work out-of-the-box with the Lafayette <kbd>Symbols</kbd> layer
+because there are no other characters typed with <kbd>AltGr</kbd>.
 </details>
 
 <details>
 <summary>Azerty</summary>
 
 By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
-<kbd>€</kbd> sign in <kbd>AltGr</kbd>. You might want to remap it elsewhere, or
-not using the Lafayette <kbd>Symbols</kbd> layer.
+<kbd>€</kbd> sign with <kbd>AltGr</kbd>. You might want to remap it elsewhere, or
+avoid using the Lafayette <kbd>Symbols</kbd> layer.
 </details>
 
 <details>
 <summary>Bépo</summary>
 
 By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
-characters in <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
-or not using the Lafayette <kbd>Symbols</kbd> layer.
+characters typed with <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
+or avoid using the Lafayette <kbd>Symbols</kbd> layer.
 </details>
 
 <details>
 <summary>Optimot</summary>
 
-Do not enable angle mod for Optimot as it is already in angle mod with its
-driver.
+Do not enable angle mod for Optimot as its driver already implements angle mod.
 
 By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
-characters in <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
-or not using the Lafayette <kbd>Symbols</kbd> layer.
+characters typed with <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
+or avoid using the Lafayette <kbd>Symbols</kbd> layer.
 </details>
-
 
 ### Bonus: Spice It Up
 
-From there, you can edit the configuration to match your liking, even contribute
+From there, you can edit the configuration to your liking, and even contribute
 to Arsenik!
 
 The 300 ms delay before a key becomes a modifier has been chosen to be easy for
 beginners. Once used to mod-taps, you may want to reduce it so keyboard
 shortcuts can be done more quickly.
 
-In the <kbd>NumRow</kbd> layer, you can edit the <kbd>dk1</kbd> to 
-<kbd>dk5</kbd> shortcuts to put whatever seams useful to you, a lot of available
-keys are defined in [Kanata source code][Kanata keys].
+In the <kbd>NumRow</kbd> layer, you can edit the <kbd>dk1</kbd> to
+<kbd>dk5</kbd> shortcuts to put whatever seems useful to you: the numerous available
+keys are defined in the [Kanata source code][Kanata keys].
 
-In the <kbd>Navigation</kbd> layer, you can put a command on top of the
-<kbd>P</kbd> key (in Qwerty), e.g. for an application launcher.
+In the <kbd>Navigation</kbd> layer, you can put a command on top of the (Qwerty)
+<kbd>P</kbd> key, e.g. for an application launcher.
 
-Note that Kanata can also use the laptop’s trackpoint buttons (e.g. ThinkPad)
+Note that Kanata can also use the laptop’s trackpoint buttons (e.g. on a ThinkPad)
 as two additional thumb keys. :-)
-
 
 Installation
 --------------------------------------------------------------------------------
@@ -243,37 +232,36 @@ Installation
 Adjusting to compact keyboard layouts isn’t easy, but Arsenik is designed for
 a step-by-step approach:
 
-- load `kanata.kbd` with Kanata ([installation instructions](kanata))
+- load `kanata.kbd` with Kanata ([installation instructions](kanata));
 - enable each feature by un-commenting the related line (a commented line starts
-with `;;`), you must enable one and only one line per feature
+with `;;`) – you must enable one and only one line per feature;
 - live-reload the configuration with <kbd>Space</kbd>+<kbd>Backspace</kbd>
-(requires the layer-taps feature enabled)
+(this requires the layer-taps feature enabled).
 
 If you have a programmable keyboard you might want to take a look at the
 [QMK](qmk) version of Arsenik (work in progress).
 
-Other desktop implementations (kmonad, keyd, Karabiner…) would be nice to see as
+Other desktop implementations (KMonad, keyd, Karabiner…) would be nice to see as
 well.
-
 
 Why “Arsenik”?
 --------------------------------------------------------------------------------
 
 33 keys layout: the 33rd element of the periodic table.
 
-Unlike Miryoku which requires 6 thumb keys, Arsenik has been designed to work
+Unlike Miryoku, which requires 6 thumb keys, Arsenik has been designed to work
 with standard ANSI/ISO/laptop keyboards, leveraging the spacebar and the two
 Alt/Cmd keys.
 
 ### Inspiration
 
 - [Miryoku] for the main idea of using modifiers on the home row and layer
-shifters under the thumbs;
-- [Lafayette] and [Ergo-L] for the <kbd>Symbol</kbd> layer, which has been
-shamelessly taken *as is*;
-- [Extend], [Neo], [Shaka34] for the <kbd>Navigation</kbd> layer.
+shifters under the thumbs
+- [Lafayette] and [Ergo-L] for the <kbd>Symbols</kbd> layer, which has been
+shamelessly taken *as is*
+- [Extend], [Neo], [Shaka34] for the <kbd>Navigation</kbd> layer
 
-### Alternative Symbol Layers
+### Alternative Symbols Layers
 
 - [Neo]
 - [Seniply]
@@ -281,30 +269,28 @@ shamelessly taken *as is*;
 
 ### Non-Goals
 
-- being the most efficient 3×5 layout — [Miryoku] is probably the most
-advanced approach for that, at least on custom 36-key keyboards;
-- suiting every user out-of-the-box — Arsenik is proposed as a reasonable
+- Being the most efficient 3×5 layout — [Miryoku] is probably the most
+advanced approach for that, at least on custom 36-key keyboards
+- Suiting every user out-of-the-box — Arsenik is proposed as a reasonable
 default configuration, but users are encouraged to customize it to suit their
-personal needs and preferences;
-- fitting any OS layout — Arsenik works best if your OS layout has either no
-AltGr layer at all (e.g. QWERTY, Colemak, Workman…), or an optimized AltGr layer
-([Lafayette], [Ergo-L]…).
+personal needs and preferences
+- Fitting any OS layout — Arsenik works best if your OS layout has either no
+AltGr layer at all (e.g. Qwerty, Colemak, Workman…) or an optimized AltGr layer
+([Lafayette], [Ergo-L]…)
 
 ### Similar Projects
 
 - [Miryoku]: 36 keys, 6 layers
 - [Seniply]: 34 keys, 6 layers, no layer-taps (“Callum-style”)
 
-
 Join the community
 --------------------------------------------------------------------------------
 
-French-speaking users may join the [Ergo-L Discord server] which hosts a
-channel to talk about Arsenik, keyboard, layouts and many more.
+French-speaking users may join the [Ergo-L Discord server], which hosts a
+channel to talk about Arsenik, keyboards, layouts and much more.
 
 Feel free to open an issue and/or a pull request if you encounter a bug or want
 to enhance the Arsenik experience!
-
 
 [Kanata]: https://github.com/jtroo/kanata
 [Miryoku]: https://github.com/manna-harbour/miryoku

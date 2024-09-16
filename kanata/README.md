@@ -17,8 +17,8 @@ Installation
 Windows users might prefer to download the `kanata_winIOv2.exe` version as it
 fixes some weird bugs like <kbd>C</kbd> and <kbd>V</kbd> inversion.
 
-*Note: this tip is tested for the version 1.6.1 of Kanata, in later version the
-`winIOv2` version might be the default one.*
+*Note: This tip has been tested for version 1.6.1 of Kanata. In later versions the
+`winIOv2` version might be the default.*
 
 Put the `kanata_winIOv2.exe` in the Kanata Arsenik folder, run it and you’re
 good to go!
@@ -36,20 +36,20 @@ If you don’t want to run `kanata` with `sudo`, you’ll need to allow Kanata t
 read from `uinput`. This requires the users to be part of both `input` and
 `uinput` groups.
 
-For that, you first need to create a `uinput` group if it is not the case yet:
+For that, you first need to create a `uinput` group if it doesn’t exist yet:
 
 ```bash
 sudo groupadd -U $USERNAME uinput
 ```
 
-Where `$USERNAME` is the target user (or users in a comma separated list), and
+where `$USERNAME` is the target user (or users in a comma-separated list). Then
 add the target user (or users) to the group input:
 
 ```bash
 sudo usermod -aG input $USERNAME
 ```
 
-You can then check after relogin that both groups appear in the result of the
+You can check after re-logging that both groups appear in the result of the
 `groups` command launched as the target user.
 
 Finally, you need to add a udev rule in `/etc/udev/rules.d/50-kanata.rules`:
@@ -58,8 +58,7 @@ Finally, you need to add a udev rule in `/etc/udev/rules.d/50-kanata.rules`:
 KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
 ```
 
-
-### Making a user-side systemd service for Kanata
+### Making a user-side <code>systemd</code> service for Kanata
 
 Note: This only works if `kanata` is able to run without `sudo` (and is using
 `systemd`).
@@ -91,6 +90,7 @@ placeholders, then run one of the following commands:
 - `systemctl --user enable kanata.service` so `kanata` may autostart whenever
 the current user logs in
 - `systemctl --user status kanata.service` to check if `kanata` is running
+
 </details>
 
 [Download Arsenik]: https://github.com/OneDeadKey/arsenik/releases
