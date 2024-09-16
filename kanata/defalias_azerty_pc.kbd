@@ -76,7 +76,7 @@
   s7 7
   s8 8
   s9 9
-  nbs spc ;; no narrow no-break space in Azerty
+  nbs (unicode  ) ;; narrow non-break space
 
   dk1 XX
   dk2 XX
