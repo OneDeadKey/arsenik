@@ -48,7 +48,7 @@ keyboard.
 
 *Note: You probably will benefit the most of Arsenik if you are [touch typing].*
 
-Pick Your Poison
+Pick Your Poison!
 --------------------------------------------------------------------------------
 
 Choose which Arsenik features to use from the following options:
