@@ -8,15 +8,24 @@
             @alt          @nav            @sym
 )
 
+;; Timing variables for tap-hold effects.
+(defvar
+  ;; The key must be pressed twice in 200ms to enable repetitions.
+  tap_timeout 200
+  ;; The key must be held 200ms to become a layer shift.
+  hold_timeout 200
+  ;; Slightly higher value for tapying keys, to prevent unexpected hold effect.
+  long_hold_timeout 300
+)
+
 (defalias
   ;; Main mod-tap: Nav layer when held, Space when tapped.
-  ;; The space key must be held long enough (300ms) to become a layer shift.
-  nav (tap-hold 200 300 spc (layer-while-held navigation))
+  nav (tap-hold $tap_timeout $long_hold_timeout spc (layer-while-held navigation))
 
   ;; Space-cadet thumb keys: Alt/BackSpace, AltGr/Enter.
   ;; Acts as a modifier by default, or as BackSpace/Enter when tapped separately.
-  alt (tap-hold-press 200 200 bspc lalt)
-  sym (tap-hold-press 200 200 ret (layer-while-held symbols))
+  alt (tap-hold-press $tap_timeout $hold_timeout bspc lalt)
+  sym (tap-hold-press $tap_timeout $hold_timeout ret (layer-while-held symbols))
 )
 
 ;; vim: set ft=lisp
