@@ -1,0 +1,47 @@
+;;==========================================================================;;
+;;                                                                          ;;
+;;  Ergo-L "portable" driver, emulated with Kanata over your regular keymap ;;
+;;                                                                          ;;
+;;==========================================================================;;
+
+
+;;-----------------------------------------------------------------------------
+;; Choose here if you want to add an angle mod: ZXCVB are shifted to the left.
+;; See https://colemakmods.github.io/ergonomic-mods/angle.html for more details.
+
+(include defsrc_pc.kbd)  ;; PC, standard finger assignment
+;;(include defsrc_pc_anglemod.kbd)  ;; PC, ZXCVB are shifted to the left
+
+
+;;-----------------------------------------------------------------------------
+;; Base keymap
+
+(include deflayer_base_over_azerty.kbd)  ;; Azerty-FR
+
+
+;;-----------------------------------------------------------------------------
+;; `Symbols` layer
+;; You need this, don’t disable it.
+
+(include deflayer_symbols_lafayette.kbd)
+
+
+;;-----------------------------------------------------------------------------
+;; Aliases for `Symbols` and `Navigation` layers
+;; Depends on PC/Mac and keyboard layout
+
+(include defalias_azerty_pc.kbd)  ;; Azerty-FR, PC
+
+
+;;-----------------------------------------------------------------------------
+;; Extra configuration
+;; You should not modify this, only if you need to.
+
+(defcfg
+  ;; Enabled makes kanata process keys that are not defined in defsrc
+  ;; Fixes altgr for Windows (see Arsenik issue #22)
+  process-unmapped-keys yes
+  windows-altgr cancel-lctl-press
+)
+
+;; vim: set ft=lisp

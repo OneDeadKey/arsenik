@@ -1,0 +1,170 @@
+;; Emulation of Ergo-L over an Azerty-FR keymap -- main layers
+
+(deftemplate dk-sft (base-action shift-action)
+  (fork (unicode $base-action) (unicode $shift-action) (lsft rsft))
+)
+
+(defalias
+  sym (layer-while-held symbols)
+
+  ;; Shift mods
+  sft0 (multi lsft (layer-while-held baseSft))
+  sft1 (multi lsft (layer-while-held dk1))
+  sft2 (multi lsft (layer-while-held dk2))
+  sft3 (multi lsft (layer-while-held dk3))
+
+  ;; dead key (becomes exclamation mark when shifte)
+  dk (fork
+    (tap-dance 5000 (
+      (one-shot-press 5000 (layer-while-held dk1))
+      (one-shot-press 5000 (layer-while-held dk2))
+      (one-shot-press 5000 (layer-while-held dk3))
+    ))
+    (unicode !)
+    (lsft rsft)
+  )
+)
+
+;; Base layer
+(defalias
+  spce (fork spc (unicode  ) (lsft rsft)) ;; space / narrow no-break space
+
+  ;; numbers row
+  acc (t! dk-sft ` ~)
+  b1 (t! dk-sft 1 €)
+  b2 (t! dk-sft 2 «)
+  b3 (t! dk-sft 3 »)
+  b4 (t! dk-sft 4 $)
+  b5 (t! dk-sft 5 %)
+  b6 (t! dk-sft 6 ^)
+  b7 (t! dk-sft 7 &)
+  b8 (t! dk-sft 8 *)
+  b9 (t! dk-sft 9 #)
+  b0 (t! dk-sft 0 @)
+  slsh (t! dk-sft / _)
+  eq (t! dk-sft = +)
+
+  ;; right-hand "extras"
+  brk1 (t! dk-sft [ {)
+  brk2 (t! dk-sft ] })
+  qte (fork 4 (unshift 3) (lsft rsft))  ;; '  "
+  bksl (t! dk-sft \ |)
+
+  ;; lower row
+  dash (t! dk-sft - ?)
+  dot (t! dk-sft . :)
+  com (t! dk-sft , ;)
+)
+
+;; sft0
+(defalias
+  ?sft m
+  !sft (unshift /)
+  ;sft (unshift ,)
+  :sft (unshift .)
+)
+
+;; Dead key layer 1
+(defalias
+  smark (unicode ’)
+
+  „ (t! dk-sft „ ‚)
+  “ (t! dk-sft “ ‘)
+  ” (t! dk-sft ” ’)
+  ¢ (unicode ¢)
+  ‰ (unicode ‰)
+  § (unicode §)
+  ¶ (unicode ¶)
+  ° (unicode °)
+
+  Â (t! dk-sft â Â)
+  Ç (t! dk-sft ç Ç)
+  Œ (t! dk-sft œ Œ)
+  Ô (t! dk-sft ô Ô)
+  µ (fork (unicode µ) XX (lsft rsft))
+  _dk (unshift 8)
+  Û (t! dk-sft û Û)
+
+  À (t! dk-sft à À)
+  É (t! dk-sft é É)
+  È (t! dk-sft è È)
+  Ê (t! dk-sft ê Ê)
+  Ñ (t! dk-sft ñ Ñ)
+  lpar (fork 5 XX (lsft rsft))
+  rpar (fork - XX (lsft rsft))
+  Î (t! dk-sft î Î)
+  Ï (t! dk-sft ï Ï)
+  Ù (t! dk-sft ù Ù)
+
+  Æ (t! dk-sft æ Æ)
+  ẞ (t! dk-sft ß ẞ)
+  ¿ (t! dk-sft ‑ ¿)
+  – (fork (unicode –) XX (lsft rsft))
+  — (fork (unicode —) XX (lsft rsft))
+  … (fork (unicode …) XX (lsft rsft))
+  • (t! dk-sft · •)
+)
+
+;; Dead key layer 2
+(defalias
+  mark 3
+
+  Ö (t! dk-sft ö Ö)
+  Ẅ (t! dk-sft ẅ Ẅ)
+  Ÿ (t! dk-sft ÿ Ÿ)
+
+  Ä (t! dk-sft ä Ä)
+  Ë (t! dk-sft ë Ë)
+  ẗ (fork (unicode ẗ) XX (lsft rsft))
+  Ü (t! dk-sft ü Ü)
+
+  Ẍ (t! dk-sft ẍ Ẍ)
+  Ḧ (t! dk-sft ḧ Ḧ)
+)
+
+;; Dead key layer 3
+(defalias
+  diaeresis (unicode ¨)
+)
+
+(deflayer base
+  @acc @b1   @b2   @b3   @b4   @b5   _   @b6   @b7   @b8   @b9   @b0  @slsh @eq
+       a     c     o     p     z         j     ;     d     @dk   y    @brk1 @brk2
+       q     s     e     n     f         l     r     t     i     u    @qte  @bksl
+       w     x     @dash v     b     <   @dot  h     g     @com  k
+  @sft0            _               @spce       @sym              @sft0
+)
+
+(deflayer baseSft
+  _    _     _     _     _     _    _    _     _     _     _     _    _    _
+       a     c     o     p     z         j     ;     d     @!sft y    _    _
+       q     s     e     n     f         l     r     t     i     u    _    _
+       w     x     @?sft v     b    _    @:sft h     g     @;sft k
+  _                _                _          _                 _
+)
+
+(deflayer dk1
+  _    @„    @“    @”   @¢     @‰   _    _     _     @§    @¶    @°   _    _
+       @Â    @Ç    @Œ   @Ô     _         _     @µ    @_dk  @dk   @Û   _    _
+       @À    @É    @È   @Ê     @Ñ        @lpar @rpar @Î    @Ï    @Ù   _    _
+       @Æ    @ẞ    @¿   @–     @—   _    @…    XX    XX    @•    XX
+  @sft1            _              @smark       _                 @sft1
+)
+
+(deflayer dk2
+  _    _     _     _     _     _    _    _     _     _     _     _    _    _
+       a     c     @Ö    p     @Ẅ        j     ;     d     @dk   @Ÿ   _    _
+       @Ä    s     @Ë    n     f         l     r     @ẗ    @Ï    @Ü   _    _
+       w     @Ẍ    @-    v     b    _    @.    @Ḧ    g     m     k
+  @sft2            _              @mark        _                 @sft2
+)
+
+(deflayer dk3
+  _    _     _     _     _     _    _    _     _     _     _     _    _    _
+       a     c     o     p     z         j     ;     d     @dk   y    _    _
+       q     s     e     n     f         l     r     t     i     u    _    _
+       w     x     @-    v     b    _    @.    h     g     m     k
+  @sft3            _           @diaeresis      _                 @sft3
+)
+
+;; vim: set ft=lisp

@@ -1,0 +1,88 @@
+;; Azerty Windows/Linux aliases
+;; Works with AZERTY-fr. Needs a couple tweaks for the Belgian and Mac variants.
+
+;; Navigation layer
+(defalias
+
+  all C-q
+  sav C-s
+  cls C-z
+  ndo C-w
+  cut C-x
+  cpy C-c
+  pst C-v
+
+  0 S-0
+  1 S-1
+  2 S-2
+  3 S-3
+  4 S-4
+  5 S-5
+  6 S-6
+  7 S-7
+  8 S-8
+  9 S-9
+  , m
+  . S-,
+)
+
+;; Symbols layer
+(defalias
+
+  ^  (macro [ spc)
+  <  <
+  >  S-<
+  $  ]
+  %  S-'
+  @  AG-0
+  &  1
+  *  \
+  '  4
+  `  (macro AG-7 spc)
+
+  {  AG-4
+  pl 5
+  pr -
+  }  AG-=
+  =  =
+  \  AG-8
+  +  S-=
+  -  6
+  /  S-.
+  '' 3
+
+  ~  (macro AG-2 spc)
+  [  AG-5
+  ]  AG--
+  _  8
+  #  AG-3
+  |  AG-6
+  !  /
+  ;  ,
+  :  .
+  ?  S-m
+)
+
+;; NumRow layer
+(defalias
+
+  s0 0
+  s1 1
+  s2 2
+  s3 3
+  s4 4
+  s5 5
+  s6 6
+  s7 7
+  s8 8
+  s9 9
+  nbs (unicode  ) ;; narrow non-break space
+
+  dk1 XX
+  dk2 XX
+  dk3 XX
+  dk4 XX
+  dk5 XX
+)
+
+;; vim: set ft=lisp
