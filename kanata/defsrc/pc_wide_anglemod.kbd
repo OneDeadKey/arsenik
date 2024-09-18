@@ -1,0 +1,13 @@
+;; wide-angle-mod:
+;; - the ISO key (a.k.a. LSGT or 102 key) becomes Z
+;; - the right hand is moved one key to the right
+
+(defsrc
+  1    2    3    4    5  bspc   7    8    9    0    -
+  q    w    e    r    t         u    i    o    p    [
+  a    s    d    f    g         j    k    l    ;    '
+  <    z    x    c    v    b    m    ,    .    /    rsft
+            lalt          spc             ralt
+)
+
+;; vim: set ft=lisp
