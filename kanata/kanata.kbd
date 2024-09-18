@@ -17,19 +17,19 @@
 ;; Choose here if you want to add an angle mod: ZXCVB are shifted to the left.
 ;; See https://colemakmods.github.io/ergonomic-mods/angle.html for more details.
 
-(include defsrc_pc.kbd)  ;; PC, standard finger assignment
-;; (include defsrc_mac.kbd)  ;; Mac, standard finger assignment
-;; (include defsrc_pc_anglemod.kbd)  ;; PC, ZXCVB are shifted to the left
-;; (include defsrc_mac_anglemod.kbd)  ;; Mac, ZXCVB are shifted to the left
+(include defsrc/pc.kbd)  ;; PC, standard finger assignment
+;; (include defsrc/mac.kbd)  ;; Mac, standard finger assignment
+;; (include defsrc/pc_anglemod.kbd)  ;; PC, ZXCVB are shifted to the left
+;; (include defsrc/mac_anglemod.kbd)  ;; Mac, ZXCVB are shifted to the left
 
 
 ;;-----------------------------------------------------------------------------
 ;; `Base` layer: standard or dual keys? (layer-taps, homerow mods?)
 ;; If you just want angle mod, you still have to enable the standard base.
 
-(include deflayer_base.kbd)  ;; standard keyboard behavior
-;; (include deflayer_base_lt.kbd)  ;; layer-taps on both thumb keys
-;; (include deflayer_base_lt_hrm.kbd)  ;; layer-taps + home-row mods
+(include deflayer/base.kbd)  ;; standard keyboard behavior
+;; (include deflayer/base_lt.kbd)  ;; layer-taps on both thumb keys
+;; (include deflayer/base_lt_hrm.kbd)  ;; layer-taps + home-row mods
 
 ;; Note: not enabling layer-taps here makes the rest of the file useless.
 
@@ -37,17 +37,17 @@
 ;;-----------------------------------------------------------------------------
 ;; `Symbols` layer
 
-(include deflayer_symbols_noop.kbd)  ;; AltGr stays as-is
-;; (include deflayer_symbols_lafayette.kbd)  ;; AltGr programmation layer like Ergo‑L
-;; (include deflayer_symbols_noop_num.kbd)  ;; AltGr stays as-is + NumRow layers
-;; (include deflayer_symbols_lafayette_num.kbd)  ;; AltGr prog layer + NumRow layers
+(include deflayer/symbols_noop.kbd)  ;; AltGr stays as-is
+;; (include deflayer/symbols_lafayette.kbd)  ;; AltGr programmation layer like Ergo‑L
+;; (include deflayer/symbols_noop_num.kbd)  ;; AltGr stays as-is + NumRow layers
+;; (include deflayer/symbols_lafayette_num.kbd)  ;; AltGr prog layer + NumRow layers
 
 
 ;;-----------------------------------------------------------------------------
 ;; `Navigation` layer: ESDF or HJKL?
 
-(include deflayer_navigation.kbd)  ;; ESDF on the left, NumPad on the right
-;; (include deflayer_navigation_vim.kbd)  ;; HJKL + NumPad on [Space]+[Q]
+(include deflayer/navigation.kbd)  ;; ESDF on the left, NumPad on the right
+;; (include deflayer/navigation_vim.kbd)  ;; HJKL + NumPad on [Space]+[Q]
 
 ;; Replace XX by the keyboard shortcut of your application launcher, if any.
 ;; Mapped on [Space]+[P] in both navigation layers.
@@ -60,14 +60,14 @@
 ;; Aliases for `Symbols` and `Navigation` layers
 ;; Depends on PC/Mac and keyboard layout
 
-(include defalias_ergol_pc.kbd)  ;; Ergo‑L PC
-;; (include defalias_qwerty-lafayette_pc.kbd)  ;; Qwerty‑Lafayette PC
-;; (include defalias_qwerty_pc.kbd)  ;; Qwerty / Colemak PC
-;; (include defalias_qwerty_mac.kbd)  ;; Qwerty / Colemak Mac
-;; (include defalias_azerty_pc.kbd)  ;; Azerty PC
-;; (include defalias_qwertz_pc.kbd)  ;; Qwertz PC
-;; (include defalias_bepo_pc.kbd)  ;; Bépo PC
-;; (include defalias_optimot_pc.kbd)  ;; Optimot PC
+(include defalias/ergol_pc.kbd)  ;; Ergo‑L PC
+;; (include defalias/qwerty-lafayette_pc.kbd)  ;; Qwerty‑Lafayette PC
+;; (include defalias/qwerty_pc.kbd)  ;; Qwerty / Colemak PC
+;; (include defalias/qwerty_mac.kbd)  ;; Qwerty / Colemak Mac
+;; (include defalias/azerty_pc.kbd)  ;; Azerty PC
+;; (include defalias/qwertz_pc.kbd)  ;; Qwertz PC
+;; (include defalias/bepo_pc.kbd)  ;; Bépo PC
+;; (include defalias/optimot_pc.kbd)  ;; Optimot PC
 
 ;;-----------------------------------------------------------------------------
 ;; Extra configuration
