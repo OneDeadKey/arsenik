@@ -11,6 +11,15 @@
 
 ;; Live-reload the configuration with Space+Backspace (requires layer-taps).
 
+;; Timing variables for tap-hold effects.
+(defvar
+  ;; The key must be pressed twice in 200ms to enable repetitions.
+  tap_timeout 200
+  ;; The key must be held 200ms to become a layer shift.
+  hold_timeout 200
+  ;; Slightly higher value for typing keys, to prevent unexpected hold effect.
+  long_hold_timeout 300
+)
 
 ;;-----------------------------------------------------------------------------
 ;; Original key arrangement on your keyboard: Mac or PC.
