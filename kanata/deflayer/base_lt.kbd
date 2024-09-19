@@ -8,15 +8,7 @@
             @alt          @nav            @sym
 )
 
-;; Timing variables for tap-hold effects.
-(defvar
-  ;; The key must be pressed twice in 200ms to enable repetitions.
-  tap_timeout 200
-  ;; The key must be held 200ms to become a layer shift.
-  hold_timeout 200
-  ;; Slightly higher value for tapying keys, to prevent unexpected hold effect.
-  long_hold_timeout 300
-)
+;; Timing variables are defined in `kanata.kbd` file.
 
 (defalias
   ;; Main mod-tap: Nav layer when held, Space when tapped.
