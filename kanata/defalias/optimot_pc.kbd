@@ -7,6 +7,7 @@
   sav C-k
   cls C-v
   ndo C-]
+  rdo C-z
   cut C-[
   cpy C-m
   pst C-/
