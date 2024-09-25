@@ -7,9 +7,6 @@
   sav C-k
   cls C-]
   ndo C-[
-  cut C-c
-  cpy C-h
-  pst C-u
 
   0 S-0
   1 S-1

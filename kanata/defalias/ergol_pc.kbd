@@ -7,9 +7,6 @@
   sav C-s
   cls C-t
   ndo C-z
-  cut C-x
-  cpy C-w
-  pst C-v
 
   0 0
   1 1
