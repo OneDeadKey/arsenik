@@ -91,4 +91,6 @@
   windows-altgr cancel-lctl-press
 )
 
+(include defalias/common.kbd)  ;; Cross-layout aliases
+
 ;; vim: set ft=lisp

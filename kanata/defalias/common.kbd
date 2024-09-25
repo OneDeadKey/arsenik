@@ -1,0 +1,5 @@
+(defalias
+  ;; Copy/paste, TypeMatrix style
+  cpy C-ins
+  pst S-ins
+)
