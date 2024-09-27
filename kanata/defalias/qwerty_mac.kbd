@@ -12,6 +12,7 @@
   pst M-v
   nwd A-rght
   pwd A-lft
+  swp M-tab
 
   0 0
   1 1
