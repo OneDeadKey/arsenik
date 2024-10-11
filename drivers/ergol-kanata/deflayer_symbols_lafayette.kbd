@@ -15,6 +15,39 @@
   ₈ (unicode ₈)
   ₉ (unicode ₉)
   ₀ (unicode ₀)
+
+  ^ (unicode ^)
+  < (unicode <)
+  > (unicode >)
+  $ (unicode $)
+  % (unicode %)
+  @ (unicode @)
+  & (unicode &)
+  * (unicode *)
+  ' (unicode ')
+  ` (unicode `)
+
+  { (unicode {)
+  pl (unicode r#"("#)  ;; (
+  pr (unicode r#")"#)  ;; )
+  } (unicode })
+  = (unicode =)
+  \ (unicode \)
+  + (unicode +)
+  - (unicode -)
+  / (unicode /)
+  '' (unicode r#"""#)  ;; "
+
+  ~ (unicode ~)
+  [ (unicode [)
+  ] (unicode ])
+  _ (unicode _)
+  # (unicode #)
+  | (unicode |)
+  ! (unicode !)
+  ; (unicode ;)
+  : (unicode :)
+  ? (unicode ?)
 )
 
 ;; shifted symbols layer aliases

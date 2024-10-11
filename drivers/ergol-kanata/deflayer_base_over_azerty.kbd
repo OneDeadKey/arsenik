@@ -47,7 +47,7 @@
   ;; right-hand "extras"
   brk1 (t! dk-sft [ {)
   brk2 (t! dk-sft ] })
-  qte (fork 4 (unshift 3) (lsft rsft))  ;; '  "
+  qte (t! dk-sft ' r#"""#)  ;; '  "
   bksl (t! dk-sft \ |)
 
   ;; lower row
@@ -58,10 +58,10 @@
 
 ;; sft0
 (defalias
-  ?sft m
-  !sft (unshift /)
-  ;sft (unshift ,)
-  :sft (unshift .)
+  ?sft (unicode ?)
+  !sft (unicode !)
+  ;sft (unicode ;)
+  :sft (unicode :)
 )
 
 ;; Dead key layer 1
@@ -82,7 +82,7 @@
   Œ (t! dk-sft œ Œ)
   Ô (t! dk-sft ô Ô)
   µ (fork (unicode µ) XX (lsft rsft))
-  _dk (unshift 8)
+  _dk (unicode _)
   Û (t! dk-sft û Û)
 
   À (t! dk-sft à À)
@@ -90,8 +90,8 @@
   È (t! dk-sft è È)
   Ê (t! dk-sft ê Ê)
   Ñ (t! dk-sft ñ Ñ)
-  lpar (fork 5 XX (lsft rsft))
-  rpar (fork - XX (lsft rsft))
+  lpar (unicode r#"("#)  ;; (
+  rpar (unicode r#")"#)  ;; )
   Î (t! dk-sft î Î)
   Ï (t! dk-sft ï Ï)
   Ù (t! dk-sft ù Ù)
