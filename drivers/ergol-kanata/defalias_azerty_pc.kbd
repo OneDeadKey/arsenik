@@ -26,43 +26,6 @@
   . S-,
 )
 
-;; Symbols layer
-(defalias
-
-  ^  (macro [ spc)
-  <  <
-  >  S-<
-  $  ]
-  %  S-'
-  @  AG-0
-  &  1
-  *  \
-  '  4
-  `  (macro AG-7 spc)
-
-  {  AG-4
-  pl 5
-  pr -
-  }  AG-=
-  =  =
-  \  AG-8
-  +  S-=
-  -  6
-  /  S-.
-  '' 3
-
-  ~  (macro AG-2 spc)
-  [  AG-5
-  ]  AG--
-  _  8
-  #  AG-3
-  |  AG-6
-  !  /
-  ;  ,
-  :  .
-  ?  S-m
-)
-
 ;; NumRow layer
 (defalias
 
