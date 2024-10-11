@@ -9,8 +9,6 @@
   cls C-w
   ndo C-z
   cut C-x
-  cpy C-c
-  pst C-v
 
   0 0
   1 1
