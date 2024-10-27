@@ -93,5 +93,94 @@ the current user logs in
 
 </details>
 
+<details>
+<summary> macOS</summary>
+
+### Karabiner DriverKit installation
+
+Install the [Karabiner-DriverKit-VirtualHIDDevice](https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases/tag/v4.3.0). Latest version (v5.0.0) is not working with Kanata.
+
+To activate it:
+
+```
+/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate
+```
+
+You may have to allow Kanata execution in the Privacy & Security panel from macOS settings.
+
+As root, add the following content in `/Library/LaunchDaemons/org.pqrs.service.daemon.Karabiner-VirtualHIDDevice-Daemon.plist` file:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>org.pqrs.service.daemon.Karabiner-VirtualHIDDevice-Daemon</string>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ProcessType</key>
+    <string>Interactive</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/Applications/Karabiner-VirtualHIDDevice-Daemon.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Daemon</string>
+    </array>
+  </dict>
+</plist>
+```
+
+A new item *Fumihiko Takayama* will be added in System Settings > Login Items.
+
+Two Karabiner processes should be started:
+
+```
+sh-3.2# ps aux | grep -i karabiner | grep -v grep
+_driverkit       26050   0.0  0.0 410598064   2256   ??  Ss    8:02PM   0:00.04 /Library/SystemExtensions/.../org.pqrs.Karabiner-DriverKit-VirtualHIDDevice.dext/org.pqrs.Karabiner-DriverKit-VirtualHIDDevice org.pqrs.Karabiner-DriverKit-VirtualHIDDevice 0x10002b929 org.pqrs.Karabiner-DriverKit-VirtualHIDDevice
+root             25744   0.0  0.1 410756464   9872   ??  Ss    8:01PM   0:00.16 /Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/Applications/Karabiner-VirtualHIDDevice-Daemon.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Daemon
+```
+
+### Kanata installation
+
+Download Kanata [here](https://github.com/jtroo/kanata/releases/tag/v1.7.0) and save it in a persistent directory.
+
+Add a sudo rule in `/private/etc/sudoers.d/kanata` where `$USERNAME` is your username:
+
+```
+$USERNAME ALL=(ALL) NOPASSWD: /path/to/kanata/binary/kanata
+```
+
+To start Kanata at the beginning of the session, add a property list file in `~/Library/LaunchAgents/com.jtroo.kanata.plist` with the following content:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.jtroo.kanata</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>sudo</string>
+        <string>/path/to/kanata/binary/kanata</string>
+        <string>--cfg</string>
+        <string>/path/to/kanata/config/file</string>
+        <string>-n</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+</dict>
+</plist>
+```
+
+In system settings, search Login Items menu and select `sudo` service in *Allow in the Background* list.
+You can restart Kanata with new configuration by disabling and enabling this service.
+
+</details>
+
 [Download Arsenik]: https://github.com/OneDeadKey/arsenik/releases
 [Download Kanata]: https://github.com/jtroo/kanata/releases
