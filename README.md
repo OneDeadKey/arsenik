@@ -101,7 +101,7 @@ For the <kbd>Symbols</kbd> layer you can keep <kbd>AltGr</kbd> as-is. It is
 useful for keyboard layouts that rely heavily on the <kbd>AltGr</kbd> key.
 
 But the real fun (especially for programmers) happens when we enable the
-“Lafayette” programmation layer!
+“Lafayette” programming layer!
 
 ![Lafayette symbols layer on a 33-key keyboard](./img/symbols.svg)
 
