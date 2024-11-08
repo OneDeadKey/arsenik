@@ -11,7 +11,8 @@
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 /* QMK considers tap-hold actions as "tap by default" when another key is
  * pressed during the "quantum period", but some tap-holds should ideally be
- * "hold by default" to avoid this delay.
+ * "hold by default" to avoid this delay or accidentally pressing keys like
+ * Enter or Escape.
  *
  * This option allows us to have a fine-grain controll over this behaviour.
  *
@@ -26,7 +27,7 @@
  * use the `hold-action`.
  *
  * This option allows us to have a fine-grain controll over the `TAPPING_TERM`
- * for each tap-hold key, allowing a longer delay on those sensitive keys
+ * for each tap-hold key, allowing for a longer delay on those sensitive keys
  * without slowing down the safer ones.
  *
  * Arsenik provides a good default implementation of the required function
@@ -42,8 +43,9 @@
 
 
 #define ARSENIK_HRM_TAPPING_TERM 300
-// This is the delay used by Arsenik for sensitive tap-holds, which include
-// home-row-mods and mod-taps using the spacebar
+/* This is the delay used by Arsenik for sensitive tap-holds, which include
+ * home-row-mods and mod-taps using the spacebar
+ */
 
 
 //  ────────────────────< Main Arsenik configuration >─────────────────
@@ -101,41 +103,23 @@
  */
 
 // #define SELENIUM_LEFT_HAND_SPACE
-/* Swaps around the backspace and space keycodes with Selenium, but not the
- * layers when those keys are held. Handy for people who prefer using their
- * left thunb for the space bar
- *
- * (Requires `ARSENIK_ENABLE_SELENIUM_VARIANT`)
-  */
-
-// #define SELENIUM_LEFT_HAND_NAV
-/* Swaps around the navigation and numbers layers with Selenium, but not space
- * and backspace when those keys are tapped. Handy for people who prefer having
- * their nav layer on their left hand
+/* Swaps around the backspace and space keycodes, for people who prefer using
+ * their left thunb for the space bar.
  *
  * (Requires `ARSENIK_ENABLE_SELENIUM_VARIANT`)
  */
 
-// #define SELENIUM_SWAP_SAME_THUMB_HOLD_ACTION
-/* Swaps around the hold actions of the keys from the same thumb as to place
- * Shift and Lafayette / AltGr on the home position, which may be more
- * comfortable but less intuitive (espactially for Lafayette / AltGr).
- *
- * (Requires `ARSENIK_ENABLE_SELENIUM_VARIANT`)
- */
-
-// #define SELENIUM_RESTORE_SPACE
-/* Having Space accessible to one thumb may create some problems, especially
+#define SELENIUM_RESTORE_SPACE
+/* Having Space accessible to only one thumb may create some problems, especially
  * when trying to type Shift + Space or Lafayette / AltGr + Space (depending if
- * your space key is on your left or right hand). When active, it temporarely
- * replaces the homming thumb key with Space on tap if the modifier from the
- * same hand as the "real" Space key is held
+ * your space key is on your left or right hand). When active, backspace gets
+ * temporarily replaced by space when the original space key is held.
  *
  * (Requires `ARSENIK_ENABLE_SELENIUM_VARIANT`)
  */
 
 
-// Lists of layouts supported by Arsenik. Some parts of the config is dependent
+// Lists of layouts supported by Arsenik. Some parts of the config are dependent
 // on keyboard layout used on your computer. If they don’t match up some
 // characters may not be correctly placed or missing entirely. If multiple
 // options are toggled at the same time, the first one is chosen.

@@ -1,6 +1,5 @@
 #include QMK_KEYBOARD_H
 #include "arsenik.h"
-// Dummy sed marker (used by arsenik, keep includes above this line)
 
 enum arsenik_layers {
     _base,
@@ -20,13 +19,16 @@ enum custom_keycodes {
     ODK_5,  // ‰
 };
 
-// Syntaxic sugar
-#ifndef TEST
-#    define AG(keycode) RALT(keycode)
-#    define XX KC_NO
-#    define __ KC_TRNS
-#endif
-
+// The ARSENIK_LAYOUT macro allows us to declare a config for a 4x6+3 keyboard, then truncate it
+// (or fill it with noops) depending on the size of your keyboard. Your keyboard may have extra
+// definitions for this macro or none at all (preventing you from compiling the keymap). Check
+// the `README.md` file for more information.
+//
+// A comprehensive list of QMK keycodes is available here: https://docs.qmk.fm/keycodes
+// However, we used a many aliases to automatically adapt the keymap depending on the options you
+// enabled in the `config.h` file (or just to have some syntaxic sugar). You can find all of them
+// in the `arsenik.h` file. Feel free to remove those aliases and replace them with their actual
+// value if you need something Arsenik doesn’t provide.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_base] = ARSENIK_LAYOUT(
@@ -34,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  KC_Q, KC_W,  KC_E,  KC_R,  KC_T,      KC_Y, KC_U,  KC_I,   KC_O,    KC_P,    KC_BSPC,
         KC_ESC,  KC_A, KC_SS, KC_DD, KC_FF, KC_G,      KC_H, KC_JJ, KC_KK,  KC_LL,   KC_SCLN, KC_ENTER,
         KC_LSFT, KC_Z, KC_X,  KC_C,  KC_V,  KC_B,      KC_N, KC_M,  KC_DOT, KC_COMM, KC_SLSH, KC_RSFT,
-             AS_TL_TUCK, AS_TL_HOME, AS_TL_REACH,      AS_TR_REACH, AS_TR_HOME, AS_TR_TUCK
+         AS_TL_TUCK,   AS_TL_HOME,   AS_TL_REACH,      AS_TR_REACH,   AS_TR_HOME,   AS_TR_TUCK
     ),
 
     [_lafayette] = ARSENIK_LAYOUT(
@@ -42,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __, AS(CIRC), AS(LT),   AS(GT),   AS(DLR),  AS(PERC),      AS(AT),   AS(AMPR), AS(ASTR), AS(QUOT), AS(GRV),  __,
         __, AS(LCBR), AS(LPRN), AS(LPRN), AS(RCBR), AS(EQL),       AS(BSLS), AS(PLUS), AS(MINS), AS(SLSH), AS(DQUO), __,
         __, AS(TILD), AS(LBRC), AS(RBRC), AS(UNDS), AS(HASH),      AS(PIPE), AS(EXLM), AS(SCLN), AS(COLN), AS(QUES), __,
-                                    MO(_num_row), KC_SPC, XX,      XX, KC_SPC, MO(_num_row)
+                                MO(_num_row),   KC_SPC,   XX,      XX,   KC_SPC,   MO(_num_row)
     ),
 
     // Not fully implemented yet
@@ -51,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __, AS_S1, AS_S2, AS_S3, AS_S4, AS_S5,      AS_S6, AS_S7,    AS_S8,    AS_S9,   AS_S0,    __,
         __, AS(1), AS(2), AS(3), AS(4), AS(5),      AS(6), AS(7),    AS(8),    AS(9),   AS(0),    __,
         __, ODK_1, ODK_2, ODK_3, ODK_4, ODK_5,      XX,    AS(MINS), AS(COMM), AS(DOT), AS(SLSH), __,
-        LAFAYETTE_LAYER_TOGGLE, KC_SPC, XX,         XX, KC_SPC, LAFAYETTE_LAYER_TOGGLE
+                    LAFAYETTE,   KC_SPC,   XX,      XX,   KC_SPC,   LAFAYETTE
     ),
 
     [_vim_nav] = ARSENIK_LAYOUT(
@@ -59,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __, MO(_num_nav), C(AS(T)), KC_WBAK,   KC_WFWD,  XX,      KC_HOME,  KC_PGDN,  KC_PGUP, KC_END,  G(AS(P)),     __,
         __, C(AS(A)),     C(AS(S)), S(KC_TAB), KC_TAB,   XX,      KC_LEFT,  KC_DOWN,  KC_UP,   KC_RGHT, MO(_fun_pad), __,
         __, C(AS(Z)),     C(AS(X)), C(AS(C)),  C(AS(V)), XX,      KC_WH_L,  KC_WH_D,  KC_WH_U, KC_WH_R, XX,           __,
-                                             KC_DEL, __, XX,      XX, __, KC_ESC
+                                         KC_DEL,   __,   XX,      XX,   __,   KC_ESC
     ),
 
     [_num_nav] = ARSENIK_LAYOUT(
@@ -67,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __, KC_TAB,   KC_HOME,  KC_UP,    KC_END,   KC_PGUP,        AS(SLSH), AS(7),    AS(8),   AS(9),   G(AS(P)), __,
         __, C(AS(A)), KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_PGDN,        AS(MINS), AS(4),    AS(5),   AS(6),   AS(0),    __,
         __, C(AS(Z)), C(AS(X)), C(AS(C)), C(AS(V)), S(KC_TAB),      AS(COMM), AS(1),    AS(2),   AS(3),   AS(DOT),  __,
-                                               KC_DEL, __, XX,      XX, __, KC_ESC
+                                           KC_DEL,   __,   XX,      XX,   __,   KC_ESC
     ),
 
     [_fun_pad] = ARSENIK_LAYOUT(
@@ -75,38 +77,42 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __, KC_F1, KC_F2,  KC_F3,  KC_F4,  XX,      XX, XX,      XX,      XX,      XX, __,
         __, KC_F5, KC_F6,  KC_F7,  KC_F8,  XX,      XX, KC_LCTL, KC_LALT, KC_LGUI, __, __,
         __, KC_F9, KC_F10, KC_F11, KC_F12, XX,      XX, XX,      XX,      XX,      XX, __,
-        LAFAYETTE_LAYER_TOGGLE, KC_SPC, XX,         XX, KC_SPC, LAFAYETTE_LAYER_TOGGLE
+                    LAFAYETTE,   KC_SPC,   XX,      XX,   KC_SPC,   LAFAYETTE
     ),
 
 };
 
+
 // This is where you’ll write most of your custom code for your keyborad.
-// This callback is called before the keycode is sent to the OS.
-// returning false cancels any furnther treatment.
+// This callback is called right before the keycode is sent to the OS.
+//
+// returning false cancels any furnther processing.
 // for instance, calling `tap_code(KC_B)` if KC_A is pressed but true is
 // returned, "ba" is sent, but if `false` is returned, it’s just "b"
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 #   ifdef SELENIUM_RESTORE_SPACE
     static bool thumb_mod_same_hand_as_space_held = false;
-    if (keycode == THUMB_MOD_SAME_HAND_AS_SPACE && record->event.tap == 0)
+    if ((keycode & 0xff) == KC_SPC && record->tap.count == 0)
         thumb_mod_same_hand_as_space_held = record->event.pressed;
 #   endif
 
     // Let QMK do its thing on key releases.
     if (!record->event.pressed) return true;
 
-    switch (keycode) {
-        // Code for your custom keycodes goes here.
+#   ifdef SELENIUM_RESTORE_SPACE
+    if ((keycode & 0xff) == KC_BSPC &&
+        !thumb_mod_same_hand_as_space_held &&
+        record->tap.count > 0
+    ) {
+        tap_code(KC_SPC);
+        return false;
+    }
+#   endif
 
-        // Below are definitoins for features provided by Arsenik, depending on
-        // your config.
-#       ifdef SELENIUM_RESTORE_SPACE
-        case ALT_THUMB_KEY_SPACE:
-            if (!thumb_mod_same_hand_as_space_held) return true;
-            if (record->event.tap == 0) return true;
-            tap_code(KC_SPC);
-            return false;
-#       endif
+    switch (keycode) {
+        // ----------------------------------------
+        // Code for your custom keycodes goes here.
+        // ----------------------------------------
 
         case ODK_1: ODK1_SEQUENCE; return false;
         case ODK_2: ODK2_SEQUENCE; return false;

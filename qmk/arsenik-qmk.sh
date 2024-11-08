@@ -49,7 +49,7 @@ function make_new_arsenik_keymap() {
     esac
 
     if [ "$layout" == "LAYOUT" ]; then
-        layout+="_$(echo "$keyboard_name" | sed 's,/,_,g')_default"
+        layout+="_$(echo "$keyboard_name" | sed 's,/,_,g' | sed 's/_rev[0-9]*$//')"
     fi
 
     layout="ARSENIK_$layout"

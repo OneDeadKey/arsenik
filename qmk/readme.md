@@ -2,18 +2,33 @@
 
 This is a generic implementation of the Arsenik layout for QMK keyboards.
 
+**Disclaimer** : This is still relatively new. There might be bugs and your
+keyboard might not be compatible *yet*.
+
 ## How it works
 
 Arsenik-QMK will define a full qmk keymap in a dummy `ARSENIK_LAYOUT` layout
-definition. It compile time, this dummy gets is replaced by the layout
+definition. At compile time, this dummy gets is replaced by the layout
 definition your keyboard actually uses. This means that the keymap will
-naturally remove unused keys (like the number row on a keyboard with 3 lines)
-or add dummy no-op keys to the keys unused by Arsenik on bigger keyboards.
+naturally remove unused keys (like the number row on a keyboard with 3 rows)
+or add no-op to the keys unused by Arsenik on bigger keyboards.
 
 Ideally, you install it and it just works, but not every keyboards are
 currently supported. If the `ARSENIK_LAYOUT` isn’t defined for your keyboard,
 it needs to be added at the end of the `arsenik.h` file. PRs are welcome, but
 we will gladly help you if you open an issue ^^
+
+Here is a list of all currently supported QMK layouts :
+
+- `LAYOUT_split_3x5_2`
+- `LAYOUT_split_3x5_3`
+- `LAYOUT_split_3x6_3`
+- `LAYOUT_ortho_4x10`
+- `LAYOUT_ortho_4x12`
+- `LAYOUT_ortho_5x10`
+- `LAYOUT_ortho_5x12`
+- `LAYOUT_planck_grid`
+- `LAYOUT_keebio_iris_default`
 
 ## Install
 
