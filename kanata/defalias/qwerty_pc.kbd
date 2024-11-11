@@ -8,9 +8,13 @@
   sav C-s
   cls C-w
   ndo C-z
+  rdo C-y
   cut C-x
   cpy C-c
   pst C-v
+  nwd C-rght
+  pwd C-lft
+  swp A-tab
 
   0 0
   1 1
