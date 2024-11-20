@@ -91,6 +91,63 @@ placeholders, then run one of the following commands:
 the current user logs in
 - `systemctl --user status kanata.service` to check if `kanata` is running
 
+### Sway configuration
+
+In sway world, keyboards are "input" and kanata should be declared as one. Its input identifier is `1:1:kanata`.
+
+The `~/.config/sway/config` file must handle it so that kanata is correctly recognised by the system.
+
+**Tips** : you should reload the sway config (Cmd+Shift+C) **after** having started kanata.
+
+#### existing configuration declares yet a `*` wildcard input configuration
+
+Nothing to change, kanata should work.
+
+```ini
+input * {
+  xkb_layout     fr,fr,fr
+  xkb_variant    ergol,bepo_afnor,azerty
+  xkb_options    grp:win_space_toggle
+}
+```
+
+#### existing configuration declares no `*` wildcard input configuration
+
+For example, in the case you have several keyboards, you could have managed different configurations without wildcard use :
+
+```ini
+input "7764:8240:TypeMatrix.com_USB_Keyboard" {
+  xkb_layout     fr,fr
+  xkb_variant    ergol,bepo_afnor
+  xkb_options    grp:win_space_toggle
+}
+input "1:1:AT_Translated_Set_2_keyboard" {
+   xkb_layout     fr,fr
+   xkb_variant    ergol,azerty
+   xkb_options    grp:win_space_toggle
+}
+```
+
+In that case, you may add a declaration of the `1:1:kanata` input, like this :
+
+```ini
+input "7764:8240:TypeMatrix.com_USB_Keyboard" {
+  xkb_layout     fr,fr
+  xkb_variant    ergol,bepo_afnor
+  xkb_options    grp:win_space_toggle
+}
+input "1:1:AT_Translated_Set_2_keyboard" {
+   xkb_layout     fr,fr
+   xkb_variant    ergol,azerty
+   xkb_options    grp:win_space_toggle
+}
+input "1:1:kanata" {
+  xkb_layout     fr,fr,fr
+  xkb_variant    ergol,bepo_afnor,azerty
+  xkb_options    grp:win_space_toggle
+}
+```
+
 </details>
 
 <details>
