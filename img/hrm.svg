@@ -43,14 +43,14 @@
       <rect width="52" height="52" rx="5" ry="5"/>
       <g class="key">
         <text x="12.8" y="20.6">D</text>
-        <text x="26.0" y="43.4" class="layer">Alt</text>
+        <text x="26.0" y="43.4" class="layer">Ctrl</text>
       </g>
     </g>
     <g transform="translate(270)">
       <rect width="52" height="52" rx="5" ry="5"/>
       <g class="key">
         <text x="12.8" y="20.6">F</text>
-        <text x="26.0" y="43.4" class="layer">Ctrl</text>
+        <text x="26.0" y="43.4" class="layer">Alt</text>
       </g>
     </g>
     <g transform="translate(330)">
