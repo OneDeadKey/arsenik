@@ -128,6 +128,7 @@
       <g transform="translate(390)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">H</text>
+        <text x="38.0" y="20.6" class="layerNav">⇧</text>
       </g>
       <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>
