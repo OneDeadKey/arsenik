@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/usr/bin/env bash
 
 set -euo pipefail
 
@@ -14,6 +14,15 @@ fi
 
 if [ -z "${QMK_PATH+x}" ]; then
     QMK_PATH="$HOME/qmk_firmware"
+fi
+
+
+if [ -z "${EDITOR+x}" ]; then
+    if [ which nano 2>&1 >/dev/null ]; then
+        EDITOR="nano"
+    else
+        EDITOR="vi"
+    fi
 fi
 
 
@@ -36,15 +45,18 @@ function make_new_arsenik_keymap() {
     local no_editor="$3"
 
     local keymap_folder=$(get_keymaps_folder "$keyboard_name")
-    local arsenik_folder="$keymap_folder/arsenik"
+    local arsenik_folder="$keymap_folder/arsenik/"
     local default_keymap_folder="$keymap_folder/default"
 
+    echo "$default_keymap_folder"
+    echo "$arsenik_folder"
     cp -r "$default_keymap_folder" "$arsenik_folder"
+    ls -l "$arsenik_folder"
 
     local layout=""
-    case $(ls "$arsenik_folder"/keymap.* | sed 's/.*\(keymap.*\)/\1/') in
-        "keymap.c")    layout=$(grep 'LAYOUT' "$arsenik_folder"/keymap.c | sed 's/.*= \(.*\)(/\1/' | head -n 1);;
-        "keymap.json") layout=$(grep 'LAYOUT' "$arsenik_folder"/keymap.json | sed 's/ *"layout": "\(.*\)",/\1/');;
+    case $(ls "$default_keymap_folder"/keymap.* | sed 's/.*\(keymap.*\)/\1/') in
+        "keymap.c")    layout=$(grep 'LAYOUT' "$default_keymap_folder"/keymap.c | sed 's/.*= \(.*\)(/\1/' | head -n 1);;
+        "keymap.json") layout=$(grep 'LAYOUT' "$default_keymap_folder"/keymap.json | sed 's/ *"layout": "\(.*\)",/\1/');;
         *) echo "Unable to find layout name, unsupported keymap format";;
     esac
 
@@ -59,6 +71,7 @@ function make_new_arsenik_keymap() {
     cat ./rules.mk >> "$arsenik_folder/rules.mk"
     cp ./keymap.c ./arsenik.h ./keymap_ergol.h "$arsenik_folder"
 
+    # echo "s/ARSENIK_PLACEHOLDER_LAYOUT/$layout/"
     sed -i "s/ARSENIK_PLACEHOLDER_LAYOUT/$layout/" "$arsenik_folder/config.h"
 
     if [ $no_editor = false ]; then
