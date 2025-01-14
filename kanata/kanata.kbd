@@ -32,6 +32,8 @@
 ;; (include defsrc/mac_anglemod.kbd)  ;; Mac, ZXCVB are shifted to the left
 ;; (include defsrc/pc_wide_anglemod.kbd)  ;; PC, angle-mod + right hand shifted by one key
 ;; (include defsrc/mac_wide_anglemod.kbd)  ;; Mac, angle-mod + right hand shifted by one key
+;; (include defsrc/pc_ultrawide_anglemod.kbd)  ;; PC, angle-mod + left & right hand shifted by one key
+;; (include defsrc/mac_ultrawide_anglemod.kbd)  ;; Mac, angle-mod + left & right hand shifted by one key
 
 
 ;;-----------------------------------------------------------------------------
