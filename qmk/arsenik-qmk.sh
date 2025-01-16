@@ -48,8 +48,6 @@ function make_new_arsenik_keymap() {
     local arsenik_folder="$keymap_folder/arsenik/"
     local default_keymap_folder="$keymap_folder/default"
 
-    echo "$default_keymap_folder"
-    echo "$arsenik_folder"
     cp -r "$default_keymap_folder" "$arsenik_folder"
     ls -l "$arsenik_folder"
 
