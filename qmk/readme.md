@@ -74,5 +74,5 @@ qmk list-keyboards | grep 'iris'
 Then I run the script
 
 ```sh
-QMK_PATH="~/Code/qmk" ./arsenik-qmk.sh keebio/iris/rev2 -f
+QMK_PATH="$HOME/Code/qmk" ./arsenik-qmk.sh keebio/iris/rev2 -f
 ```
