@@ -85,7 +85,7 @@ and <kbd>Navigation</kbd> layers further reduces hand and finger movements.
 When you are familiar with mod-taps, it’s time to enable them on the home row
 with the “HRM” variants:
 
-- <kbd>FDS</kbd> and <kbd>JKL</kbd> become <kbd>Ctrl</kbd>, <kbd>Alt</kbd>,
+- <kbd>FDS</kbd> and <kbd>JKL</kbd> become <kbd>Alt</kbd>, <kbd>Ctrl</kbd>,
 <kbd>Super</kbd> when held long enough;
 - the left thumb key can now emit a <kbd>Shift</kbd> rather than <kbd>Alt</kbd>
 when held.
