@@ -8,8 +8,6 @@
   cls C-v
   ndo C-]
   cut C-[
-  cpy C-m
-  pst C-/
 
   0 S-0
   1 S-1
