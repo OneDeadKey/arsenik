@@ -18,7 +18,7 @@ fi
 
 
 if [ -z "${EDITOR+x}" ]; then
-    if [ which nano 2>&1 >/dev/null ]; then
+    if which nano >/dev/null 2>&1; then
         EDITOR="nano"
     else
         EDITOR="vi"
