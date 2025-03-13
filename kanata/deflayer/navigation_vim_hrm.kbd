@@ -1,0 +1,54 @@
+;; Vim-Navigation layer (optimized for home-row mods):
+;;  - right: Vim-like arrows on HJKL, home/end page up/down, mouse scroll
+;;  - left: Tab/Shift-Tab, prev/next, quit, esc, del
+;;  - top: Super-num (i3/sway) or Alt-num (browser), zoom in/out
+
+;; The `lrld` action stands for "live reload". This will re-parse everything
+;; except for linux-dev, i.e. you cannot live reload and switch keyboard devices.
+
+(deflayer navigation
+  M-1  M-2  M-3  M-4  M-5  lrld M-6  M-7  M-8  M-9  M-0
+  @qut esc  bck  fwd  XX        home pgdn pgup end  @run
+  @pad S-tab tab tab  XX        lft  down up   rght @fun
+  XX   XX   XX   del  XX    _   @mwl @mwd @mwu @mwr XX
+            del             _             esc
+)
+
+;; NumPad
+(deflayer numpad
+  _    _    _    _    _     _   _    _    _    _    _
+  XX   home up   end  pgup      @/   @7   @8   @9   XX
+  XX   lft  down rght pgdn      @-   @4   @5   @6   @0
+  XX   XX   XX   XX   XX    _   @,   @1   @2   @3   @.
+            @std           @nbs           @std
+)
+
+;; function keys
+(deflayer funpad
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  f1   f2   f3   f4   XX        XX   XX   XX   XX   XX
+  f5   f6   f7   f8   XX        XX   lctl lalt lmet _
+  f9   f10  f11  f12  XX   XX   XX   XX   XX   XX   XX
+            _               _             _
+)
+
+(defalias
+  std (layer-switch base)
+  pad (layer-switch numpad)
+
+  fun (layer-while-held funpad)
+
+  ;; Choose the quit shortcut according to your OS.
+  ;; qut C-q ;; [Control]-[Q] (Linux)
+  ;; qut M-q ;; [Command]-[Q] (macOS)
+  ;; qut A-f4 ;; [Alt]-[F4] (Windows)
+  qut XX ;; do nothing
+
+  ;; Mouse wheel emulation
+  mwu (mwheel-up    50 120)
+  mwd (mwheel-down  50 120)
+  mwl (mwheel-left  50 120)
+  mwr (mwheel-right 50 120)
+)
+
+;; vim: set ft=lisp

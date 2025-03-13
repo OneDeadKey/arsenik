@@ -59,6 +59,7 @@
 
 (include deflayer/navigation.kbd)  ;; ESDF on the left, NumPad on the right
 ;; (include deflayer/navigation_vim.kbd)  ;; HJKL + NumPad on [Space]+[Q]
+;; (include deflayer/navigation_vim_hrm.kbd)  ;; HJKL + NumPad on [Space]+[A], optimized for home-row mods
 
 ;; Replace XX by the keyboard shortcut of your application launcher, if any.
 ;; Mapped on [Space]+[P] in both navigation layers.
