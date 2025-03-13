@@ -18,7 +18,7 @@ fi
 
 
 if [ -z "${EDITOR+x}" ]; then
-    if [ which nano 2>&1 >/dev/null ]; then
+    if which nano >/dev/null 2>&1; then
         EDITOR="nano"
     else
         EDITOR="vi"
@@ -72,14 +72,14 @@ function make_new_arsenik_keymap() {
     # echo "s/ARSENIK_PLACEHOLDER_LAYOUT/$layout/"
     sed -i "s/ARSENIK_PLACEHOLDER_LAYOUT/$layout/" "$arsenik_folder/config.h"
 
-    if [ $no_editor = false ]; then
+    if [ "$no_editor" = false ]; then
         eval "$EDITOR" "$arsenik_folder/config.h"
     fi
 
     case "$qmk_cmd" in
         "none") ;;
-        "build") cd $QMK_PATH && make "$keyboard_name:arsenik";;
-        "flash") cd $QMK_PATH && make "$keyboard_name:arsenik:flash";;
+        "build") cd "$QMK_PATH" && make "$keyboard_name:arsenik";;
+        "flash") cd "$QMK_PATH" && make "$keyboard_name:arsenik:flash";;
     esac
 }
 
