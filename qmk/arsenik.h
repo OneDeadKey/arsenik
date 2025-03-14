@@ -62,14 +62,14 @@
 #elif defined ARSENIK_ENABLE_SELENIUM_VARIANT
 #    define AS_TL_REACH XX
 #    define AS_TR_REACH XX
-#    define AS_TL_TUCK  LT(_vim_nav, KC_ESC)
-#    define AS_TR_TUCK  LT(_num_row, KC_ENT)
+#    define AS_TL_TUCK  LSFT_T(KC_ESC)
+#    define AS_TR_TUCK  LAFAYETTE_T(KC_ENT)
 #    if defined SELENIUM_LEFT_HAND_SPACE
-#        define AS_TL_HOME  LSFT_T(KC_SPC)
-#        define AS_TR_HOME  LAFAYETTE_T(KC_BSPC)
+#        define AS_TL_HOME  LT(_vim_nav, KC_SPC)
+#        define AS_TR_HOME  LT(_num_row, KC_BSPC)
 #    else
-#        define AS_TL_HOME  LSFT_T(KC_BSPC)
-#        define AS_TR_HOME  LAFAYETTE_T(KC_SPC)
+#        define AS_TL_HOME  LT(_vim_nav, KC_BSPC)
+#        define AS_TR_HOME  LT(_num_row, KC_SPC)
 #    endif
 #else
 #    define AS_TL_TUCK LSFT_T(KC_BSPC)
