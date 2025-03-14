@@ -52,7 +52,7 @@
 #endif
 
 // Extra simple config for beginners with bigger keyboards
-#if defined ARSENIK_DISABLE_THUMB_TAP_HOLDS
+#if defined ARSENIK_ENABLE_SIMPLE_THUMBS
 #    define AS_TL_TUCK  _ALT
 #    define AS_TL_HOME  _CTL
 #    define AS_TL_REACH _GUI

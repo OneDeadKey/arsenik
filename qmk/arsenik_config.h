@@ -78,13 +78,13 @@
  * (Requires `ARSENIK_ENABLE_HRM`)
  */
 
-// #define ARSENIK_DISABLE_THUMB_TAP_HOLDS
+// #define ARSENIK_ENABLE_SIMPLE_THUMBS
 /* When active, uses an extra simple config without any tap-holds on the thumb
  * keys. It may be a *lot* simpler to use, but requieres a keyboard with at
  * least 6 thumb keys (so 3 per thumb) instead of 3 thumb keys total and is
  * overall a lot less efficient (especially when combining modifiers).
  *
- * Base thumb config: LSFT_T(KC_ËSC)  LT(_num_nav, KC_SPC)  RALT_T(KC_ENT)
+ * Base thumb config: LSFT_T(KC_ESC)  LT(_num_nav, KC_SPC)  RALT_T(KC_ENT)
  * When it’s active: KC_ALT  KC_CTL  KC_GUI     MO(_num_nav)  KC_SPC  KC_RALT
  * (KC_RALT becomes the `_lafayette` layer if `ARSENIK_ENABLE_LAFAYETTE_LAYER`
  * is active)
