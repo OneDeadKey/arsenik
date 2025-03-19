@@ -120,7 +120,7 @@
 
 
 // Lists of layouts supported by Arsenik. Some parts of the config are dependent
-// on keyboard layout used on your computer. If they don’t match up some
+// on the keyboard layout used on your computer. If they don’t match up some
 // characters may not be correctly placed or missing entirely. If multiple
 // options are toggled at the same time, the first one is chosen.
 #define ARSENIK_HOST_LAYOUT_QWERTY
