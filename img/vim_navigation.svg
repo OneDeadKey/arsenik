@@ -72,6 +72,7 @@
       <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="38.0" y="20.6" class="layerNav">↦</text>
       </g>
     </g>
     <g class="right">
@@ -127,6 +128,7 @@
       <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="20.6" class="layerNav">⎌</text>
       </g>
     </g>
     <g class="right">
@@ -194,6 +196,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g>
           <text x="12.8" y="20.6" class="level2">B</text>
+        <text x="38.0" y="20.6" class="layerNav">↤</text>
         </g>
       </g>
     </g>
@@ -228,6 +231,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">/</text>
         <text x="12.8" y="20.6" class="level2">?</text>
+        <text x="38.0" y="20.6" class="layerNav shortcut">redo</text>
       </g>
     </g>
   </g>
