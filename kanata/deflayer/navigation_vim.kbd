@@ -27,7 +27,7 @@
 (deflayer funpad
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   f1   f2   f3   f4   XX        XX   XX   XX   XX   XX
-  f5   f6   f7   f8   XX        XX   lctl lalt lmet _
+  f5   f6   f7   f8   XX        lsft lctl lalt lmet _
   f9   f10  f11  f12  XX   XX   XX   XX   XX   XX   XX
             _               _             _
 )
