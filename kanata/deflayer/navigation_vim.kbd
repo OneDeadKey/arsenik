@@ -29,14 +29,14 @@
   f1   f2   f3   f4   XX        XX   XX   XX   XX   XX
   f5   f6   f7   f8   XX        XX   lctl lalt lmet _
   f9   f10  f11  f12  XX   XX   XX   XX   XX   XX   XX
-            _               _             _
+            @std           _              @std
 )
 
 (defalias
   std (layer-switch base)
-  pad (layer-switch numpad)
 
-  fun (layer-while-held funpad)
+  pad (layer-switch numpad)
+  fun (layer-switch funpad)
 
   ;; Mouse wheel emulation
   mwu (mwheel-up    50 120)
