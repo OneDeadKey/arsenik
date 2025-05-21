@@ -39,14 +39,14 @@ read from `uinput`. This requires the users to be part of both `input` and
 For that, you first need to create a `uinput` group if it doesn’t exist yet:
 
 ```bash
-sudo groupadd -U $USERNAME uinput
+sudo groupadd -U $USER uinput
 ```
 
-where `$USERNAME` is the target user (or users in a comma-separated list). Then
-add the target user (or users) to the group input:
+where `$USER` is the target user (or users in a comma-separated list). Then
+add the target user (or users) to the group uinput:
 
 ```bash
-sudo usermod -aG input $USERNAME
+sudo usermod -aG uinput $USER
 ```
 
 You can check after re-logging that both groups appear in the result of the
@@ -143,10 +143,10 @@ root             25744   0.0  0.1 410756464   9872   ??  Ss    8:01PM   0:00.16 
 
 Download Kanata [here](https://github.com/jtroo/kanata/releases/tag/v1.7.0) and save it in a persistent directory.
 
-Add a sudo rule in `/private/etc/sudoers.d/kanata` where `$USERNAME` is your username:
+Add a sudo rule in `/private/etc/sudoers.d/kanata` where `$USER` is your username:
 
 ```
-$USERNAME ALL=(ALL) NOPASSWD: /path/to/kanata/binary/kanata
+$USER ALL=(ALL) NOPASSWD: /path/to/kanata/binary/kanata
 ```
 
 To start Kanata at the beginning of the session, add a property list file in `~/Library/LaunchAgents/com.jtroo.kanata.plist` with the following content:
