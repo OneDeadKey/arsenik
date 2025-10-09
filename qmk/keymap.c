@@ -83,10 +83,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-// This is where you’ll write most of your custom code for your keyborad.
+// This is where you’ll write most of your custom code for your keyboard.
 // This callback is called right before the keycode is sent to the OS.
 //
-// returning false cancels any furnther processing.
+// returning false cancels any further processing.
 // for instance, calling `tap_code(KC_B)` if KC_A is pressed but true is
 // returned, "ba" is sent, but if `false` is returned, it’s just "b"
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
@@ -125,7 +125,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 }
 
 static inline bool tap_keycode_used_in_text(uint16_t keycode) {
-    // We can’t make assumptions on curstom keycodes
+    // We can’t make assumptions on custom keycodes
     if (keycode >= SAFE_RANGE) return false;
 
     // Remove "quantum" part of the keycode to get the action on tap.
