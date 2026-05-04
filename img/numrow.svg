@@ -193,23 +193,24 @@
       <g transform="translate(390)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">N</text>
+        <text x="38.0" y="43.4" class="layerNum">-</text>
       </g>
       <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
-        <text x="38.0" y="43.4" class="layerNum">-</text>
+        <text x="38.0" y="43.4" class="layerNum">,</text>
       </g>
       <g transform="translate(510)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">&lt;</text>
-        <text x="38.0" y="43.4" class="layerNum">,</text>
+        <text x="38.0" y="43.4" class="layerNum">.</text>
       </g>
       <g transform="translate(570)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">.</text>
         <text x="12.8" y="20.6" class="level2">&gt;</text>
-        <text x="38.0" y="43.4" class="layerNum">.</text>
+        <text x="38.0" y="43.4" class="layerNum">:</text>
       </g>
       <g transform="translate(630)">
         <rect width="52" height="52" rx="5" ry="5"/>
