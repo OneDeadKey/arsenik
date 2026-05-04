@@ -49,10 +49,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Not fully implemented yet
     [_num_row] = ARSENIK_LAYOUT(
-        __, __,    __,    __,    __,    __,         __,    __,       __,       __,      __,       __,
-        __, AS_S1, AS_S2, AS_S3, AS_S4, AS_S5,      AS_S6, AS_S7,    AS_S8,    AS_S9,   AS_S0,    __,
-        __, AS(1), AS(2), AS(3), AS(4), AS(5),      AS(6), AS(7),    AS(8),    AS(9),   AS(0),    __,
-        __, ODK_1, ODK_2, ODK_3, ODK_4, ODK_5,      XX,    AS(MINS), AS(COMM), AS(DOT), AS(SLSH), __,
+        __, __,    __,    __,    __,    __,         __,       __,       __,      __,       __,       __,
+        __, AS_S1, AS_S2, AS_S3, AS_S4, AS_S5,      AS_S6,    AS_S7,    AS_S8,   AS_S9,    AS_S0,    __,
+        __, AS(1), AS(2), AS(3), AS(4), AS(5),      AS(6),    AS(7),    AS(8),   AS(9),    AS(0),    __,
+        __, ODK_1, ODK_2, ODK_3, ODK_4, ODK_5,      AS(MINS), AS(COMM), AS(DOT), AS(COLN}, AS(SLSH), __,
                     LAFAYETTE,   KC_SPC,   XX,      XX,   KC_SPC,   LAFAYETTE
     ),
 
