@@ -307,6 +307,78 @@
                        k51, k52, k53,         k54, k55, k56\
     )
 
+#elif defined ARSENIK_LAYOUT_ansi_89
+#define ARSENIK_LAYOUT(\
+        k11, k12, k13, k14, k15, k16,      k17, k18, k19, k1a, k1b, k1c,\
+        k21, k22, k23, k24, k25, k26,      k27, k28, k29, k2a, k2b, k2c,\
+        k31, k32, k33, k34, k35, k36,      k37, k38, k39, k3a, k3b, k3c,\
+        k41, k42, k43, k44, k45, k46,      k47, k48, k49, k4a, k4b, k4c,\
+                       k51, k52, k53,      k54, k55, k56\
+    ) LAYOUT_ansi_90(\
+        KC_MUTE, KC_ESC, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_INS, KC_DEL,\
+        __, k11, k12, k13, k14, k15, k16,      k17, k18, k19, k1a, k1b, k1c, KC_EQL,  KC_BSPC, KC_PGUP,\
+        __, k21, k22, k23, k24, k25, k26,      k27, k28, k29, k2a, k2b, k2c, KC_RBRC, KC_BSLS, KC_PGDN,\
+        __, k31, k32, k33, k34, k35, k36,      k37, k38, k39, k3a, k3b, k3c,          KC_ENT,  KC_HOME,\
+        __, k41, k42, k43, k44, k45, k46, k46, k47, k48, k49, k4a, k4b, k4c,    KC_UP,\
+        __, KC_LCTL, _GUI,      k51, k52, k53,      k55, k56, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT\
+    )
+
+#    define AS_ROTARY_ENCODER_LIST_BASE      { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_LAFAYETTE { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_ROW   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_VIM_NAV   { ENCODER_CCW_CW(KC_BRIGHTNESS_UP, KC_BRIGHTNESS_DOWN) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_NAV   { ENCODER_CCW_CW(KC_BRIGHTNESS_UP, KC_BRIGHTNESS_DOWN) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_PAD   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_FUN_PAD   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+
+#elif defined ARSENIK_LAYOUT_iso_90
+#define ARSENIK_LAYOUT(\
+        k11, k12, k13, k14, k15, k16,      k17, k18, k19, k1a, k1b, k1c,\
+        k21, k22, k23, k24, k25, k26,      k27, k28, k29, k2a, k2b, k2c,\
+        k31, k32, k33, k34, k35, k36,      k37, k38, k39, k3a, k3b, k3c,\
+        k41, k42, k43, k44, k45, k46,      k47, k48, k49, k4a, k4b, k4c,\
+                       k51, k52, k53,      k54, k55, k56\
+    ) LAYOUT_iso_91(\
+        KC_MUTE, KC_ESC, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_INS, KC_DEL,\
+        __,          k11, k12, k13, k14, k15, k16,      k17, k18, k19, k1a, k1b, k1c, KC_EQL,  KC_BSPC, KC_PGUP,\
+        __,          k21, k22, k23, k24, k25, k26,      k27, k28, k29, k2a, k2b, k2c, KC_RBRC,          KC_PGDN,\
+        __,          k31, k32, k33, k34, k35, k36,      k37, k38, k39, k3a, k3b, k3c, KC_NUHS, KC_ENT,  KC_HOME,\
+        __, KC_NUBS, k41, k42, k43, k44, k45, k46, k46, k47, k48, k49, k4a, k4b, k4c, KC_UP,\
+        __, KC_LCTL, _GUI,          k51, k52, k53,      k55, k56, KC_RCTL,   KC_LEFT, KC_DOWN, KC_RGHT\
+    )
+
+#    define AS_ROTARY_ENCODER_LIST_BASE      { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_LAFAYETTE { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_ROW   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_VIM_NAV   { ENCODER_CCW_CW(KC_BRIGHTNESS_UP, KC_BRIGHTNESS_DOWN) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_NAV   { ENCODER_CCW_CW(KC_BRIGHTNESS_UP, KC_BRIGHTNESS_DOWN) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_PAD   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_FUN_PAD   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+
+#elif defined ARSENIK_LAYOUT_iso_90_angle_mod
+#define ARSENIK_LAYOUT(\
+        k11, k12, k13, k14, k15, k16,      k17, k18, k19, k1a, k1b, k1c,\
+        k21, k22, k23, k24, k25, k26,      k27, k28, k29, k2a, k2b, k2c,\
+        k31, k32, k33, k34, k35, k36,      k37, k38, k39, k3a, k3b, k3c,\
+        k41, k42, k43, k44, k45, k46,      k47, k48, k49, k4a, k4b, k4c,\
+                       k51, k52, k53,      k54, k55, k56\
+    ) LAYOUT_iso_91(\
+        KC_MUTE, KC_ESC, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_INS, KC_DEL,\
+        __, k11, k12, k13, k14, k15, k16,               k17, k18, k19, k1a, k1b, k1c, KC_EQL,  KC_BSPC, KC_PGUP,\
+        __, k21, k22, k23, k24, k25, k26,               k27, k28, k29, k2a, k2b, k2c, KC_RBRC,          KC_PGDN,\
+        __, k31, k32, k33, k34, k35, k36,               k37, k38, k39, k3a, k3b, k3c, KC_NUHS, KC_ENT,  KC_HOME,\
+        __, k41, k42, k43, k44, k45, k46, KC_NUBS, k46, k47, k48, k49, k4a, k4b, k4c, KC_UP,\
+        __, KC_LCTL, _GUI,      k51, k52, k53,          k55, k56, KC_RCTL,   KC_LEFT, KC_DOWN, KC_RGHT\
+    )
+
+#    define AS_ROTARY_ENCODER_LIST_BASE      { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_LAFAYETTE { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_ROW   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_VIM_NAV   { ENCODER_CCW_CW(KC_BRIGHTNESS_UP, KC_BRIGHTNESS_DOWN) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_NAV   { ENCODER_CCW_CW(KC_BRIGHTNESS_UP, KC_BRIGHTNESS_DOWN) },
+#    define AS_ROTARY_ENCODER_LIST_NUM_PAD   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+#    define AS_ROTARY_ENCODER_LIST_FUN_PAD   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+
 #else
 #    error "Arsenik: Unknown layout"
 #endif
