@@ -35,7 +35,7 @@ Here is a list of all currently supported QMK layouts :
 You’ll need to setup your QMK environment beforhand, QMK’s cli tool does the
 job well. You’ll need to know how is your keyboard is called inside of QMK’s
 code, usually they are named `brand/model/revision` though that may vary from a
-keyboard to another. You can always run `qmk list-keyboard | grep <your
+keyboard to another. You can always run `qmk list-keyboards | grep <your
 keyboard>` to quickly find it, is case you don’t know.
 
 Once you know how your keyboard is named, installing Arsenik-QMK is as easy as
