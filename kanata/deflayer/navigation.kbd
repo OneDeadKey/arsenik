@@ -14,4 +14,4 @@
             del             _             esc
 )
 
-;; vim: set ft=lisp
+;; vim: set ft=lisp:

@@ -49,10 +49,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Not fully implemented yet
     [_num_row] = ARSENIK_LAYOUT(
-        __, __,    __,    __,    __,    __,         __,    __,       __,       __,      __,       __,
-        __, AS_S1, AS_S2, AS_S3, AS_S4, AS_S5,      AS_S6, AS_S7,    AS_S8,    AS_S9,   AS_S0,    __,
-        __, AS(1), AS(2), AS(3), AS(4), AS(5),      AS(6), AS(7),    AS(8),    AS(9),   AS(0),    __,
-        __, ODK_1, ODK_2, ODK_3, ODK_4, ODK_5,      XX,    AS(MINS), AS(COMM), AS(DOT), AS(SLSH), __,
+        __, __,    __,    __,    __,    __,         __,       __,       __,      __,       __,       __,
+        __, AS_S1, AS_S2, AS_S3, AS_S4, AS_S5,      AS_S6,    AS_S7,    AS_S8,   AS_S9,    AS_S0,    __,
+        __, AS(1), AS(2), AS(3), AS(4), AS(5),      AS(6),    AS(7),    AS(8),   AS(9),    AS(0),    __,
+        __, ODK_1, ODK_2, ODK_3, ODK_4, ODK_5,      AS(MINS), AS(COMM), AS(DOT), AS(COLN}, AS(SLSH), __,
                     LAFAYETTE,   KC_SPC,   XX,      XX,   KC_SPC,   LAFAYETTE
     ),
 
@@ -83,10 +83,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-// This is where you’ll write most of your custom code for your keyborad.
+// This is where you’ll write most of your custom code for your keyboard.
 // This callback is called right before the keycode is sent to the OS.
 //
-// returning false cancels any furnther processing.
+// returning false cancels any further processing.
 // for instance, calling `tap_code(KC_B)` if KC_A is pressed but true is
 // returned, "ba" is sent, but if `false` is returned, it’s just "b"
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
@@ -125,7 +125,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 }
 
 static inline bool tap_keycode_used_in_text(uint16_t keycode) {
-    // We can’t make assumptions on curstom keycodes
+    // We can’t make assumptions on custom keycodes
     if (keycode >= SAFE_RANGE) return false;
 
     // Remove "quantum" part of the keycode to get the action on tap.

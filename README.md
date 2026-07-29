@@ -239,6 +239,8 @@ with `;;`) – you must enable one and only one line per feature;
 - live-reload the configuration with <kbd>Space</kbd>+<kbd>Backspace</kbd>
 (this requires the layer-taps feature enabled).
 
+NixOS users can do this through [`services.arsenik`](https://search.nixos.org/options?channel=unstable&query=services.arsenik) options.
+
 If you have a programmable keyboard you might want to take a look at the
 [QMK](qmk) version of Arsenik (work in progress).
 

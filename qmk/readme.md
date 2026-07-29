@@ -32,10 +32,10 @@ Here is a list of all currently supported QMK layouts :
 
 ## Install
 
-You’ll need to setup your QMK environment beforhand, QMK’s cli tool does the
+You’ll need to setup your QMK environment beforehand, QMK’s cli tool does the
 job well. You’ll need to know how is your keyboard is called inside of QMK’s
 code, usually they are named `brand/model/revision` though that may vary from a
-keyboard to another. You can always run `qmk list-keyboard | grep <your
+keyboard to another. You can always run `qmk list-keyboards | grep <your
 keyboard>` to quickly find it, is case you don’t know.
 
 Once you know how your keyboard is named, installing Arsenik-QMK is as easy as
@@ -47,18 +47,18 @@ before running the script.
 The script will duplicate the default config for your keyboard, replace the
 keymap by Arsenik’s keymap and install As-QMK’s library and default config.
 Once this is done, the script will open the newly created `config.h` file with
-your `$EDITOR` to let you emmidiatly toggle the different config options you
+your `$EDITOR` to let you immediately toggle the different config options you
 can choose from (see "Configuration" section).
 
 Optionnal flags can be passed to `arsenik-qmk.sh` to enable or disable certain
 features:
 
 - `-n`: “no editor” (doesn’t open the `config.h` file)
-- `-b`: “build” (immidiatlly build the keymap after installing it)
-- `-f`: “flash” (immidiatlly build the keymap and flash your keyboard with it
+- `-b`: “build” (immediately build the keymap after installing it)
+- `-f`: “flash” (immediately build the keymap and flash your keyboard with it
     after installing it)
 
-### example:
+### Example:
 
 Let’s say I have a Keebio Iris Rev2, and I want to install Arsenik-QMK for it
 (with my QMK folder located in `~/Code/qmk`) then flash the keymap. First, I

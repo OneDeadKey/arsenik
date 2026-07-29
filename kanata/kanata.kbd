@@ -91,4 +91,4 @@
   windows-altgr cancel-lctl-press
 )
 
-;; vim: set ft=lisp
+;; vim: set ft=lisp:

@@ -10,4 +10,4 @@
             lalt          spc             ralt
 )
 
-;; vim: set ft=lisp
+;; vim: set ft=lisp:

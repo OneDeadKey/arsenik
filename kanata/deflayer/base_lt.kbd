@@ -20,4 +20,4 @@
   sym (tap-hold-press $tap_timeout $hold_timeout ret (layer-while-held symbols))
 )
 
-;; vim: set ft=lisp
+;; vim: set ft=lisp:

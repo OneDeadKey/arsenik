@@ -28,4 +28,4 @@
   ll (tap-hold $tap_timeout $long_hold_timeout l rmet)
 )
 
-;; vim: set ft=lisp
+;; vim: set ft=lisp:
