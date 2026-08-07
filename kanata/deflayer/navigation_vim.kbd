@@ -17,9 +17,9 @@
 ;; NumPad
 (deflayer numpad
   _    _    _    _    _     _   _    _    _    _    _
-  XX   home up   end  pgup      @/   @7   @8   @9   XX
-  XX   lft  down rght pgdn      @-   @4   @5   @6   @0
-  XX   XX   XX   XX   XX    _   @,   @1   @2   @3   @.
+  XX   home up   end  pgup      @/   @7   @8   @9   @:
+  bspc lft  down rght pgdn      @-   @4   @5   @6   @0
+  XX   @%   @*   @+   @=    _   @,   @1   @2   @3   @.
             @std           @nbs           @std
 )
 
