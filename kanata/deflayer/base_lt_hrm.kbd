@@ -8,7 +8,7 @@
             @sft          @nav            @sym
 )
 
-;; Timing variables are defined in `kanata.kbd` file.
+;; Timing and home-row modifier variables are defined in `kanata.kbd`.
 
 (defalias
   ;; Main mod-tap: Nav layer when held, Space when tapped.
@@ -20,12 +20,12 @@
   sym (tap-hold-press $tap_timeout $hold_timeout ret (layer-while-held symbols))
 
   ;; Home-row mods
-  ss (tap-hold $tap_timeout $long_hold_timeout s lmet)
-  dd (tap-hold $tap_timeout $long_hold_timeout d lctl)
-  ff (tap-hold $tap_timeout $long_hold_timeout f lalt)
-  jj (tap-hold $tap_timeout $long_hold_timeout j lalt)
-  kk (tap-hold $tap_timeout $long_hold_timeout k rctl)
-  ll (tap-hold $tap_timeout $long_hold_timeout l rmet)
+  ss (tap-hold $tap_timeout $long_hold_timeout s $hrm_ring)
+  dd (tap-hold $tap_timeout $long_hold_timeout d $hrm_middle)
+  ff (tap-hold $tap_timeout $long_hold_timeout f $hrm_index)
+  jj (tap-hold $tap_timeout $long_hold_timeout j $hrm_index)
+  kk (tap-hold $tap_timeout $long_hold_timeout k $hrm_middle)
+  ll (tap-hold $tap_timeout $long_hold_timeout l $hrm_ring)
 )
 
 ;; vim: set ft=lisp:

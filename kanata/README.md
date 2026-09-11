@@ -1,6 +1,14 @@
 Arsenik Kanata
 ================================================================================
 
+Customizing home-row mods
+--------------------------------------------------------------------------------
+
+In `kanata.kbd`, enable `deflayer/base_lt_hrm.kbd` instead of the other base
+layers, then edit `hrm_index`, `hrm_middle`, and `hrm_ring`. Each setting applies
+to both hands: index on F/J, middle on D/K, and ring on S/L (Qwerty positions).
+The defaults are Alt, Control, and Super/Command for index, middle, and ring respectively.
+
 Installation
 --------------------------------------------------------------------------------
 

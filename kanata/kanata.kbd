@@ -50,6 +50,14 @@
 
 ;; Note: not enabling layer-taps here makes the rest of the file useless.
 
+;; Home-row modifier order
+;; lmet = Super/Command, lctl = Control, lalt = Alt.
+(defvar
+  hrm_index  lalt
+  hrm_middle lctl
+  hrm_ring   lmet
+)
+
 
 ;;-----------------------------------------------------------------------------
 ;; `Symbols` layer
