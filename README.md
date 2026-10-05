@@ -1,36 +1,29 @@
-<h1 align="center">Arsenik</h1>
+Arsenik
+================================================================================
 
-<div align="center">
-  ★ <strong>Ergonomics for any keyboard!</strong> ★
-</div>
+An intuitive approach to minimize finger movements on *any* keyboard:
 
-<br>
-
-<div align="center">
-  Configure your keyboard — even if it is not programmable — with a
-  beginner-friendly approach to minimize finger movements!
-</div>
-
-<br>
+- programmable or not
+- any geometry: ANSI, ISO, ortholinear, split…
+- any layout: QWERTY, AZERTY, QWERTZ, Dvorak, Colemak, Ergo‑L…
 
 ![base, navigation and sym layers on a 33-key keyboard](img/all.svg)
 
-*Note: The keyboard layout presented here in the illustration is Qwerty but it
-works with other layouts as well — Azerty, Qwertz, Ergo‑L, Bépo…*
+> [!NOTE]
+> All releases have been moved to Ækeynox repositories (Kanata, QMK, ZMK).
+> [More details in the Installation section.](#installation)
 
---------------------------------------------------------------------------------
-
-Table of contents
---------------------------------------------------------------------------------
+Table of contents:
 
 - [Philosophy](#philosophy)
-- [Features](#pick-your-poison)
-  1. [Angle mod](#1-angle-mod)
-  2. [Mod-taps](#2-supercharge-your-thumbs-with-mod-taps)
-  3. [Symbols layer](#3-symbols-layer)
-  4. [Navigation layer](#4-navigation-layer)
-  5. [Keyboard layout](#5-keyboard-layout)
-  6. [Extra customization](#bonus-spice-it-up)
+- [Step by Step](#step-by-step)
+  1. [Angle Mod](#1-angle-mod)
+  2. [Thumb-Taps](#2-thumb-taps)
+  3. [Home Row Mods](#3-home-row-mods)
+- [Layers](#layers)
+  - [Symbols](#symbols)
+  - [Navigation](#navigation)
+  - [Extra customization](#bonus-spice-it-up)
 - [Installation](#installation)
 - [Why “Arsenik”?](#why-arsenik)
 
@@ -46,24 +39,26 @@ Download a ready-to-use Arsenik configuration for [Kanata], and enjoy your
 regular features that were normally only accessible to a programmable
 keyboard.
 
-*Note: You probably will benefit the most of Arsenik if you are [touch typing].*
 
-
-Pick Your Poison!
+Step by Step
 --------------------------------------------------------------------------------
 
 Choose which Arsenik features to use from the following options:
 
-### 1. Angle mod
+### 1. Angle Mod
 
 On an ISO keyboard, it permutes the extra down-left key to ease the angle on
-your left wrist when typing.
+your left wrist when [touch typing]. This makes any staggered keyboard almost
+ortholinear.
 
 ![Angle mod](./img/angle_mod.svg)
 
-### 2. Supercharge your thumbs with mod-taps
+On an ANSI keyboard, the left <kbd>Shift</kbd> key becomes Z (“fat Z”). This
+supposes home row mods are enabled (see below).
 
-#### First: layer-taps
+On an ortholinear keyboard, you don’t want this option, obviously.
+
+### 2. Thumb-Taps
 
 If you’re new to mod-taps, we suggest to start by adding the “layer-tap” option
 where only the thumbs are affected:
@@ -81,7 +76,7 @@ Having <kbd>Backspace</kbd> and <kbd>Enter</kbd> under the thumbs is enough to
 reduce pinky fatigue very significantly. And using the <kbd>Symbols</kbd>
 and <kbd>Navigation</kbd> layers further reduces hand and finger movements.
 
-#### Next level: enable the Home Row Mods
+### 3. Home Row Mods
 
 When you are familiar with mod-taps, it’s time to enable them on the home row
 with the “HRM” variants:
@@ -96,7 +91,11 @@ when held.
 This is a very basic variant of the [Miryoku] principle: one layer on each
 thumb key, and symmetrical modifiers on the home row.
 
-### 3. Symbols layer
+
+Layers
+--------------------------------------------------------------------------------
+
+### Symbols
 
 For the <kbd>Symbols</kbd> layer you can keep <kbd>AltGr</kbd> as-is. It is
 useful for keyboard layouts that rely heavily on the <kbd>AltGr</kbd> key.
@@ -122,7 +121,7 @@ inputs
 Even on keyboards that *do* have a physical number row, this `NumRow` layer can
 be interesting to use in order to further minimize finger movements.
 
-### 4. Navigation layer
+### Navigation
 
 A basic <kbd>Navigation</kbd> layer has an arrow cluster on the left hand to
 move around and a num pad on the right hand.
@@ -157,46 +156,6 @@ without holding the key until escaped with <kbd>Alt</kbd> or <kbd>AltGr</kbd>.
 <p align="center">
   <em>Fn layer toggled</em>
 </p>
-
-### 5. Keyboard layout
-
-Choose your keyboard layout among the available ones for Arsenik to work
-properly.
-
-If your layout is not on this list, feel free to open an issue or upvote an
-existing one.
-
-Here are some caveats for specific layouts:
-
-<details>
-<summary>QWERTY/Colemak</summary>
-
-Qwerty and Colemak work out-of-the-box with the Lafayette <kbd>Symbols</kbd> layer
-because there are no other characters typed with <kbd>AltGr</kbd>.
-</details>
-
-<details>
-<summary>Ergo‑L/QWERTY‑Lafayette/other Lafayette layouts</summary>
-
-Arsenik works out-of-the-box with Lafayette layouts because their
-<kbd>AltGr</kbd> layer already matches Arsenik’s <kbd>Symbols</kbd> layer.
-</details>
-
-<details>
-<summary>AZERTY</summary>
-
-By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
-<kbd>€</kbd> sign with <kbd>AltGr</kbd>. You might want to remap it elsewhere, or
-avoid using the Lafayette <kbd>Symbols</kbd> layer.
-</details>
-
-<details>
-<summary>Bépo</summary>
-
-By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
-characters typed with <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
-or avoid using the Lafayette <kbd>Symbols</kbd> layer.
-</details>
 
 ### Bonus: Spice It Up
 
