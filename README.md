@@ -7,25 +7,29 @@ An intuitive approach to minimize finger movements on *any* keyboard:
 - any geometry: ANSI, ISO, ortholinear, split…
 - any layout: QWERTY, AZERTY, QWERTZ, Dvorak, Colemak, Ergo‑L…
 
-![base, navigation and sym layers on a 33-key keyboard](img/all.svg)
+![base, navigation and sym layers on a 33-key, ortholinear keyboard](img/all.svg)
 
 > [!NOTE]
-> All releases have been moved to Ækeynox repositories (Kanata, QMK, ZMK).
-> [More details in the Installation section.](#installation)
+> All releases have been moved to Ækeynox repositories (Kanata, QMK, ZMK).<br>
+> [More details in the “Installation” section.](#installation)
 
-Table of contents:
+<details>
+<summary>Table of Contents</summary>
 
 - [Philosophy](#philosophy)
-- [Step by Step](#step-by-step)
+- [Pick Your Poison](#pick-your-poison)
   1. [Angle Mod](#1-angle-mod)
   2. [Thumb-Taps](#2-thumb-taps)
   3. [Home Row Mods](#3-home-row-mods)
+  4. [Spice It Up](#4-spice-it-up)
 - [Layers](#layers)
-  - [Symbols](#symbols)
   - [Navigation](#navigation)
-  - [Extra customization](#bonus-spice-it-up)
+  - [Symbols](#symbols)
+  - [Numbers](#numbers)
+  - [FunMedia](#funmedia)
 - [Installation](#installation)
 - [Why “Arsenik”?](#why-arsenik)
+</details>
 
 
 Philosophy
@@ -40,10 +44,11 @@ regular features that were normally only accessible to a programmable
 keyboard.
 
 
-Step by Step
+Pick Your Poison
 --------------------------------------------------------------------------------
 
-Choose which Arsenik features to use from the following options:
+Arsenik is designed to learn home row mods step by step. The following features
+pave a natural progression.
 
 ### 1. Angle Mod
 
@@ -86,92 +91,116 @@ with the “HRM” variants:
 - the left thumb key can now emit a <kbd>Shift</kbd> rather than <kbd>Alt</kbd>
 when held.
 
-![home row mods on SDF keys](./img/hrm.svg)
+![home row mods (PC) on SDF keys](./img/hrm_pc.svg)
+
+The most frequent modifier is assigned to the middle finger, and the second
+most frequent to the index. Therefore, the HRM order is different on Mac:
+
+![home row mods (Mac) on SDF keys](./img/hrm_mac.svg)
 
 This is a very basic variant of the [Miryoku] principle: one layer on each
 thumb key, and symmetrical modifiers on the home row.
+
+### 4. Spice It Up
+
+Once home row mods are mastered, it may be time to fine-tune your configuration.
+
+Timing is key. There are several kinds of mod-taps, depending on the priority:
+
+- *hold-preferred* for <kbd>Shift</kbd> and <kbd>Sym</kbd>: they behave as a
+  *tap* only when released before 150 ms;
+- *tap-preferred* for <kbd>Space</kbd> and HRMs: they behave as a layer or
+  modifier only when pressed longer than 300 ms.
+
+These delays are very safe/conservative to be beginner-friendly. When you get
+fluent with HRMs, you might want to reduce the 300 ms delay a bit (250 ms is
+okay, 200 ms is too quick for most users).
+
+Note that Kanata can also use the laptop’s trackpoint buttons (e.g. on a ThinkPad)
+as two additional thumb keys. :-)
 
 
 Layers
 --------------------------------------------------------------------------------
 
-### Symbols
-
-For the <kbd>Symbols</kbd> layer you can keep <kbd>AltGr</kbd> as-is. It is
-useful for keyboard layouts that rely heavily on the <kbd>AltGr</kbd> key.
-
-But the real fun (especially for programmers) happens when we enable the
-“Lafayette” programming layer!
-
-![Lafayette symbols layer on a 33-key keyboard](./img/symbols.svg)
-
-#### Num row >> Num pad
-
-If enabled, in <kbd>Symbols</kbd> mode, pressing the left thumb key brings up
-the <kbd>NumRow</kbd> layer:
-
-- all digits are on the home row, in the order you already know;
-- the upper row helps with <kbd>Shift</kbd>-digit shortcuts;
-- the lower row has dash, comma, dot and slash signs to help with number/date
-inputs
-- <kbd>Space</kbd> becomes a narrow no-break space for layouts that support it.
-
-![NumRow layer on a 33-key keyboard](./img/numrow.svg)
-
-Even on keyboards that *do* have a physical number row, this `NumRow` layer can
-be interesting to use in order to further minimize finger movements.
-
 ### Navigation
 
-A basic <kbd>Navigation</kbd> layer has an arrow cluster on the left hand to
-move around and a num pad on the right hand.
+- the <kbd>Navigation</kbd> layer can be either <kbd>NavNum</kbd> or
+  <kbd>VimNav</kbd>
+- in both cases, <kbd>NavNum</kbd> can be locked with <kbd>nav</kbd><kbd>P</kbd>
 
-![navigation layer on a 33-key keyboard](./img/navigation.svg)
+#### NavNum
 
-#### Vim Variant
+The default <kbd>Navigation</kbd> layer has an arrow cluster on the left hand to
+move around, and a num pad on the right hand.
 
-For those who like to move the cursor with <kbd>HJKL</kbd> in all apps with any
-keyboard layout, it is possible to enable a Vim-like <kbd>Navigation</kbd>
-layer.
+![Default navigation layer on a 33-key keyboard](./img/navnum.svg)
 
-It also has:
+#### VimNav
 
-- super-comfortable <kbd>Tab</kbd> and <kbd>Shift</kbd>-<kbd>Tab</kbd>
-- mouse emulation: previous/next and mouse scroll
+The alternative <kbd>Navigation</kbd> layer has:
+- under the left hand, <kbd>Tab</kbd> / <kbd>Shift</kbd><kbd>Tab</kbd> and
+  <kbd>Previous</kbd> / <kbd>Next</kbd> navigation keys;
+- under the right hand, an <kbd>HJKL</kbd> arrow cluster and a mouse scroll
+  emulation.
 
-![Vim navigation layer on a 33-key keyboard](./img/vim_navigation.svg)
+![Vim navigation layer on a 33-key keyboard](./img/vimnav.svg)
 
 This <kbd>Navigation</kbd> layer has a few empty slots on purpose, so you can
 add your own keys or layers.
 
-<kbd>NumPad</kbd> and <kbd>Fn</kbd> lock these layers: they remain active
-without holding the key until escaped with <kbd>Alt</kbd> or <kbd>AltGr</kbd>.
+#### NavLock
+
+<kbd>Nav</kbd><kbd>P</kbd> locks the default navigation layer: it remains
+active without holding any key until escaped with <kbd>Sym</kbd>.
+
+![Locked navigation layer on a 33-key keyboard](./img/navlock.svg)
+
+### Symbols
+
+The <kbd>Symbols</kbd> layer is optimized for programming. The most frequent
+symbols are on the left home row, and most common combos can be done either
+with a roll or a hand alternation: no same-finger bigram.
+
+![Symbols layer on a 33-key keyboard](./img/symbols.svg)
+
+### Numbers
+
+In <kbd>Symbols</kbd> mode, pressing the left thumb key brings up the
+<kbd>Numbers</kbd> layer. This is handy when mixing symbols and numbers,
+e.g. `(0)`, `[1]`, etc.
+
+Two alternatives are proposed: <kbd>NumPad</kbd> and <kbd>NumRow</kbd>.
+
+#### NumPad
+
+By default, the <kbd>Numbers</kbd> layer uses the same num pad as the default
+<kbd>Navigation</kbd> layer:
 
 ![NumPad layer on a 33-key keyboard](./img/numpad.svg)
-<p align="center">
-  <em>NumPad layer toggled</em>
-</p>
 
-![Fn layer on a 33-key keyboard](./img/fn.svg)
-<p align="center">
-  <em>Fn layer toggled</em>
-</p>
+#### NumRow
 
-### Bonus: Spice It Up
+Optionally, the <kbd>Numbers</kbd> layer can use a numeric row:
 
-From there, you can edit the configuration to your liking, and even contribute
-to Arsenik!
+- all digits are on the home row, with the finger assignment you already know;
+- the upper row helps with <kbd>Shift</kbd>-digit shortcuts;
+- the lower row has dash, comma, dot and slash signs to help with number/date
+  inputs (+ empty slots under the left hand);
+- <kbd>Space</kbd> becomes <kbd>Shift</kbd>-<kbd>Space</kbd>, which can be a
+  no-break space for some keyboard layouts.
 
-The 300 ms delay before a key becomes a modifier has been chosen to be easy for
-beginners. Once used to mod-taps, you may want to reduce it so keyboard
-shortcuts can be done more quickly.
+![NumRow layer on a 33-key keyboard](./img/numrow.svg)
 
-In the <kbd>NumRow</kbd> layer, you can edit the <kbd>dk1</kbd> to
-<kbd>dk5</kbd> shortcuts to put whatever seems useful to you: the numerous available
-keys are defined in the [Kanata source code][Kanata keys].
+### FunMedia
 
-Note that Kanata can also use the laptop’s trackpoint buttons (e.g. on a ThinkPad)
-as two additional thumb keys. :-)
+In <kbd>Navigation</kbd> mode, pressing the right thumb key brings up the
+<kbd>FunMedia</kbd> layer.
+
+![FunMedia layer on a 33-key keyboard](./img/funmedia.svg)
+
+Note that home row mods are *always* enabled under the right hand on this layer,
+with an additional <kbd>Shift</kbd> key on the pinky.
 
 
 Installation
@@ -195,10 +224,6 @@ Arsenik can be installed as a configuration for your PC or Mac with
 
 This implementation used to be developed in this repository, but it’s been fully
 refactored, and it now lives in its own repository.
-
-[Ækeynox-kanata] is the easiest way to adjust to compact keyboard layouts. It’s
-designed for a step-by-step approach, where every feature can be enabled one by
-one, until home row mods are finally mastered.
 
 Kanata has been favored because for its features and active development, but
 other desktop implementations would be nice to see as well: KMonad, keyd,

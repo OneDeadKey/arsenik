@@ -1,294 +1,391 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
-
-  <style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 0 720 255">
+  <style><![CDATA[
     :root {
       color-scheme: light dark;
     }
+
     rect {
+      fill: #fff;
       fill: #f8f8f8;
       stroke: #666;
       stroke-width: .5px;
     }
+    .glyph {
+      transform: scale(0.4) translate(-24px, -36px);
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
     text {
-      fill: #bbb;
+      fill: #666;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
     }
-    .dualKey { fill: #ddd; transform: translateY(26px); }
+    use {
+      stroke: #666;
+    }
 
-    #row_AD { transform: translate(48px,  64px); }
-    #row_AC { transform: translate(64px, 124px); }
-    #row_AB { transform: translate(32px, 184px); }
-    #row_AA { transform: translate(62px, 244px); }
+    .specialKey text,
+    .mod, .hrm, .pc, .func { font-size: 14px; }
+    .shortcut              { font-size: 11px; }
 
-    .shortcut { font-size: 10px; transform: translate(-3px,  -1px); }
-    .layerSym { font-weight: normal; }
-    .layerMod { font-weight: bold; font-size: 14px; }
-    .layerNav { font-weight: bold; }
-    .right .layerNav { font-weight: normal; }
+    .func {
+      transform: translateX(-1px);
+      display: none;
+    }
 
-    .layerMod, .colorMod { fill: #333; }
-    .layerSym, .colorSym { fill: blue; }
-    .layerNav, .colorNav { fill: #e83; }
-    #row_AA    .level2   { fill: #333; }
+    .dual { transform: translateY(26px); }
+    .mod rect.mod { fill: #ddd; }
+
+    text.hrm,
+    text.mod  { fill: #333; }
+    rect.hrm,
+    use.hrm { stroke: #333; }
+    text.sym  { fill: #66f; }
+    use.sym { stroke: #66f; }
+    text.nav  { fill: #e83; }
+    use.nav { stroke: #e83; }
+    .nav rect.mod { stroke: #e83; stroke-width: .8px; }
+         rect.hrm { stroke: #444; stroke-width: .8px; }
+    .sym rect.mod { fill: #aaf; }
+    .sym text.mod { fill: navy; }
+
+    .level1, .level2 { opacity: 0.8; }
 
     @media (prefers-color-scheme: dark) {
-      text                 { fill: #666; }
-      rect                 { fill: #444; }
-      .dualKey             { fill: #666; }
-      .layerMod, .colorMod { fill: #eee; }
-      .layerSym, .colorSym { fill: #99f; }
-      .layerNav, .colorNav { fill: #e83; }
-      #row_AA .level2      { fill: #ccc; }
+      rect          { fill: #333; }
+      text          { fill: #bbb; }
+      use         { stroke: #bbb; }
+      use.hrm,
+      rect.hrm    { stroke: #eee; }
+      text.hrm,
+      text.mod      { fill: #eee; }
+      text.sym      { fill: #99f; }
+      use.sym     { stroke: #99f; }
+      .sym rect.mod { fill: #77d; }
+      .mod rect.mod { fill: #666; }
     }
-  </style>
 
-  <g id="row_AD">
-    <g class="left">
-      <g transform="translate(90)">
+    .left  { transform: translateX(  4px); }
+    .right { transform: translateX(334px); }
+
+    .row_1 { transform: translateY(  0px); }
+    .row_2 { transform: translateY( 60px); }
+    .row_3 { transform: translateY(120px); }
+
+    .col_1, .col_6 { transform: translateX(  0px); }
+    .col_2, .col_7 { transform: translateX( 60px); }
+    .col_3, .col_8 { transform: translateX(120px); }
+    .col_4, .col_9 { transform: translateX(180px); }
+    .col_5, .col_0 { transform: translateX(240px); }
+
+    .thb_left  { transform: translate(110px, 195px); }
+    .thb_space { transform: translate(200px, 195px); }
+    .thb_right { transform: translate(440px, 195px); }
+
+    .thb_3 { transform: translate(120px, 195px); }
+    .thb_4 { transform: translate(180px, 195px); }
+    .thb_5 { transform: translate(240px, 195px); }
+
+    .thb_6 { transform: translate(  0px, 195px); }
+    .thb_7 { transform: translate( 60px, 195px); }
+    .thb_8 { transform: translate(120px, 195px); }
+  ]]></style>
+
+  <defs>
+    <path class="glyph" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
+    <path class="glyph" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
+    <path class="glyph" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
+    <path class="glyph" id="glyph_space"     d="M42,24V32H6V24"/>
+    <path class="glyph" id="glyph_escape"    d="M24,24l-18-18 m0,10v-10h10 M24,6A18,18,0,1,1,6,24"/>
+    <path class="glyph" id="glyph_up"        d="M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="glyph" id="glyph_down"      d="M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="glyph" id="glyph_pgup"      d="M16,32h16 M16,24h16 M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="glyph" id="glyph_pgdown"    d="M16,16h16 M16,24h16 M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="glyph" id="glyph_left"      d="M42,24h-36 m6-8l-8,8l8,8"/>
+    <path class="glyph" id="glyph_right"     d="M6,24h36 m-6-8l8,8l-8,8"/>
+    <path class="glyph" id="glyph_tab"       d="M6,24h27 m-6-8l8,8l-8,8 M42,12V36"/>
+    <path class="glyph" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
+    <path class="glyph" id="glyph_home"      d="M42,42l-28-28 m0,10v-10h10 m8-8h-26v26"/>
+    <path class="glyph" id="glyph_end"       d="M6,6l28,28 m0-10v10h-10 m-8,8h26v-26"/>
+    <path class="glyph" id="glyph_prev"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M26,16l-8,8l8,8"/>
+    <path class="glyph" id="glyph_next"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M22,16l8,8l-8,8"/>
+    <path class="glyph" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
+    <path class="glyph" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
+    <path class="glyph" id="glyph_command"   d="M20,16v16A4,4,0,1,1,16,28h16A4,4,0,1,1,28,32v-16A4,4,0,1,1,32,20h-16A4,4,0,1,1,20,16"/>
+    <path class="glyph" id="glyph_option"    d="M10,12h8l12,24h8 M28,12h10"/>
+    <path class="glyph" id="glyph_control"   d="M16,24l8-8l8,8"/>
+  </defs>
+
+  <g class="left">
+    <g class="col_1">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Q</text>
-        <text x="38.0" y="20.6" class="layerNav">↹</text>
-        <text x="38.0" y="43.4" class="layerSym">^</text>
+        <text x="38.0" y="20.6" class="sym">^</text>
+        <text x="38.0" y="43.4" class="nav func">F1</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_tab"/>
       </g>
-      <g transform="translate(150)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">W</text>
-        <text x="38.0" y="20.6" class="layerNav">⇱</text>
-        <text x="38.0" y="43.4" class="layerSym">&lt;</text>
-      </g>
-      <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">E</text>
-        <text x="38.0" y="20.6" class="layerNav">↑</text>
-        <text x="38.0" y="43.4" class="layerSym">&gt;</text>
-      </g>
-      <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">R</text>
-        <text x="38.0" y="20.6" class="layerNav">⇲</text>
-        <text x="38.0" y="43.4" class="layerSym">$</text>
-      </g>
-      <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">T</text>
-        <text x="38.0" y="20.6" class="layerNav">⇞</text>
-        <text x="38.0" y="43.4" class="layerSym">%</text>
-      </g>
-    </g>
-    <g class="right">
-      <g transform="translate(390)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">Y</text>
-        <text x="38.0" y="20.6" class="layerNav">/</text>
-        <text x="38.0" y="43.4" class="layerSym">@</text>
-      </g>
-      <g transform="translate(450)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">U</text>
-        <text x="38.0" y="20.6" class="layerNav">7</text>
-        <text x="38.0" y="43.4" class="layerSym">&amp;</text>
-      </g>
-      <g transform="translate(510)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">I</text>
-        <text x="38.0" y="20.6" class="layerNav">8</text>
-        <text x="38.0" y="43.4" class="layerSym">*</text>
-      </g>
-      <g transform="translate(570)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">O</text>
-        <text x="38.0" y="20.6" class="layerNav">9</text>
-        <text x="38.0" y="43.4" class="layerSym">'</text>
-      </g>
-      <g transform="translate(630)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">P</text>
-        <text x="38.0" y="43.4" class="layerSym">`</text>
-      </g>
-    </g>
-  </g>
-
-  <g id="row_AC">
-    <g class="left">
-      <g transform="translate(90)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">A</text>
-        <text x="38.0" y="20.6" class="layerNav shortcut">all</text>
-        <text x="38.0" y="43.4" class="layerSym">{</text>
+        <text x="38.0" y="20.6" class="sym">{</text>
+        <text x="38.0" y="43.4" class="nav func">F5</text>
+        <text x="38.0" y="43.4" class="nav shortcut">all</text>
       </g>
-      <g transform="translate(150)">
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="12.8" y="20.6" class="level2">S</text>
-        <text x="12.8" y="43.4" class="layerMod">⌘</text>
-        <text x="38.0" y="20.6" class="layerNav">←</text>
-        <text x="38.0" y="43.4" class="layerSym">(</text>
-      </g>
-      <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="12.8" y="20.6" class="level2">D</text>
-        <text x="12.8" y="43.4" class="layerMod">⌥</text>
-        <text x="38.0" y="20.6" class="layerNav">↓</text>
-        <text x="38.0" y="43.4" class="layerSym">)</text>
-      </g>
-      <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="12.8" y="20.6" class="level2">F</text>
-        <text x="12.8" y="43.4" class="layerMod">⌃</text>
-        <text x="38.0" y="20.6" class="layerNav">→</text>
-        <text x="38.0" y="43.4" class="layerSym">}</text>
-      </g>
-      <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">G</text>
-        <text x="38.0" y="20.6" class="layerNav">⇟</text>
-        <text x="38.0" y="43.4" class="layerSym">=</text>
+        <text x="12.8" y="20.6" class="level2">Z</text>
+        <text x="38.0" y="20.6" class="sym">~</text>
+        <text x="38.0" y="43.4" class="nav func">F9</text>
+        <text x="38.0" y="43.4" class="nav shortcut">undo</text>
       </g>
     </g>
-    <g class="right">
-      <g transform="translate(390)">
+
+    <g class="col_2">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">H</text>
-        <text x="38.0" y="20.6" class="layerNav">-</text>
-        <text x="38.0" y="43.4" class="layerSym">\</text>
+        <text x="12.8" y="20.6" class="level2">W</text>
+        <text x="38.0" y="20.6" class="sym">&lt;</text>
+        <text x="38.0" y="43.4" class="nav func">F2</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_home"/>
       </g>
-      <g transform="translate(450)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="12.8" y="20.6" class="level2">J</text>
-        <text x="12.8" y="43.4" class="layerMod">⌃</text>
-        <text x="38.0" y="20.6" class="layerNav">4</text>
-        <text x="38.0" y="43.4" class="layerSym">+</text>
+        <rect width="26" height="26" rx="2" ry="2" class="dual hrm"/>
+        <text x="12.8" y="20.6" class="level2">S</text>
+        <text x="38.0" y="20.6" class="sym">(</text>
+        <text x="38.0" y="43.4" class="nav func">F6</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_left"/>
+        <use  x="12.8" y="43.4" class="hrm" href="#glyph_option"/>
       </g>
-      <g transform="translate(510)">
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="12.8" y="20.6" class="level2">K</text>
-        <text x="12.8" y="43.4" class="layerMod">⌥</text>
-        <text x="38.0" y="20.6" class="layerNav">5</text>
-        <text x="38.0" y="43.4" class="layerSym">-</text>
+        <text x="12.8" y="20.6" class="level2">X</text>
+        <text x="38.0" y="20.6" class="sym">[</text>
+        <text x="38.0" y="43.4" class="nav func">F10</text>
+        <text x="38.0" y="43.4" class="nav shortcut">cut</text>
       </g>
-      <g transform="translate(570)">
+    </g>
+
+    <g class="col_3">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="12.8" y="20.6" class="level2">L</text>
-        <text x="12.8" y="43.4" class="layerMod">⌘</text>
-        <text x="38.0" y="20.6" class="layerNav">6</text>
-        <text x="38.0" y="43.4" class="layerSym">/</text>
+        <text x="12.8" y="20.6" class="level2">E</text>
+        <text x="38.0" y="20.6" class="sym">&gt;</text>
+        <text x="38.0" y="43.4" class="nav func">F3</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_up"/>
       </g>
-      <g transform="translate(630)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">;</text>
-        <text x="12.8" y="20.6" class="level2">:</text>
-        <text x="38.0" y="20.6" class="layerNav">0</text>
-        <text x="38.0" y="43.4" class="layerSym">"</text>
+        <rect width="26" height="26" rx="2" ry="2" class="dual hrm"/>
+        <text x="12.8" y="20.6" class="level2">D</text>
+        <text x="38.0" y="20.6" class="sym">)</text>
+        <text x="38.0" y="43.4" class="nav func">F7</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_down"/>
+        <use  x="12.8" y="43.4" class="hrm" href="#glyph_command"/>
+      </g>
+      <g class="row_3">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">C</text>
+        <text x="38.0" y="20.6" class="sym">]</text>
+        <text x="38.0" y="43.4" class="nav func">F11</text>
+        <text x="38.0" y="43.4" class="nav shortcut">copy</text>
+      </g>
+    </g>
+
+    <g class="col_4">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">R</text>
+        <text x="38.0" y="20.6" class="sym">$</text>
+        <text x="38.0" y="43.4" class="nav func">F4</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_end"/>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual hrm"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="20.6" class="sym">}</text>
+        <text x="38.0" y="43.4" class="nav func">F8</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_right"/>
+        <use  x="12.8" y="43.4" class="hrm" href="#glyph_control"/>
+      </g>
+      <g class="row_3">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">V</text>
+        <text x="38.0" y="20.6" class="sym">_</text>
+        <text x="38.0" y="43.4" class="nav func">F12</text>
+        <text x="38.0" y="43.4" class="nav shortcut">paste</text>
+      </g>
+    </g>
+
+    <g class="col_5">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="38.0" y="20.6" class="sym">%</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_pgup"/>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="20.6" class="sym">=</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_pgdown"/>
+      </g>
+      <g class="row_3">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">B</text>
+        <text x="38.0" y="20.6" class="sym">#</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_btab"/>
       </g>
     </g>
   </g>
 
-  <g id="row_AB">
-    <g class="left">
-      <g transform="translate(150)">
+  <g class="right">
+    <g class="col_6">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">Z</text>
-          <text x="38.0" y="20.6" class="layerNav shortcut">undo</text>
-          <text x="38.0" y="43.4" class="layerSym">~</text>
-        </g>
+        <text x="12.8" y="20.6" class="level2">Y</text>
+        <text x="38.0" y="20.6" class="sym">@</text>
+        <text x="38.0" y="43.4" class="nav">/</text>
       </g>
-      <g transform="translate(210)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">X</text>
-          <text x="38.0" y="20.6" class="layerNav shortcut">cut</text>
-          <text x="38.0" y="43.4" class="layerSym">[</text>
-        </g>
+        <text x="12.8" y="20.6" class="level2">H</text>
+        <text x="38.0" y="20.6" class="sym">\</text>
+        <text x="38.0" y="43.4" class="nav">-</text>
       </g>
-      <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">C</text>
-          <text x="38.0" y="20.6" class="layerNav shortcut">copy</text>
-          <text x="38.0" y="43.4" class="layerSym">]</text>
-        </g>
-      </g>
-      <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">V</text>
-          <text x="38.0" y="20.6" class="layerNav shortcut">paste</text>
-          <text x="38.0" y="43.4" class="layerSym">_</text>
-        </g>
-      </g>
-      <g transform="translate(390)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">B</text>
-          <text x="38.0" y="20.6" class="layerNav">⇤</text>
-          <text x="38.0" y="43.4" class="layerSym">#</text>
-        </g>
-      </g>
-    </g>
-    <g class="right">
-      <g transform="translate(450)">
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">N</text>
-        <text x="38.0" y="20.6" class="layerNav">,</text>
-        <text x="38.0" y="43.4" class="layerSym">|</text>
+        <text x="38.0" y="20.6" class="sym">|</text>
+        <text x="38.0" y="43.4" class="nav">,</text>
       </g>
-      <g transform="translate(510)">
+    </g>
+
+    <g class="col_7">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">U</text>
+        <text x="38.0" y="20.6" class="sym">&amp;</text>
+        <text x="38.0" y="43.4" class="nav">7</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual hrm"/>
+        <use  x="12.8" y="43.4" class="hrm" href="#glyph_control"/>
+        <text x="12.8" y="20.6" class="level2">J</text>
+        <text x="38.0" y="20.6" class="sym">+</text>
+        <text x="38.0" y="43.4" class="nav">4</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
-        <text x="38.0" y="20.6" class="layerNav">1</text>
-        <text x="38.0" y="43.4" class="layerSym">!</text>
+        <text x="38.0" y="20.6" class="sym">!</text>
+        <text x="38.0" y="43.4" class="nav">1</text>
       </g>
-      <g transform="translate(570)">
+    </g>
+
+    <g class="col_8">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">I</text>
+        <text x="38.0" y="20.6" class="sym">*</text>
+        <text x="38.0" y="43.4" class="nav">8</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual hrm"/>
+        <use  x="12.8" y="43.4" class="hrm" href="#glyph_command"/>
+        <text x="12.8" y="20.6" class="level2">K</text>
+        <text x="38.0" y="20.6" class="sym">-</text>
+        <text x="38.0" y="43.4" class="nav">5</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">&lt;</text>
-        <text x="38.0" y="20.6" class="layerNav">2</text>
-        <text x="38.0" y="43.4" class="layerSym">;</text>
+        <text x="38.0" y="20.6" class="sym">;</text>
+        <text x="38.0" y="43.4" class="nav">2</text>
       </g>
-      <g transform="translate(630)">
+    </g>
+
+    <g class="col_9">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">O</text>
+        <text x="38.0" y="20.6" class="sym">'</text>
+        <text x="38.0" y="43.4" class="nav">9</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual hrm"/>
+        <use  x="12.8" y="43.4" class="hrm" href="#glyph_option"/>
+        <text x="12.8" y="20.6" class="level2">L</text>
+        <text x="38.0" y="20.6" class="sym">/</text>
+        <text x="38.0" y="43.4" class="nav">6</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">.</text>
         <text x="12.8" y="20.6" class="level2">&gt;</text>
-        <text x="38.0" y="20.6" class="layerNav">3</text>
-        <text x="38.0" y="43.4" class="layerSym">:</text>
+        <text x="38.0" y="20.6" class="sym">:</text>
+        <text x="38.0" y="43.4" class="nav">3</text>
       </g>
-      <g transform="translate(690)">
+    </g>
+
+    <g class="col_0">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">P</text>
+        <text x="38.0" y="20.6" class="sym">`</text>
+        <text x="38.0" y="43.4" class="nav pc">lck</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">;</text>
+        <text x="12.8" y="20.6" class="level2">:</text>
+        <text x="38.0" y="20.6" class="sym">"</text>
+        <text x="38.0" y="43.4" class="nav">0</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">/</text>
         <text x="12.8" y="20.6" class="level2">?</text>
-        <text x="38.0" y="20.6" class="layerNav">.</text>
-        <text x="38.0" y="43.4" class="layerSym">?</text>
+        <text x="38.0" y="20.6" class="sym">?</text>
+        <text x="38.0" y="43.4" class="nav">.</text>
       </g>
     </g>
   </g>
 
-  <g id="row_AA">
-    <g transform="translate(180)">
+  <g class="thb_left specialKey mod">
+    <g>
       <rect width="82" height="52" rx="5" ry="5"/>
-      <rect width="41" height="26" rx="2" ry="2" class="dualKey"/>
-      <text x="20.5" y="42.8" class="layerMod">shift</text>
-      <text x="61.5" y="20.6" class="layerNav" style="font-size: 14px;">⌦</text>
-      <text x="20.5" y="20.6" class="level2" style="font-size: 14px;">⌫</text>
+      <rect width="41" height="26" rx="2" ry="2" class="dual mod"/>
+      <text x="20.5" y="43.4" class="mod">shift</text>
+      <use  x="61.5" y="43.4" class="nav"    href="#glyph_delete"/>
+      <use  x="61.5" y="18.6" class="sym"    href="#glyph_escape"/>
+      <use  x="20.5" y="18.6" class="level2" href="#glyph_backspace"/>
     </g>
-    <g transform="translate(270)">
+  </g>
+  <g class="thb_space specialKey nav">
+    <g>
       <rect width="232" height="52" rx="5" ry="5"/>
-      <rect width="41" height="26" rx="2" ry="2" class="dualKey"/>
-      <text x="20.5" y="42.8" class="layerMod colorNav">nav</text>
+      <rect width="41"  height="26" rx="2" ry="2" class="dual mod"/>
+      <text x="20.5" y="43.4" class="nav">nav</text>
+      <use  x="20.5" y="18.6" class="level2" href="#glyph_space"/>
     </g>
-    <g transform="translate(510)">
+  </g>
+  <g class="thb_right specialKey sym">
+    <g>
       <rect width="82" height="52" rx="5" ry="5"/>
-      <rect width="41" height="26" rx="2" ry="2" class="dualKey"/>
-      <text x="20.5" y="42.8" class="layerMod colorSym">sym</text>
-      <text x="61.5" y="20.6" class="layerNav" style="font-weight: normal;">⎋</text>
-      <text x="20.5" y="22.6" class="level2">⏎</text>
+      <rect width="41" height="26" rx="2" ry="2" class="dual mod"/>
+      <text x="20.5" y="43.4" class="mod">sym</text>
+      <text x="61.5" y="43.4" class="nav">fn</text>
+      <use  x="20.5" y="18.6" class="level2" href="#glyph_return"/>
     </g>
   </g>
 

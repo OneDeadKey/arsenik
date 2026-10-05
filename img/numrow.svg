@@ -1,238 +1,274 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
-
-  <style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 0 720 255">
+  <style><![CDATA[
     :root {
       color-scheme: light dark;
     }
+
     rect {
+      fill: #fff;
       fill: #f8f8f8;
       stroke: #666;
       stroke-width: .5px;
     }
     text {
-      fill: #bbb;
+      fill: #666;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
     }
-    .dualKey { fill: #ddd; transform: translateY(26px); }
 
-    #row_AD { transform: translate(64px,  64px); }
-    #row_AC { transform: translate(64px, 124px); }
-    #row_AB { transform: translate(64px, 184px); }
-    #row_AA { transform: translate(64px, 244px); }
-    .left   { transform: translate(-15px, 0); }
-    .right  { transform: translate(+15px, 0); }
+    .specialKey text,
+    .mod, .pc { font-size: 14px; }
 
-    .layer  { font-size: 14px; font-weight: bold; fill: #f8f8f8; }
-    .layerNum { fill: green; }
-    .layerSym { font-weight: normal; }
-    .layerMod { font-weight: bold; font-size: 14px; }
+    .mod rect.mod { fill: #ddd; }
 
-    .layerSym, .colorSym { fill: blue; }
+    text.mod  { fill: #333; }
+    text.num  { fill: green; }
+    .thumbSym rect { fill: #ceceff; }
+    .thumbSym text { fill: #4f4fac; }
+    .thumbNum rect { fill: #a2e7a2; }
+    .thumbNum text { fill: #437a43; }
+    .nav rect.mod { stroke: #e83; stroke-width: 1px; }
+
+    .level1, .level2 { opacity: 0.5; }
 
     @media (prefers-color-scheme: dark) {
-      text                 { fill: #666; }
-      rect                 { fill: #444; }
-      .dualKey             { fill: #666; }
-      .layerMod            { fill: #eee; }
-      .layerNum            { fill: #6d6; }
-      .layerSym, .colorSym { fill: #99f; }
+      rect           { fill: #333; }
+      text           { fill: #bbb; }
+      text.mod       { fill: #eee; }
+      text.num       { fill: #6d6; }
+      .mod rect.mod  { fill: #666; }
+      .thumbSym rect { fill: #66b; }
+      .thumbSym text { fill: #11a; }
+      .thumbNum rect { fill: #484; }
+      .thumbNum text { fill: #141; }
     }
-  </style>
 
-  <g id="row_AD">
-    <g class="left">
-      <g transform="translate(90)">
+    .left  { transform: translateX(  4px); }
+    .right { transform: translateX(334px); }
+
+    .row_1 { transform: translateY(  0px); }
+    .row_2 { transform: translateY( 60px); }
+    .row_3 { transform: translateY(120px); }
+
+    .col_1, .col_6 { transform: translateX(  0px); }
+    .col_2, .col_7 { transform: translateX( 60px); }
+    .col_3, .col_8 { transform: translateX(120px); }
+    .col_4, .col_9 { transform: translateX(180px); }
+    .col_5, .col_0 { transform: translateX(240px); }
+
+    .thb_left  { transform: translate(110px, 195px); }
+    .thb_space { transform: translate(200px, 195px); }
+    .thb_right { transform: translate(440px, 195px); }
+
+    .thb_3 { transform: translate(120px, 195px); }
+    .thb_4 { transform: translate(180px, 195px); }
+    .thb_5 { transform: translate(240px, 195px); }
+
+    .thb_6 { transform: translate(  0px, 195px); }
+    .thb_7 { transform: translate( 60px, 195px); }
+    .thb_8 { transform: translate(120px, 195px); }
+  ]]></style>
+
+  <g class="left">
+    <g class="col_1">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Q</text>
-        <text x="38.0" y="43.4" class="layerNum">!</text>
+        <text x="38.0" y="43.4" class="num">!</text>
       </g>
-      <g transform="translate(150)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">W</text>
-        <text x="38.0" y="43.4" class="layerNum">@</text>
-      </g>
-      <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">E</text>
-        <text x="38.0" y="43.4" class="layerNum">#</text>
-      </g>
-      <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">R</text>
-        <text x="38.0" y="43.4" class="layerNum">$</text>
-      </g>
-      <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">T</text>
-        <text x="38.0" y="43.4" class="layerNum">%</text>
-      </g>
-    </g>
-    <g class="right">
-      <g transform="translate(390)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">Y</text>
-        <text x="38.0" y="43.4" class="layerNum">^</text>
-      </g>
-      <g transform="translate(450)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">U</text>
-        <text x="38.0" y="43.4" class="layerNum">&amp;</text>
-      </g>
-      <g transform="translate(510)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">I</text>
-        <text x="38.0" y="43.4" class="layerNum">*</text>
-      </g>
-      <g transform="translate(570)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">O</text>
-        <text x="38.0" y="43.4" class="layerNum">(</text>
-      </g>
-      <g transform="translate(630)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">P</text>
-        <text x="38.0" y="43.4" class="layerNum">)</text>
-      </g>
-    </g>
-  </g>
-
-  <g id="row_AC">
-    <g class="left">
-      <g transform="translate(90)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">A</text>
-        <text x="38.0" y="43.4" class="layerNum">1</text>
+        <text x="38.0" y="43.4" class="num">1</text>
       </g>
-      <g transform="translate(150)">
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">S</text>
-        <text x="38.0" y="43.4" class="layerNum">2</text>
-      </g>
-      <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">D</text>
-        <text x="38.0" y="43.4" class="layerNum">3</text>
-      </g>
-      <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">F</text>
-        <text x="38.0" y="43.4" class="layerNum">4</text>
-      </g>
-      <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">G</text>
-        <text x="38.0" y="43.4" class="layerNum">5</text>
+        <text x="12.8" y="20.6" class="level2">Z</text>
       </g>
     </g>
-    <g class="right">
-      <g transform="translate(390)">
+
+    <g class="col_2">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">H</text>
-        <text x="38.0" y="43.4" class="layerNum">6</text>
+        <text x="12.8" y="20.6" class="level2">W</text>
+        <text x="38.0" y="43.4" class="num">@</text>
       </g>
-      <g transform="translate(450)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">J</text>
-        <text x="38.0" y="43.4" class="layerNum">7</text>
+        <text x="12.8" y="20.6" class="level2">S</text>
+        <text x="38.0" y="43.4" class="num">2</text>
       </g>
-      <g transform="translate(510)">
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">K</text>
-        <text x="38.0" y="43.4" class="layerNum">8</text>
+        <text x="12.8" y="20.6" class="level2">X</text>
       </g>
-      <g transform="translate(570)">
+    </g>
+
+    <g class="col_3">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">L</text>
-        <text x="38.0" y="43.4" class="layerNum">9</text>
+        <text x="12.8" y="20.6" class="level2">E</text>
+        <text x="38.0" y="43.4" class="num">#</text>
       </g>
-      <g transform="translate(630)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">;</text>
-        <text x="12.8" y="20.6" class="level2">:</text>
-        <text x="38.0" y="43.4" class="layerNum">0</text>
+        <text x="12.8" y="20.6" class="level2">D</text>
+        <text x="38.0" y="43.4" class="num">3</text>
+      </g>
+      <g class="row_3">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">C</text>
+      </g>
+    </g>
+
+    <g class="col_4">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">R</text>
+        <text x="38.0" y="43.4" class="num">$</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="43.4" class="num">4</text>
+      </g>
+      <g class="row_3">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">V</text>
+      </g>
+    </g>
+
+    <g class="col_5">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="38.0" y="43.4" class="num">%</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="43.4" class="num">5</text>
+      </g>
+      <g class="row_3">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">B</text>
       </g>
     </g>
   </g>
 
-  <g id="row_AB">
-    <g class="left">
-      <g transform="translate(90)">
+  <g class="right">
+    <g class="col_6">
+      <g class="row_1">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">Z</text>
-        </g>
+        <text x="12.8" y="20.6" class="level2">Y</text>
+        <text x="38.0" y="43.4" class="num">^</text>
       </g>
-      <g transform="translate(150)">
+      <g class="row_2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">X</text>
-        </g>
+        <text x="12.8" y="20.6" class="level2">H</text>
+        <text x="38.0" y="43.4" class="num">6</text>
       </g>
-      <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">C</text>
-        </g>
-      </g>
-      <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">V</text>
-        </g>
-      </g>
-      <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <g>
-          <text x="12.8" y="20.6" class="level2">B</text>
-        </g>
-      </g>
-    </g>
-    <g class="right">
-      <g transform="translate(390)">
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">N</text>
-        <text x="38.0" y="43.4" class="layerNum">-</text>
+        <text x="38.0" y="43.4" class="num">-</text>
       </g>
-      <g transform="translate(450)">
+    </g>
+
+    <g class="col_7">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">U</text>
+        <text x="38.0" y="43.4" class="num">&amp;</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">J</text>
+        <text x="38.0" y="43.4" class="num">7</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
-        <text x="38.0" y="43.4" class="layerNum">,</text>
+        <text x="38.0" y="43.4" class="num">,</text>
       </g>
-      <g transform="translate(510)">
+    </g>
+
+    <g class="col_8">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">I</text>
+        <text x="38.0" y="43.4" class="num">*</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">K</text>
+        <text x="38.0" y="43.4" class="num">8</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">&lt;</text>
-        <text x="38.0" y="43.4" class="layerNum">.</text>
+        <text x="38.0" y="43.4" class="num">.</text>
       </g>
-      <g transform="translate(570)">
+    </g>
+
+    <g class="col_9">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">O</text>
+        <text x="38.0" y="43.4" class="num">(</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">L</text>
+        <text x="38.0" y="43.4" class="num">9</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">.</text>
         <text x="12.8" y="20.6" class="level2">&gt;</text>
-        <text x="38.0" y="43.4" class="layerNum">:</text>
+        <text x="38.0" y="43.4" class="num">:</text>
       </g>
-      <g transform="translate(630)">
+    </g>
+
+    <g class="col_0">
+      <g class="row_1">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">P</text>
+        <text x="38.0" y="43.4" class="num">)</text>
+      </g>
+      <g class="row_2">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">;</text>
+        <text x="12.8" y="20.6" class="level2">:</text>
+        <text x="38.0" y="43.4" class="num">0</text>
+      </g>
+      <g class="row_3">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">/</text>
         <text x="12.8" y="20.6" class="level2">?</text>
-        <text x="38.0" y="43.4" class="layerNum">/</text>
+        <text x="38.0" y="43.4" class="num">/</text>
       </g>
     </g>
   </g>
 
-  <g id="row_AA">
-    <g transform="translate(180)">
-      <rect width="82" height="52" rx="5" ry="5" class="layerNum"/>
-      <text x="20.5" y="42.8" class="layer">num</text>
+
+  <g class="thb_left specialKey mod">
+    <g class="thumbNum">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <text x="20.5" y="43.4">num</text>
     </g>
-    <g transform="translate(270)">
+  </g>
+  <g class="thb_space specialKey nav">
+    <g>
       <rect width="232" height="52" rx="5" ry="5"/>
-      <text x="20.5" y="42.8" class="layer layerNum">⍽</text>
     </g>
-    <g transform="translate(510)">
-      <rect width="82" height="52" rx="5" ry="5" class="layerSym"/>
-      <text x="20.5" y="42.8" class="layer">sym</text>
+  </g>
+  <g class="thb_right specialKey sym">
+    <g class="thumbSym">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <text x="20.5" y="43.4">sym</text>
     </g>
   </g>
 
