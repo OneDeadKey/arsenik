@@ -32,9 +32,8 @@ Table of contents
   5. [Keyboard layout](#5-keyboard-layout)
   6. [Extra customization](#bonus-spice-it-up)
 - [Installation](#installation)
-- [Troubleshooting](#troubleshooting)
 - [Why “Arsenik”?](#why-arsenik)
-- [Join the community](#join-the-community)
+
 
 Philosophy
 --------------------------------------------------------------------------------
@@ -48,6 +47,7 @@ regular features that were normally only accessible to a programmable
 keyboard.
 
 *Note: You probably will benefit the most of Arsenik if you are [touch typing].*
+
 
 Pick Your Poison!
 --------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ move around and a num pad on the right hand.
 
 ![navigation layer on a 33-key keyboard](./img/navigation.svg)
 
-#### A superpowered Vim-friendly mod
+#### Vim Variant
 
 For those who like to move the cursor with <kbd>HJKL</kbd> in all apps with any
 keyboard layout, it is possible to enable a Vim-like <kbd>Navigation</kbd>
@@ -169,21 +169,21 @@ existing one.
 Here are some caveats for specific layouts:
 
 <details>
-<summary>Ergo‑L/Qwerty‑Lafayette/other Lafayette layouts</summary>
-
-Arsenik works out-of-the-box with Lafayette layouts because their
-<kbd>AltGr</kbd> layer already matches Arsenik’s <kbd>Symbols</kbd> layer.
-</details>
-
-<details>
-<summary>Qwerty/Colemak</summary>
+<summary>QWERTY/Colemak</summary>
 
 Qwerty and Colemak work out-of-the-box with the Lafayette <kbd>Symbols</kbd> layer
 because there are no other characters typed with <kbd>AltGr</kbd>.
 </details>
 
 <details>
-<summary>Azerty</summary>
+<summary>Ergo‑L/QWERTY‑Lafayette/other Lafayette layouts</summary>
+
+Arsenik works out-of-the-box with Lafayette layouts because their
+<kbd>AltGr</kbd> layer already matches Arsenik’s <kbd>Symbols</kbd> layer.
+</details>
+
+<details>
+<summary>AZERTY</summary>
 
 By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
 <kbd>€</kbd> sign with <kbd>AltGr</kbd>. You might want to remap it elsewhere, or
@@ -192,16 +192,6 @@ avoid using the Lafayette <kbd>Symbols</kbd> layer.
 
 <details>
 <summary>Bépo</summary>
-
-By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
-characters typed with <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
-or avoid using the Lafayette <kbd>Symbols</kbd> layer.
-</details>
-
-<details>
-<summary>Optimot</summary>
-
-Do not enable angle mod for Optimot as its driver already implements angle mod.
 
 By using the Lafayette <kbd>Symbols</kbd> layer, you won’t have access to the
 characters typed with <kbd>AltGr</kbd>. You might want to remap some of them elsewhere,
@@ -221,38 +211,52 @@ In the <kbd>NumRow</kbd> layer, you can edit the <kbd>dk1</kbd> to
 <kbd>dk5</kbd> shortcuts to put whatever seems useful to you: the numerous available
 keys are defined in the [Kanata source code][Kanata keys].
 
-In the <kbd>Navigation</kbd> layer, you can put a command on top of the (Qwerty)
-<kbd>P</kbd> key, e.g. for an application launcher.
-
 Note that Kanata can also use the laptop’s trackpoint buttons (e.g. on a ThinkPad)
 as two additional thumb keys. :-)
+
 
 Installation
 --------------------------------------------------------------------------------
 
-Adjusting to compact keyboard layouts isn’t easy, but Arsenik is designed for
-a step-by-step approach:
+- [Ækeynox-kanata] for non-programmable keyboards
+- [Ækeynox-QMK] for QMK keyboards
+- [Ækeynox-ZMK] for ZMK keyboards
 
-- load `kanata.kbd` with Kanata ([installation instructions](kanata));
-- enable each feature by un-commenting the related line (a commented line starts
-with `;;`) – you must enable one and only one line per feature;
-- live-reload the configuration with <kbd>Space</kbd>+<kbd>Backspace</kbd>
-(this requires the layer-taps feature enabled).
+[Ækeynox-kanata]: https://github.com/OneDeadKey/kanata-config-aekeynox
+[Ækeynox-QMK]:    https://github.com/OneDeadKey/qmk-config-aekeynox
+[Ækeynox-ZMK]:    https://github.com/OneDeadKey/zmk-config-aekeynox
 
-NixOS users can do this through [`services.arsenik`](https://search.nixos.org/options?channel=unstable&query=services.arsenik) options.
+### Non-Programmable Keyboards
 
-If you have a programmable keyboard you might want to take a look at the
-[QMK](qmk) version of Arsenik (work in progress).
+Arsenik can be installed as a configuration for your PC or Mac with
+[Ækeynox-kanata] (Windows, macOS, Linux). We recommend using:
 
-Other desktop implementations (KMonad, keyd, Karabiner…) would be nice to see as
-well.
+- the angle-mod for laptop keyboards with a short spacebar (5u);
+- the wide angle-mod for desktop keyboards with a long spacebar (6.25u or more).
 
-Troubleshooting
---------------------------------------------------------------------------------
+This implementation used to be developed in this repository, but it’s been fully
+refactored, and it now lives in its own repository.
 
-Some combinations of three keys might not work on a standard keyboard, due to
-[ghosting], which is a hardware problem that Kanata cannot fix. If you have this
-problem, you have to release a key to be able to press another one.
+[Ækeynox-kanata] is the easiest way to adjust to compact keyboard layouts. It’s
+designed for a step-by-step approach, where every feature can be enabled one by
+one, until home row mods are finally mastered.
+
+Kanata has been favored because for its features and active development, but
+other desktop implementations would be nice to see as well: KMonad, keyd,
+Karabiner….
+
+### Programmable Keyboards
+
+Arsenik can be installed on most programmable keyboards:
+
+- either “as is” on ANSI/ISO keyboards, or on ergonomic keyboards with a central
+  space bar (Planck, Preonic, Reviung…);
+- or with the [Selenium] variant, for split keyboards with at least two keys
+  per thumb.
+
+There are two implementations, [Ækeynox-QMK] and [Ækeynox-ZMK], for QMK and ZMK
+keyboards, respectively. Both are actively maintained.
+
 
 Why “Arsenik”?
 --------------------------------------------------------------------------------
@@ -277,36 +281,16 @@ shamelessly taken *as is*
 - [Seniply]
 - [Pascal Getreuer’s]
 
-### Non-Goals
-
-- Being the most efficient 3×5 layout — [Miryoku] is probably the most
-advanced approach for that, at least on custom 36-key keyboards
-- Suiting every user out-of-the-box — Arsenik is proposed as a reasonable
-default configuration, but users are encouraged to customize it to suit their
-personal needs and preferences
-- Fitting any OS layout — Arsenik works best if your OS layout has either no
-AltGr layer at all (e.g. Qwerty, Colemak, Workman…) or an optimized AltGr layer
-([Lafayette], [Ergo-L]…)
-
 ### Similar Projects
 
-- [Miryoku]: 36 keys, 6 layers
+- [Miryoku]: 36 keys, 6 layers, <kbd>Shift</kbd> as home row mod
 - [Seniply]: 34 keys, 6 layers, no layer-taps (“Callum-style”)
-
-Join the community
---------------------------------------------------------------------------------
-
-French-speaking users may join the [Ergo-L Discord server], which hosts a
-channel to talk about Arsenik, keyboards, layouts and much more.
-
-Feel free to open an issue and/or a pull request if you encounter a bug or want
-to enhance the Arsenik experience!
+- [Selenium]: 34 keys, an Arsenik variant for split keyboards
 
 [Kanata]: https://github.com/jtroo/kanata
 [Miryoku]: https://github.com/manna-harbour/miryoku
 [touch typing]: https://en.wikipedia.org/wiki/Touch_typing
-[ghosting]: https://en.wikipedia.org/wiki/Key_rollover#Ghosting
-[Lafayette]: https://qwerty-lafayette.org/42
+[Lafayette]: https://qwerty-lafayette.org/
 [Ergo-L]: https://ergol.org
 [Kanata keys]: https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs#L159
 [Extend]: https://dreymar.colemak.org/layers-extend.html
@@ -314,4 +298,4 @@ to enhance the Arsenik experience!
 [Shaka34]: https://github.com/lobre/shaka34
 [Seniply]: https://stevep99.github.io/seniply/
 [Pascal Getreuer’s]: https://getreuer.info/posts/keyboards/symbol-layer/#my-symbol-layer
-[Ergo-L Discord server]: https://discord.gg/5xR5K3nAFX
+[Selenium]: https://onedeadkey.github.io/selenium/
