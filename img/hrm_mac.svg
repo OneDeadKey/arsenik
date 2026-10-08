@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -4 720 60">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    rect {
+      fill: #f8f8f8;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: #666;
+      font: normal 20px sans-serif;
+      text-align: center;
+      opacity: 0.5;
+    }
+    path {
+      transform: scale(0.4) translate(-24px, -36px);
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .hrm {
+      transform: translateY(26px);
+      stroke: #333;
+      stroke-width: .8px;
+    }
+    use {
+      stroke: #333;
+    }
+    @media (prefers-color-scheme: dark) {
+      rect  { fill: #333; }
+      text  { fill: #bbb; }
+      .hrm,
+      use { stroke: #eee; }
+    }
+  </style>
+
+  <defs>
+    <path id="glyph_control" d="M16,24l8-8l8,8"/>
+    <path id="glyph_command" d="M20,16v16A4,4,0,1,1,16,28h16A4,4,0,1,1,28,32v-16A4,4,0,1,1,32,20h-16A4,4,0,1,1,20,16"/>
+    <path id="glyph_option"  d="M10,12h8l12,24h8 M28,12h10"/>
+  </defs>
+
+  <g id="row_AC" text-anchor="middle">
+    <g transform="translate(90)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <text x="12.8" y="20.6">A</text>
+    </g>
+    <g transform="translate(150)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="26" height="26" rx="2" ry="2" class="hrm"/>
+      <text x="12.8" y="20.6">S</text>
+      <use  x="12.8" y="43.4" href="#glyph_option"/>
+    </g>
+    <g transform="translate(210)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="26" height="26" rx="2" ry="2" class="hrm"/>
+      <text x="12.8" y="20.6">D</text>
+      <use  x="12.8" y="43.4" href="#glyph_command"/>
+    </g>
+    <g transform="translate(270)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="26" height="26" rx="2" ry="2" class="hrm"/>
+      <text x="12.8" y="20.6">F</text>
+      <use  x="12.8" y="43.4" href="#glyph_control"/>
+    </g>
+    <g transform="translate(330)">
+      <rect width="52" height="52" rx="5" ry="5"/>
+      <text x="12.8" y="20.6">G</text>
+    </g>
+  </g>
+
+</svg>
