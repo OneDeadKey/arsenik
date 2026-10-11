@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="26 -4 720 60">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    rect {
+      fill: #f8f8f8;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      font: normal 14px sans-serif;
+      text-anchor: middle;
+      fill: #333;
+    }
+    path {
+      transform: scale(0.4) translate(-24px, -36px);
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    use {
+      stroke: #333;
+    }
+    .dual {
+      transform: translateY(26px);
+      stroke-width: 1px;
+    }
+    .mod .dual { fill: #ddd; }
+    .sym .dual { stroke: #4f4fac; fill: #ceceff; }
+    .sym text  {   fill: #4f4fac; }
+    .nav .dual { stroke: #e83; }
+    .nav text  {   fill: #e83; }
+
+    @media (prefers-color-scheme: dark) {
+      rect  { fill: #333; }
+      text  { fill: #eee; }
+      use { stroke: #bbb; }
+      .mod .dual { fill: #666; }
+      .sym .dual { fill: #66b; }
+      .sym text  { fill: #11a; }
+    }
+  </style>
+
+  <defs>
+    <path id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
+    <path id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
+    <path id="glyph_space"     d="M42,24V32H6V24"/>
+  </defs>
+
+  <g id="row_AA">
+    <g class="mod" transform="translate(180)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <rect width="41" height="26" rx="2" ry="2" class="dual"/>
+      <text x="20.5" y="43.4">shift</text>
+      <use  x="20.5" y="18.6" href="#glyph_backspace"/>
+    </g>
+    <g class="nav" transform="translate(270)">
+      <rect width="232" height="52" rx="5" ry="5"/>
+      <rect width="41" height="26" rx="2" ry="2" class="dual"/>
+      <text x="20.5" y="43.4">nav</text>
+      <use  x="20.5" y="18.6" href="#glyph_space"/>
+    </g>
+    <g class="sym" transform="translate(510)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <rect width="41" height="26" rx="2" ry="2" class="dual"/>
+      <text x="20.5" y="43.4">sym</text>
+      <use  x="20.5" y="18.6" href="#glyph_return"/>
+    </g>
+  </g>
+
+</svg>

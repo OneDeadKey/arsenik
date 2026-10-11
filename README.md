@@ -98,8 +98,15 @@ most frequent to the index. Therefore, the HRM order is different on Mac:
 
 ![home row mods (Mac) on SDF keys](./img/hrm_mac.svg)
 
-This is a very basic variant of the [Miryoku] principle: one layer on each
-thumb key, and symmetrical modifiers on the home row.
+This is a variant of the [Miryoku] principle: one layer on each thumb key, and
+symmetrical modifiers on the home row. A big difference, though, is that
+<kbd>Shift</kbd> becomes a thumb key:
+
+![shift, navigation and sym layers under the thumbs](./img/hrm_thumbs.svg)
+
+Arsenik is very opinionated *against* <kbd>Shift</kbd> as a home row mod.
+<kbd>Shift</kbd> has specific timing and position requirements, which are much
+easier to meet with a thumb key.
 
 ### 4. Spice It Up
 
